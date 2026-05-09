@@ -1,0 +1,459 @@
+0:11 - Kousalya (nanduri1120@gmail.com)
+  Hello. Good morning. Good morning. Elliot, look so good.
+
+0:44 - Elliot Eriksson
+  I appreciate that. I wouldn't say I feel good. I'm a bit over right now, but I'm doing my best.
+
+1:35 - sanjeev kumar
+  Hello, good morning. Morning Sanju.
+
+1:40 - Filip Cedermark
+  Good morning.
+
+1:48 - sanjeev kumar
+  How is everyone doing?
+
+1:54 - Filip Cedermark
+  Pretty good, all things considered. I'm bit tired, I was out for a bit yesterday. should be good enough. Okay, and how is it going with you, Filip?
+
+2:06 - sanjeev kumar
+  You mentioned you had some issues, and I hope everything is sorted out.
+
+2:11 - Filip Cedermark
+  Yeah, it's been going a lot better this week. I think I have at least enough stuff that I'm ready to kind of present some stuff, and I should be able to add some of it to the repo as well, if it looks good enough.  Okay. I did mention I am going to start looking at dbt a bit, but I was already kind of in the middle of my silver staging part, so I wanted to finish that up first.  So I might start looking at recreating, moving from bronze to silver using dbt the following days. Yeah, makes sense.  Yeah.
+
+2:56 - sanjeev kumar
+  Okay. So actually, we wanted to Split the sessions today, from today, but there were some logistical issues. That's why we could not do it.  And that's why we did not communicate that we will split it from this week. But next week, myself and Raj, we'll keep on discussing like how to organize it and sort out the logistics.  But until then, we will have the common sessions. We'll have a session like this, right? And we will update you in advance.  And another thing, so next week, I am on a business trip. And I will be back. I will be, I will not be able to come back on Saturday.  I'm coming back on Sunday evening, actually. So next week, we'll have to actually cancel and do it the next week, actually.  I hope that is fine. Like I want to advise, sorry, announce that right now. But I'll also drop a message for those who have not joined us.  Okay, so we'll try to do something so that we have, we have something to work for. Take two weeks.  Then let's get started. I will share my screen. Yes. Okay. So let's go over this one. I also took a look at your midweek sync.  And I also have some I have just taken out some part of it here, if you would like to discuss and whatnot, right?  Let's do that. Okay, so weekly check in. Let's start from Philip, you are on top in my screen. Yes.
+
+4:49 - Filip Cedermark
+  So let me, I can share my screen as well, and I can kind of go through because this will be probably like the first time I actually chose.  Some of my work off.
+
+5:11 - sanjeev kumar
+  And let's do one thing. So spend less time on showing showcasing right now. You can just give an update on the blockers.  So let me show you here. So we have some of the demos actually, which are, where is it? So we have one from, did I not push it?  Wait, because there is one demo pending from, yeah, Elliot. So we will see if he can, so there are actually a couple of people who already would like to present.  So it would be nice if you could just give up, give a small update and then we will add you in the queue, right?  So that we do a proper detailed discussion on that. Sure.
+
+6:00 - Filip Cedermark
+  Okay, in that case I can still share my screen like really quickly and just like kind of go over some very basic things.  Okay, you should be able to see now, right?
+
+6:14 - sanjeev kumar
+  Yeah, I can see. Okay, nice.
+
+6:17 - Filip Cedermark
+  So let's see, I will go into start. That's the schema. Where are my notebooks? Well, I can start here, I guess.  So from, like I said, this is the first time I'm going to be showing, so this is going to be like really fast.  This is me using the Faker library to kind of, not even kind of, to just generate some sample images or sample rows.  Starting out with a thousand because I don't want to go like too big of a scale right now, but this can obviously scale up to pretty much whatever I want.  And I'm just using customer IDs, name, email. PhoneCity purchase amount for some very basic things, and the plan is to first use this to generate some data and then have another function that goes in and selects some of the rows and updates some of them, so it generates a new email, a new city for example, and sets that to update, which will reflect in the actual schema.  So if I go into, maybe I'll save it for the next demo, I can go into a bit more detail.
+
+7:43 - sanjeev kumar
+  No, one quick comment. this is really good. This change type, it means you can also treat it as like CDC data, right?  So some of the records you could add, update, inserts, deletes, and then later on that can be treated as change data feed.  Then you can actually work with that. Great. Makes sense. Yes.
+
+8:05 - Filip Cedermark
+  So I can, I should have this open. If I go to bronze and customers, I can just start this really fast and because this right now, and I have also set it to include some null values as well.
+  ACTION ITEM: Post Faker-based CDC data generator to GitHub repo - WATCH: https://fathom.video/share/zugZsxNmszLcG512Tx21G2d1zhB8LBcR?timestamp=503.9999  So I can do some like basic data cleaning on this as well. And did share this with others also?
+
+8:38 - sanjeev kumar
+  Because I think they can take help. I haven't sent this to the GitHub yet, but it's pretty much finished.
+
+8:45 - Filip Cedermark
+  So I could do that like now if I wanted to, or like after the meeting to make sure that it is available.  Yeah.
+
+8:54 - sanjeev kumar
+  Great. Yeah, your ID, name, email.
+
+8:58 - Filip Cedermark
+  Here's Like I said, some null values here and there to kind of simulate missing values and stuff. And this will be treated later in the silver layer.  And here as well, like the change type, the first batch is always insert. And for the second method or function that I use, it will change this to update or delete in some cases.  Great. This makes sense. Yeah.
+
+9:26 - sanjeev kumar
+  And so for example, if I have to like generate a lot more data, then I just have to go and set that configuration increase from 1,000 to 10,000.  Yes, exactly. That's like the idea.
+
+9:38 - Filip Cedermark
+  So you can set that value to whatever you want and you can generate a table with, yeah, like you said, 1,000 rows or 10,000 rows or 100,000.  It just kind of depends on what you want to start out with. Yeah, exactly. Exactly.
+
+9:51 - sanjeev kumar
+  And just for this information, right? So we are starting small, but later on the real, the real work is on large scale data.  that we do on distributed systems. yes, I think Faker library and whatever Filip has built will really help you in later stages where we will deep dive into those issues that you will face or your customers will face and you will have to probably go and debug them, right?  So I think this is really good.
+
+10:19 - Filip Cedermark
+  Yes. So that's what it looks like. And I also have, like I said, I wanted to kind of wrap up the silver part as well before starting on DBTG.  I didn't want to have this like half done and then start DBT immediately. So I'm going to start translating this.  Okay. So this is just kind of very basic handling some of the null values that exists, checking if customer ID or change types are null because these obviously won't really work.  And then checking and replacing null values with in this case, just adding like unknown at example.com if there is a null value for the email.
+
+10:58 - sanjeev kumar
+  And then adding a name.
+
+11:00 - Filip Cedermark
+  not available if there's a missing phone number.
+
+11:05 - sanjeev kumar
+  Okay, one thing, Filip, so I understand what you're trying to do, but yeah, so move to dbt, right, try the same thing out in dbt, dbt natively is SQL, but Python also you can do like if you're very comfortable with SQL, and it's a great tool.  One thing, so when you're doing this data quality checks, right, so usually, not usually, sometimes customers will also have requirements of something requirement for dead letter queue, or quarantining your data.  So instead of going and backfilling if something is found as some default value, in some cases, that is completely fine.  But in many cases, customers, users would like to analyze what kind of error has come, and what should I do to fix that, right, because usually, there are chances that you can assume, but there are also chances that they might have to contact.  The source and say that these are the bad records we have received, why go and fix it? And I need to do a backfill for these, right?  So keep that also in mind, when you're doing when you're doing it in dbt, see how you can do dead letter queue, or quarantining your data with proper tags.  Like when you do a check, you can also say, okay, if the email is not just write one, just create one column in the end for your for your dead letter queue or quarantine table, right, that will route these bad records into that table, and tag it reason, reason column or something like that, right?  That shows why actually did you why actually your code put it in that table, okay, null found, or something like that, right?  So that you can do some some kind of analysis on top of it later on, right? So this is also one of the common scenarios we have seen the customers would ask for.  Sure. Yes. Thanks a lot.
+
+13:00 - Filip Cedermark
+  And, like, outside of this, there isn't, like, too much more exciting stuff. It's just kind of applying everything and saving it.  So, for example, you can see down here. Now, instead of, like, null values, you have, like I just mentioned, the unknown example, or the NA available.  But I'll look into, what did you say was called? Like, the one was quarantining. What was the first thing you said?
+
+13:24 - sanjeev kumar
+  Dead letter queue. usually that term is used when you have, like, streaming data, right? Data is arriving, like, in a very fast pace from Kafka, and then what dead records you find, you need to, like, put them in a queue for later processing.
+  ACTION ITEM: Implement dbt silver layer w/ quarantine table and reason tags - WATCH: https://fathom.video/share/zugZsxNmszLcG512Tx21G2d1zhB8LBcR?timestamp=819.9999  But it's the same. One of the other things. Any name is fine. Quarantine table. So, you just quarantine your data properly in a separate table and then reprocess them later when needed.  Okay. Yes.
+
+13:50 - Filip Cedermark
+  I'll make that my focus for this week.
+
+13:54 - sanjeev kumar
+  Great. And, and please showcase your work on dbt. I think a lot of us can actually learn from. There are a lot of things on dbt.  I'm not very hands-on on dbt, so it will be an opportunity for me also to see how things are done in there.  Absolutely. Okay, Suhas, you are next from my screen.
+
+14:15 - Suhash
+  Yes, Sanjeev, I don't have much update this week.
+
+14:22 - sanjeev kumar
+  Okay, great. Then we can move on to Neha. Hi, Sanjeev.
+
+14:30 - Neha Doda
+  I actually started with the SQL, the roadmap that is available on the GitHub. I installed Microsoft SQL Server 2019 edition, and then I started performing those queries.  But then suddenly I thought of learning a new tool, and I explored dbt and databricks both, like what and how they are being used.  So ... I just wanted to, like, take your guidance about that because I am more interested to data engineering, like Databricks more because I was already doing before this internship, before starting this internship, I was already like doing Microsoft Fabric, and I think they are quite similar environments and platforms.  I just did the fundamentals of Databricks from the Databricks Academy, and now I want to proceed with it, and what are your thoughts, like, and inputs on this, what should I do?
+
+15:36 - sanjeev kumar
+  But you are still focusing on data, as in data analyst, data analyst as a stream, correct?
+
+15:41 - Neha Doda
+  Yeah, I am focusing, but I also want to add, like, another, I mean, tool, and not just Power BI, don't want to, like, stick only to Power BI.  No, Suzi, I'll tell you one thing.
+
+15:57 - sanjeev kumar
+  Thank you. you. So data analysis is not just boxing it to Power BI or Tableau, it's not that, right?  That is just visualization part of it, right? You are supposed to be good at that too, but DBT actually gives every analyst a platform to actually do what a data engineer does, right?  So you can create your own transformation logic, your cleaning logic, so what Filip and others will do in data breaks, you can do it in DBT, just in pure SQL, okay?  DBT is a very, very light tool by data analysts, right? Now coming up to database, database is also great.  You can go, it's, it's like a, it's a, it's like a multi-talented platform, I would say, which where hardcore developers love it, even, and business users also love it because you can abstract with the complexity by just doing things in SQL, that is also possible.  But in my opinion. I think you should still focus on the data analyst part because that's very easy for you to skill up on and DBT, we are anyway looking to diversify the skill.  And I think you should focus on DBT if you want to. Engineering on Databricks, right? Now engineering is a different thing altogether, right?  So it's not just small bringing in the data and then transforming and writing a receiver. It's like very detailed and lot of things to learn there.  So if you're scaling from zero in data engineering, that would be a lot difficult right now, right? But then if you discuss with Raj, let us know where you want to focus.  If you want to change your stream, then we will accordingly work. But just to clarify, data analysis is not just visualization, right?
+  ACTION ITEM: Start dbt SQL learning roadmap - WATCH: https://fathom.video/share/zugZsxNmszLcG512Tx21G2d1zhB8LBcR?timestamp=1071.9999  DBT gives you power to do a lot of things in addition to just visualization. Yeah, I think I think that's a good idea.
+
+18:02 - Neha Doda
+  That's why I wanted to discuss because I do not want to like diversity. I just did one go. Yeah, it's better if I start with like SQL using SQL in dbt.  And then I will focus on data analytics. It's better for now you focus on that.
+
+18:20 - sanjeev kumar
+  And let us know if you want to change. That's not a problem. Yeah, I just want to give you my my two cents.
+
+18:25 - Neha Doda
+  One more thing I just want to like tell you because it only has week one. That's equal. Yeah, we will enrich that.
+
+18:34 - sanjeev kumar
+  So once you are done with that, do let us know. We are we are mentioned that we there are some logistical things that we are still trying to figure out.  But yeah, until then, yeah, work through that that doc and we will come up with more. Yeah, definitely. Thank you.  Okay. Then maybe Elliot, I'll come back to you later because you had a pending demo. I think we could club that  When you give your update, or do you want to do it now?
+
+19:04 - Elliot Eriksson
+  I mean, if I'm doing it later, unfortunately, I might have to drop off in around 25 minutes. Okay, not a problem.
+
+19:12 - sanjeev kumar
+  Then let's do it now. Let's see what you have. Do want me to do the demo now as well, or do you want me to just do my own?
+
+19:21 - Elliot Eriksson
+  You can, you can. Yeah, not a problem. Okay. I don't think I ever shared my screen on Google Mids before, let's see how this goes.  Yeah. So basically what I did was I created a score, a presenter's score, a finder that supposedly could generate whether or not a team will win a round of Counter-Strike from the game Counter-Strike.  So basically, I input a bunch of features, like how much time is left in the round, how many players are alive in each team, and stuff like that, and then it's supposed to give me a percentage score of how likely the team is winning the round, basically.  So, I can maybe bring up the data looks. No, I cannot. But basically, it's just like a bunch of tabs with a bunch of numbers, but there was some differences in the summertime, so that I needed to create labels, basically just defining each text as a one or zero, or making the things as a binary barrier, and stuff like that.  So I created these labels, and I split this data sets onto real We have the 80% of the data that it's trained on, and then 20% is compared to, so that we don't, we're able to score the model, basically.  And here we're doing the actual training, so I'm using a gradient boosting classifier, which is basically a linear regression model that is looking at the global minimum of the graph.  So basically if we have to go through this phase, it will be like a bunch of values, and we're trying to find like the lowest value, that is like the most accurate to each round, basically.  And we try to do that for each feature set, and then we predict here, I'm not super sure what predict Prova was, I kind of just like matched together this code with some of the other codes I found to get this.  But we also have the ROC score, which is another scoring model that we used later, and it's basically just looking at the values, basically redrawing everything on a linear graph, and then just looking at everything under that linear graph is basically given a score, and you check how much is under the line, from what I understood it.  And we used that because we want to use something called MLflow, to basically create a bunch of different models, and then using generative training, so basically created like a bunch of different, like 10 different models, and I would say, we take the best one out of that one, and then use that to base our parameters, to continue now, and create new models from that, so in total we created maybe like, a hundred different models, and then our class.  The model would be our best model, because it has the best characters, so yeah, and I would usually get around 80% scoring, or being correct 80% of the time, which was pretty good, because I started it out at like, I think my first model was like correct 60% of the time, so with MLflow I was able to increase the time, like, with how good it is, by around 30%, which is honestly great.  Yeah, makes sense.
+
+23:39 - sanjeev kumar
+  And then how do you create those iterative models? Sorry. So you mentioned that you will get like hundreds of models, and check the score of all of them, and choose the best out of the time.
+
+23:51 - Elliot Eriksson
+  Yeah. Where do you log those models? Where do you actually go and do the comparison? Like which model is good?
+
+23:57 - sanjeev kumar
+  Uh, so we use, uh, we We built a library called MFO.
+
+24:01 - Elliot Eriksson
+  I'm not, like, super certain of exactly how MFO works, but basically it's storing all of them, and then using the RSE to, like, test them, see if it's, like, the best or not, and then it was, take the one, save the one that was the best, and then just delete other ones, and then it just re-does the speed generator.  Yeah, makes sense.
+
+24:26 - sanjeev kumar
+  Can you, on the left-hand side, can you scroll down to, so there are these left panel, right? Go to the ML section.  Here, can I do your experiments?
+
+24:39 - Elliot Eriksson
+  Have you explored this UI?
+
+24:40 - sanjeev kumar
+  So all your experiments that you do should be logged here. Okay. And the list of everything should be, have you explored this UI?  I didn't even see that this was here.
+
+24:53 - Elliot Eriksson
+  Yeah, but let's do one thing.
+
+24:55 - sanjeev kumar
+  Let's go to, so experiments is where I think the code that you have written would be lost. Can you go to models, and this is database specific, but something similar would happen in, say, TensorFlow also, right?  So, conceptually, on left-hand side, we have these models.
+
+25:15 - Elliot Eriksson
+  Yeah, sorry.
+
+25:18 - sanjeev kumar
+  Can click on features?
+
+25:24 - Elliot Eriksson
+  I think, yeah, we were storing the models in a different place. I'm not too sure where it was, though, but I'm not sure where it was.  It's a model logging feature. I'm not sure which function is that.
+
+25:37 - sanjeev kumar
+  Like, MLflow dot something, right? Log models or something like that. Okay, yeah. This is the AI gateway, like, for playing with generative AI.  But yeah, here. So here you should have all your models and experiments being logged.
+
+25:53 - Elliot Eriksson
+  Okay, yeah.
+
+25:54 - sanjeev kumar
+  If I want to do, like, 40 iterations, so 40 times it will choose different parameters. think so. so Do the different clustering and log those 40 models and then see the score of them.  So whatever it does behind the scene, actually you can see in the UI. Maybe you need to check whether how it is logging, but yeah, I know that it logs everything.  Just one, go back to experiments.
+
+26:20 - Elliot Eriksson
+  Click on your notebook.
+
+26:26 - sanjeev kumar
+  Okay, yeah. Okay, gbhype.pod. run name.
+
+26:30 - Elliot Eriksson
+  Can you click on models here on left-hand side?
+
+26:33 - sanjeev kumar
+  There's a small panel here. Yeah. So I think it is doing these runs if I am not wrong. Yeah, actually.
+
+26:45 - Elliot Eriksson
+  Yeah, so source run, it just generates some names.
+
+26:48 - sanjeev kumar
+  Now click on one of the models. Let's see. Training precision score, model now. Yeah, exactly.
+
+27:00 - Elliot Eriksson
+  So I think this is what it is doing.
+
+27:01 - sanjeev kumar
+  So every time it runs, it calculates all these metrics. And on the top, you see not registered. So yeah, whatever you define is actually a max.
+
+27:11 - Elliot Eriksson
+  We need to walk those internal things that it does. And it gives you all the runs, various iterations that it has in here.  Then on top, you see model not registered. Then automatically, you can automate it or you can make sure that you can also manually manage it.  One of the models which is giving the best value is going to go and register. That becomes the XI model when you use for PPA quality.  So once the model is screened, we need to actually deploy the model. On the left is the serving, right?  So every model, once you deploy to your endpoint, it will, sorry, when you deploy, the end point. you. Thank you.  There's a bit noisy right there as well. It's a canonical. I'll try to finish what I started with. And when you get to play, the best part of the previous part of the previous, right?  This is how MLflow works. How does the law How is it low?
+
+29:26 - Suhash
+  Yeah, so this is what I was saying.
+
+29:30 - sanjeev kumar
+  It's like, yeah, I think I explained, so you started with MLflow, spend some more time here, you already started it, right?  And if you want to move competition, that is also fine, right? Explore multiple ways of doing things. I think they use Cortex there, Cortex or something.  Yeah, so explore this, how it works a little bit in more detail. There are a lot of tutorials on MLflow.  MLflow is an open source library, right? So you will have a lot of YouTube open source. Tutorials also on that and then database specific also you can find just check like how exactly details can be checked how on the left hand side how model models are logged how feature stores are created very important right how serving is done so these are three or four things if you learn then it's like end-to-end model training plus deployment plus serving okay anything else Elliot from your side to share no I could just tell you that I do work on a different project this week and I'm done with case 2 and feel free to drop if you have something else to attend to yeah okay then let's move to Deepika I guess hello Sanjeev good morning so this week I didn't progress much but I was sure
+
+31:00 - DEEPIKA ELANGOVAN
+  So you what I did the previous week. Let me just share my screen quickly.
+
+31:09 - sanjeev kumar
+  My screen is visible? Yes, it is visible. Okay, so like this is my Databricks pre-edition.
+
+31:17 - DEEPIKA ELANGOVAN
+  So I uploaded data and I started with like ingestion of data. Then I read the data, writing it to bronze layer.  Then I repeated the same for the other files as well. So I have uploaded two files here, which is like customer and orders which has these parameters.  Then in when it comes to silver layer, like I again started from reading from bronze table. Then like for data transformation, tried like some features like trimming, normalization, removing the values, renaming the column name and writing back the green data to the silver table.  And again, I was repeating the same for another table as well. But I wanted to do some advantage. Function for this week, which I couldn't plan because I was focusing more on my volunteering work this week, Sanjeev.  So I will try to do work on more on this and I will give proper update next week, next meeting.
+  ACTION ITEM: Research Databricks CI/CD: bundle vs Terraform for catalog/schema/checkpoints; prep pros/cons for Sanjeev - WATCH: https://fathom.video/share/zugZsxNmszLcG512Tx21G2d1zhB8LBcR?timestamp=1928.9999  Yeah, sure. Thanks a lot.
+
+32:14 - sanjeev kumar
+  No problem. Take your time. So once you do this, right? So as a DevOps engineer, next meeting, could you give me an answer?  So this is a data engineer's code, right? Yeah. And then this code needs to be deployed using, using DAVs or whatnot.  You have that DevOps setup. And then you have, you have, you have Terraform also using that you can do all this deployment.  Could you give me an answer? As a customer, I'm asking this question. Okay. I am forgetting to last time when you did the demo, was that using Databricks Automation Bundle or was it using just simple APIs and forgetting that?  Only APIs. so it didn't have any Databricks integration. Oh, okay. Okay. Yeah, so could you give me like research and give me this answer that when I do my pipeline deployments, what part of my artifacts should be deployable within my, should be in the control of my CD, the CI and CD part, and which part should be separated from my pipeline deployment to probably the deployment.  For example, where should my catalog and schema deployment should go? Should, should that go as my infrastructure deployment? Or should that go as my pipeline deployment?  Maybe when I'm, if I'm doing streaming, I have checkpoints, right? Like for example, I know you don't have to know like in detail what are these checkpoints, but these are like pipeline specific, job specific.  Should these be pipeline scope or should this be like in, in, in, in infrastructure scope? Okay. Okay.
+
+34:01 - DEEPIKA ELANGOVAN
+  I'm able to partially get it, Sanjeev, but I will try to explore more on whatever I got. My whole point is to, because recently a customer had this question, right?
+
+34:12 - sanjeev kumar
+  So, for example, I'll also give you an answer, right? You can go and just research about it. So when you do deployments, they had two setups.  One, Terraform. Terraform will their workspace setup and whatnot, right? Blah, blah, everything. And then they had this, you can say Databricks Automation Bundles or simple APIs.  Databricks Automation Bundles is nothing but API calls, right? Wrapped under a very pleasant way of just YAML file way of doing it.  But yeah, you can also write it through. And what that deployment pipeline does, that makes sure, okay, this particular job needs to be built, tested, and deployed here.  When the job is being deployed, it will create tables. There will be a schema, there will be a catalog, there will be a table name.  And it's a job will have, I don't know, it will have checkpoints, right? Then their question was, should these artifacts, schema, catalog, and checkpoints be created within my pipeline deployment path?  Or shall I handle it separately? So pipeline deployment will deploy my code, should I also deploy catalog, schema, and checkpoints also within the pipeline?  Or should my terraform deployment make sense? So whenever I do a workspace deployment or terraform deployment, that will make sure all these common things because location of a checkpoint is a common stuff.  All my jobs will refer to that, right? And catalog creation, schema creation is one one time thing rest. After that, if I deploy n number of jobs, all of them could go and write to the same catalog and schema, schema, right?  So there's a reusable Should I separate it from my pipeline deployment or should I keep it within the pipeline deployment?  This was their question and we had to like answer that. So the point is like, yeah, if I'm able to make myself clear, the reusable things, just in the pro because one con is if you bundle these catalog creation and checkpoint creation within a pipeline, what if there is a bindness because you frequently deploy things.  There is always a chance that you mess up as some developer messes up or some problem happens and a volume is deleted, a catalog is deleted.  The blast radius, right? You have to think about that. Whether it is smaller here or if we do a disjointed separate deployment using TerraPoint.
+
+36:51 - DEEPIKA ELANGOVAN
+  I think it's always good to have some separated pipelines. I guess maybe I will explore more and I will on that.  So you You know the answer, yeah, exactly.
+
+37:01 - sanjeev kumar
+  But if you could come up with the pro and cons, exactly why, right? Because this is what a customer will expect when they ask you this question.  Okay, sure. I will work on, I will explore on that part and I will come back to you. Okay.  Thanks. Then I think we have Asindu and Nicholas. Asindu, would you like to go ahead?
+
+37:24 - Asindu Gayangana
+  Sanjay, sorry, I don't have too many updates for this week because I was busy in last two weeks. It's not a problem.  Yeah, completely fine.
+
+37:34 - sanjeev kumar
+  Then we can go to Nicholas.
+
+37:39 - Nikolaos Biniaris
+  Hey. So for this week, I, if you remember, I had implemented CDC in my pipelines the last time. So this week, what I changed is that I implemented also a slowly changing dimensions to my code layer.  And I implemented. And And it's also a data quality framework, also in the gold layer. I didn't use the library grade expectations.  What I mostly did was I copied how dbt does it. So I implemented the four basic data checks for uniqueness, null values, relationships of foreign tables to the dimensions.  I mean the foreign keys to the primary key, and this was the other one, country, and accepted values, if I have like a dictionary of accepted values.  And then I also created some business metric. Business Metric APIs directly from my goal layer. So if, if I share my screen, right, you can see the whole tag that I created.  So if I get rid of this and this, and so I have my bronze layer, silver, and then I create the dimensions.  With the dimensions, then I create the fact of sales. Inside also the dimensions, I instantly do quality checks in my customer's dimension, in my product's dimension, and then I create the business metric APIs like the customer lifetime value, revenue by product, and then if you remember I used also an API, so I have fact sales enriched because I use the holidays to compare holidays days if they have more sales compared to no holiday.  And then I do a quality check in the fact sales as well, and then some more business metrics like customer segments coming directly from the customer lifetime value, country performance, holiday impact as a business metric as well, and then I do a data quality check as well for the fact sales enriched, and yeah, I had some bugs, I had some problems while  I'm trying to run the whole pipeline without breaking, but I fixed that as well, mostly written in PySpark, right?  Yeah, yeah. Okay, great. I mean, it's in Databricks, so I use Spark SQL or PySpark. So it's a script.  Yeah. For example, data quality text notebook, I use a parameter here. Here it comes from the first table. On the first script, I automatically find all the goal tables.  So every time if I have a new one, it will get added so that I can upgrade my parameter.  And this is how I use the parameter here to implement the data quality. What kind of data quality check you're doing?  Uniqueness of primary keys, relationship of foreign keys that are always existing in the primary table. Also accepted values, like everything should exist.  If there is like a new value added, it will break.
+
+42:33 - sanjeev kumar
+  And not null.
+
+42:35 - Nikolaos Biniaris
+  So the important features of every table are not null. And then I have a quarantine table that I have created that will have the broken rows.  And do you also know the reason for the breakage?
+
+42:55 - sanjeev kumar
+  Do you also know why it failed? Null is the reason or something?
+
+43:00 - Nikolaos Biniaris
+  Yes, yes, of course, yes, I end up with tables that always have the percentage of past values, broken values, and they also say the reason, like that, unique test, not null test, how many accepted values, pass rate 99.97, total failed records, and why, yes, so, I mean, data quality check file.
+
+43:30 - sanjeev kumar
+  Code file, the, this one, right? Yeah, where you had all these things defined, yeah, can you scroll up, I want to go to the base of your, go to the top, I just want to check one thing, scroll down, scroll down, keep going to your, wait here, spot the SQL, space gold, scroll down, so what you're doing, you're  So wrote your goal table, and then you are reading that into df.tables, and then wait, once again, once again, scroll up, see, this is what I meant.  So you are converting the tables.df to pandas, and then to list. You know what this does? So your code will work, but this is not scalable.  The reason being it is falling out of Spark. And now, yeah, this is only to get this, only to get this list, this specific chunk.  goal is not a table, it is just a metadata table? Yes, it's just metadata, this one. Okay, great, great.  Okay.
+
+44:47 - Nikolaos Biniaris
+  For example, yeah, if you see, like, creating a business metric, it says Spark SQL.
+
+44:53 - sanjeev kumar
+  Yeah, yeah, this is fine. Yeah. So everything is done is Spark, but yeah, I just created this dynamic.
+
+45:02 - Nikolaos Biniaris
+  Okay, so everything from here is Spark SQL, and then if I need Python, it's PySpark. Yeah, yeah.
+
+45:16 - sanjeev kumar
+  Could you show me your goal table, which you were trying to read? I just want to see what you are reading from there.  Ah, yes. So you mean in the catalog, right?
+
+45:26 - Nikolaos Biniaris
+  Yeah, in the catalog.
+
+45:27 - sanjeev kumar
+  Because you are reading that and converting it to list, right? I would like to take a look what exactly you have there.
+
+45:36 - Nikolaos Biniaris
+  A fact sales, for example.
+
+45:43 - sanjeev kumar
+  Aha. So you're reading dot gold. I just want to understand like why you are reading that gold. Gold is a...  Okay, so you are listing all these tables and just finding out the table names from there. Yes, yes, that's what that...
+
+46:00 - Nikolaos Biniaris
+  Parameter is to build the parameter so that this notebook uses the parameter in my tag to say, now do this for the customers, now do this for the metric, now do this for fact sales.  So I use the parameter. Yes, it's the same data quality notebook, but using the parameter, it changes according to the table I want to implement the data quality on.  Awesome. Awesome. No, makes sense.
+
+46:28 - sanjeev kumar
+  Makes sense. And then in that way, you just make your code reusable for multiple data. Yes. Yeah, that looks great.  Okay.
+
+46:36 - Nikolaos Biniaris
+  But yeah, in the tag, if you can see here, so here, it's the same notebook everywhere. So this, what is it, quality check in customers, it uses this notebook, data quality checks.  And it's the same. Notebook used, for example, quality check fact sales, data quality checks, it's just that it changes the parameter.
+
+47:10 - sanjeev kumar
+  Okay, and you just passed the parameter there. Okay, now this is the table that I need to do quality check on.
+
+47:19 - Nikolaos Biniaris
+  Yes. That's nice. Okay, this looks great.
+
+47:23 - sanjeev kumar
+  What is the next task? So I have a couple of things that I would like to give you as a next task.  Because this is really great. This is what I was expecting. Okay, you. Do you have something else to do or shall I give you some tips like what?
+
+47:37 - Nikolaos Biniaris
+  No, I would like to have the next steps from you because I implemented slowly changing dimensions, data quality checks.  The pipeline is independent, so I tried to run it. I didn't have any duplicates after multiple runs.
+
+47:55 - sanjeev kumar
+  So I tell you one, just note it down so that you go and read about it. much. added you It  So if I understand correctly your current data quality checks is on data on rest. So once your data has been written, or if I'm wrong or not, maybe I'm wrong, but Nikolaos, you are the better judge here.  So is your goal table written and then you read back again and do a data quality check? Or is it like when you are first time writing it, you apply your data quality check?  Is it in flight data quality check or address data quality check?
+
+48:31 - Nikolaos Biniaris
+  Um, I think it reads it again because it's a different notebook. Yeah, exactly.
+
+48:40 - sanjeev kumar
+  So if that is the case, just, just make a note of these two, these two criteria. So address data quality check and in-flight data quality check.  These are two different concepts and they have pro and cons. Just note them down, explore that and see how you can, which one should you implement?  Ideally, in-flight data quality. So, is more optimal, right? And you get more real time cleaning of the data. At rest is like your data is written, and then you read it again, do the quality check and write it back.  This is a little bit inefficient, and there is delay in data quality, data cleaning, right? So keep that in mind.  So that's one point. Second, yeah, I also saw, could you go back to your code? So I also saw, that a lot of those data quality checks were written in your code.  Okay, these are the checks I want to do. Null check should be on these columns, right? So and then you pass it like, okay, all those dimension tables dynamically there.  What if I have a fourth table, where I don't have those three columns, it's completely new column, what would happen?  Then I would need to go
+
+50:00 - Nikolaos Biniaris
+  Back to the notebook, the data quality checks, and maybe add this new column there to be checked. So it's not very, I understand that it's only for a few tables, it's going to work.  It's not very, it's not going to go very far if I add.
+
+50:18 - sanjeev kumar
+  Yeah, could somebody in the team let us know like what problem they see there and if how we can resolve this?  There's a proper term for it. Okay, so what I meant was like, okay, rightly pointed out, Nicholas, first of all, this was a great work.  I'm not, I just want to improve it more, right? What we see in production. So next step is, so this is your job is fine, but it is not dynamic, first of all, and it is not metadata driven.  So what, so tomorrow if I have, if I onboard a new source, there's... Should not be a need to go and change the code.  Why? First of all, it introduces lot of risks because every code change needs a proper testing, needs a proper integration testing, needs a proper deployment.  And always there are risks to it. Some teams will not have windows. They will create like every two week window for deployment.  There is a delay in work, right? If somebody needs a quick fix or quick onboarding, that's going to delay things right for you.  And it increases the risks. Now, so that's why metadata driven frameworks are the standard in production where a developer or a user when they request an onboarding of a new table, everything should be in a configuration file.  The code should be reusable. Right now your code is reusable for three tables because the call is repeated, right?  But fourth table, you need to do a code. The only thing I have to do in that configuration file or a table, it could be JSON file or whatnot, right?  It's also could be a data table. You just write an entry, say, okay, this is the new source. These are the columns.  These are the checks I want to do on these columns. That's it. Right. And then that information will dynamically be parsed in your code.  And then it will just apply it. Exactly the same way you are applying. Those tables that you are reading and making a list out of it, it will work exactly the same way.  It's just that those checks also it will fetch from a metadata table.
+
+52:41 - Nikolaos Biniaris
+  I see. Is there like a specific tool that is being used in Databricks for this reason? No.
+
+52:48 - sanjeev kumar
+  So there are tools, but I would like you to implement it yourself, right? Because, yeah, because it will initiate you to think what exactly, how to,  What problems would come? it's a metadata-driven framework is a complex topic. There are a lot of complexity would come in based on customers, how the teams are set up and blah, blah, complexity of their job.  Monorepo, multirepo, a lot of variabilities are there. But I want you to like try it out yourself. There will be problems.  You will not be able to figure out a couple of things. You will have to do research. But that journey is important, right?
+  ACTION ITEM: Build metadata-driven DQ framework in Gold layer - WATCH: https://fathom.video/share/zugZsxNmszLcG512Tx21G2d1zhB8LBcR?timestamp=3203.9999  Okay, yeah. Let's do that. Okay. Then anything else, Niklas? No, no, no. Yes.
+
+53:35 - Nikolaos Biniaris
+  I will try to move my project to metadata-driven framework.
+
+53:40 - sanjeev kumar
+  So that it's dynamic. Yes. Okay.
+
+53:44 - Nikolaos Biniaris
+  Yeah, great. But great work, Niklas.
+
+53:46 - sanjeev kumar
+  I think you are making good progress. I could see that you are preparing proper DAX. You are thinking about reusability of code.  That's really great, right? These are just some tips I'm giving you so that you keep on improving. Okay, next.  So there are some other things also, meeting schedule. So this is from the last midweek sync. What was this about?  You guys can discuss about it. Agree on six recurring time going forward.
+
+54:30 - DEEPIKA ELANGOVAN
+  Since the Wednesday meeting time is so not comfortable for everyone, Kousalya said, she might plan how to take it forward, Sanjeev.
+  ACTION ITEM: Post Slack poll for Wed session time; target 6 recurring slots - WATCH: https://fathom.video/share/zugZsxNmszLcG512Tx21G2d1zhB8LBcR?timestamp=3276.9999  Most of the people are not able to join. I am joining a bit late because of my SFV class.  Hmm.
+
+54:47 - sanjeev kumar
+  Okay. Then I think you guys can probably chat in the Slack channel and then, yeah, come up with the time.  It makes sense. Yeah. Uh, I'm not sure like, uh, yeah, since everybody. If is here, you can, you can spend one minute to actually discuss about it if you want, um, maybe we'll have a slack thread and we'll come from the timing, we'll save some time here.  Okay. Then, uh, session stream split. Okay. This, like I mentioned, uh, this has been delayed right now. I will be handling ML and DA2, but there are some logistical things that we are trying to figure out, uh, then Neha dbt versus Databricks.  I think we have answered this Neha. Uh, please focus on if possible, uh, be on data analyst stream and go for dbt.  Uh, that's very good tool. Uh, then Elliot, we already had a demo from him, uh, Then, yeah, I actually wanted to come on these.  These are like getting pushed from a couple of sessions. There was this discussion some time back about incrementalization and item potency, pipeline designing and backfill handling.  Then infer schema versus fixed schema, right? I think Asindu, you had a project and then we had this like, you were using infer of inferring the schema dynamically and I wanted to check like, could you find out what are the pros and cons of it, right?
+  ACTION ITEM: Research Available Now trigger; fix maxBytesPerPartition; prep short walkthrough for Sanjeev - WATCH: https://fathom.video/share/zugZsxNmszLcG512Tx21G2d1zhB8LBcR?timestamp=3382.9999  Versus fixed schema. Then available now trigger, Asindu, you were using it. And I wanted to check like, if you can do some research and then let us know what exactly that means, because you were using that.  You were correctly using the streaming API for incrementalization. But yeah, these are the couple of things we wanted to check.  And then scalar UDF versus vectorized UDF. Nicholas, you were using UDF. So I wanted to check like, if you can  Search about it and and talk on this particular path. Seven detailed pattern walkthrough. I think Nikolaos, you have already done that.  So this is fine. Yes, out of these four topics, please feel free to raise your hand and talk about it.  Let's discuss it because these are like important topics. Just pick any one of them if you have some answers.  Otherwise, I can talk. I think Suhash, I think you do have some experience on this area, right? It would be nice to hear what you think.
+
+57:40 - Suhash
+  Like, I can speak a little about like info schema versus fixed schema. Yeah. So when we mention as info schema, there is a possibility for misjudging also some of like  Some production data might have like arrays and then like a complex structure within a string column. And when I tried using the first schema, like the data it extracted doesn't actually reflect what it is actually.  And so, but when I defined the schema and then like utilizing explode and stuff, it actually resonated with the data, the actual structure of it.  And I think it's all like just my perspective, it's always better to define the schema in production environment, which is, which is the best practice I consider.  Please do comment if it is not. And yeah, so that's something I know about this topic.
+
+59:14 - sanjeev kumar
+  Let's stay on this topic. Anybody else has any inputs on what Suhash said?
+
+59:24 - DEEPIKA ELANGOVAN
+  So when we are using infoschema, like infoschema true, like it defines a column name into its respective format, like integer, row, string.  Yes, yes. Or does it consider everything as a string or something? No.
+
+59:39 - sanjeev kumar
+  So for example, in Spark, right, or any modern tool, if you have not defined the schema, like, okay, this particular ID column is an integer or a string, or this particular cost is a decimal or not, you have not defined anything.  If you set that feature flag as infoschema true, it is going to look at your data and automatically infoschema  Okay. This is what looks like, uh, the, the, uh, the, the type of the column is, and then it will create a schema for you automatically, uh, asindu, any inputs here, if you're still here, I'm not sure.
+
+1:00:19 - Asindu Gayangana
+  Uh, yeah, Sanjeev, uh, info schema can have that issue if that source system is not, uh, if, if, uh, source system had bad, uh, uh, incorrect data types.  But in the, but we define schema in, uh, silver layer, uh, exactly. In, we define a fixed schema in, uh, silver layer.  Uh, so, so. Actually, I don't go through too much on these topics. No problem. So let me summarize it.
+
+1:01:12 - sanjeev kumar
+  So first of all, what Suhash said is absolutely right. Best practice is always to, in production, right, to have some kind of fixed schema.  I'll tell you why I say some kind of fixed schema. First, let me tell you what the problem is in for schema.  One what Suhash said. So what does in for schema does, right? Doesn't matter which platform, right? It could be the spark or anything, what it does.  So your data is arriving, right? What it will do, I'm just giving you one example. And you have billions of records which are arriving.  So it's not going to take a look at because it has to come at the schema in the first run itself.  The first time you are ingesting the data, it needs to identify, okay, this is the kind of data I'm seeing.  Let me fix this column schema to integer, right? And how does it do that? It does a sampling of data.  will, out of thousands of records, hundreds and thousands of records, it will randomly pick samples from data and see, okay, this seems like integer.  It doesn't need to be long or decimal, right? Or decimal or double or whatnot. So there is always a risk that it has not sampled good enough amount of data.  So out of 10,000 records, it might just take a look at, say, 1000 records and say, okay, this looks like an integer.  And then it will define that as an integer column. Now, tomorrow, just imagine your system is generating like very long data sets and evolving.  Now you start seeing long data types. By long, I mean like, integer would mean, there is like certain, certain bits that that it's stored like small numbers, like say,  Say, I don't know, 10,000 or something like that. But tomorrow, if you start getting numbers, 9-digit, 10-digit numbers, that integer that your auto-inferred schema defined will drop your data.  It will, out of 9 digits of that long, will just take first 5 digits. And because it considers it as an integer, so it should not exceed more than n number of digits, right?  So, there is always a chance, if you completely give a free hand to infer schema, that in production, it might wrongly infer your schema.  And we have seen this in production, this has happened, right, in my experience. So, there is always a best practice.  And also, fixing schema all the time is also not possible, like it's too much of an overhead, right? So, I usually recommend customers to have a mix and match of it.  Very important columns where you cannot afford. So any mistakes, say cost, right, or I don't know, IDs, which you just cannot afford to, that's very critical to your system.  Make sure that you have schema defined. So in Spark, you have some concept called partial schema. You can give schema hints.  So out of 30 columns, you choose your very important columns, or even all 30 columns, just give a hint to it.  So you can define partial columns, you say, okay, ID column will be string, and age column will be long, you can define that.  And rest all, it will, your Spark will auto infer. So that's called partial schema fixing, right. And so yeah, this is how you should do it.  And there is also a concept called schema evolution. So what these modern engines do, like Spark, so you have your 30 columns, tomorrow, if a new column has arrived, right, a new column, it's going to automatically infer and evolve your schema.  It will not fail your document or job, or it will not silently drop it. No, you can set it to schema evolution because in big data world, we want to capture everything.  We don't want to lose data, right? So in those scenarios, it is going to automatically try to find out the data types, right?  So you cannot like, so the whole point is try to mix and match in first schema versus fixed schema.  If you only go for fixed schema, then tomorrow, if there's a data evolution, sorry, column evolution, a new column has been added, and your profile will doesn't fit with this fixed schema because your fixed schema only has 30 columns, it will just silently drop your 31st column, right?  So, so yeah, mix and match, fix your schema and also set your schema evolution to true. In that case, it's going to take those very important columns, fix the schema for it and the new columns, it will automatically evolve evolve and give a So, So, I've Oh!-bye.  you. Data type for that. Yes, Vaaz.
+
+1:06:03 - Suhash
+  One question, when you say like mix and match, like if you are going for fixed schema, we can't use info schema at that point, right?  or you can just move.
+
+1:06:16 - sanjeev kumar
+  Yeah, exactly. So that's why I said, so you don't fix the schema fully, you give schema hints. So there's schema hint option in Spark.  If you do option schema hint underscore and a set of column in that case, you know, this is, this is a hint to me.  This is what the, these are the columns. I need to fix the schema rest all I can infer it.  Okay.
+
+1:06:39 - Suhash
+  Okay. So schema hint is an option there.
+
+1:06:42 - sanjeev kumar
+  Okay. Yes, Sanjay.
+
+1:06:45 - Asindu Gayangana
+  My question is, according to my point of view, I think in the bronze layer, we have to use infer with schema hints, because we have to save incoming new columns in the bronze.  For future consume and the auditing purpose also. So from my point of view, I think it's better to save incoming new columns.  If we go with fixed schema, we definitely missing that incoming new columns of future using purposes. So we can't use those columns for the future purposes.  Yes, absolutely.
+
+1:07:29 - sanjeev kumar
+  So you are absolutely right, Asindu, but there is one point I don't agree with, that you always have to have infer schema in bronze.  Again, the same issue that I explained earlier, that there is a chance it will wrongly infer the schema type, data type, and might drop some data.  That has happened. Instead, what you can do, I have seen, because we don't want to miss anything in bronze, right?  I have seen customers by default, setting all the columns to strings. So you can actually mix and match schema inference plus fixed schema.  So just declare everything as string because string will accept everything. Nothing will be dropped. You can still add it in bronze, whichever data type you have.  And then also evolve the schema by inferring it. In silver and other layers, you can properly go and set the schema for those columns.  What do you think, Asindu? Yes, Anjeev, I'm completely agree with you.
+
+1:08:45 - Asindu Gayangana
+  So, yeah, so going with schema with schema.
+
+1:08:50 - sanjeev kumar
+  Yes, infer schema is a great tool for experimentation, but setting blindly infer schema in any layer is risky. So you have to keep that in mind because  this is what customers would ask you, right? So always say that yes, even if you talk about infer schema, always acknowledge that there is always this risk, whoever you are talking to, right?  And then say these are the actions we can take to avoid that, right? So the things that I said, give schema hint, partial schema fixing and whatnot, or set everything, so string in bronze, and then evolve your tables, right?  So these kind of pointers you should put forward whenever you have come up with this discussion. Okay, then if nobody has any other comments on this one, we can move on to the next one.  Okay, then let's take a look at scalar UDF versus vectorized. Nikolas, were you able to take a look at this one, any inputs?
+
+1:10:00 - Nikolaos Biniaris
+  Yes, I read a bit about them, but I think that I'm not implementing them right now to my project.  But anyway, I read about the pandas UDF being way faster than the scalar ones, because they're not working on every row one by one.  And so they implement Spark successfully, while the other ones cannot be, give me one moment, because it's been over two weeks where I searched about it, Not a problem, yeah.  Pandas UDFs.
+
+1:10:51 - sanjeev kumar
+  Yes, so the first one, it cannot.
+
+1:11:02 - Nikolaos Biniaris
+  It cannot be serialized between the JVM of Spark and Python. It does just row by row processing. And also there's no vectorization, the scalar UDF.  And then the solution was Pandas UDF, which is able to do all this through Spark. Yes, absolutely.
+
+1:11:31 - sanjeev kumar
+  So you are correct. So a simple thing. UDFs, like you mentioned, it cannot be serialized. Spark is a JVM based engine.  And when you use UDFs, it's a non-native Spark function, actually. Users can define whatever they want. So it needs to do serialization.  It cannot be serialized that easy. It needs to fall out of JVM, do Python stuff, then again converted back to JVM.  Okay, so you lose the Spark implementation overall? No, you don't lose Spark implementation. By Spark implementation, we mean, yeah, it's a mix of everything.  UDF will still run on distributed systems, all four workers. If you have four workers, the UDF will process parallelly on all four of them, but it will not be a native Spark function.  It will fall out of Java virtual machine, right? It will fall to a proper like native Python functions, right?  And that's not like, that's not ideal. Spark can do a lot better job. Serialization and deserialization are required, which makes the Spark process slow.  Now, get around that exactly what you mentioned. Pandas UDFs are vectorized UDFs. And yeah, so even these UDFs are scalar, like per row application of the function.  beautiful! our system. Here And Per row application. It's very inefficient, right? I have seen cases like I myself have done those mistakes, like where I, there was a small function, like, say, I don't know, get a max of something, right?  Spark has a native function for it, max, M-A-X braces. What I did, instead of doing that, I created a UDF to find that max.  My job was running for eight hours. I did not know why. And somebody, some experienced guy came and said, okay, no, you can just use the native function of Spark and the same eight hour job finished in 20 minutes.  This is the scale of degradation of performance. Sometimes you can see with UDF, right? Because you have a lot of reasons like it is DC.  It cannot be easily serialized and then, then just row by row processing. But Pandas UDF solved that. It is also vectorized.  So first of all, it tries to do everything in, in, in Spark. Second, it does not work on row by row.  It picks a chunk of it, like maybe say, don't know, I don't know, like Spark takes a call, how many rows I have to do, but it will pick, say, 10,000 rows and apply all those, apply this max function, just for the sake of saying, to all those 10,000 at one time, and then keep work, it's working chunks.  That's why it is able to speed up the current, the new UDF technology that Spark has, okay? And just for you guys, like this is a very important topic and you might be asked about it, right?  Very commonly asked in Spark. This is one of the very basic optimization techniques. Yes, Suhash?
+
+1:14:46 - Suhash
+  Sanjeev, like, is it like mostly, we will try to avoid using UDF in production? Or how, what is the best practice?
+
+1:14:56 - sanjeev kumar
+  yeah, so, yes, so my first instinct has Whenever a customer complains about my code is running slow, my first question are using UDFs because I want to first investigate why are they using it.  Sometimes they might have like really custom needs and then we cannot get around it. That is possible, right? I'll give you one example.  So one of the cases, customer had a trained model and when they are reading the data from, I don't know, from their point of sale system or something like that, what they were doing, they wanted to for every record that they receive, oh, sorry, this was the, I took the wrong example.  This was the machine learning model that was looking at images of their machines. This is the North world project.  Like we have these big machines, the cameras will send the images of the machine just to see how much is stress on that system and whatnot, blah, blah, right?  The visible analysis they wanted to do, visual analysis or computer vision analysis they wanted to do. So, They will send these images, process these images, and within, while they are being loaded, they will run, they will, on every row, every image that they receive, every image comes as a binary, as a row.  They will fire an API call to their model endpoint. It will take the, take the image, do, do the propensity score of, say, how, when probably, how much fresh or damaged it is, like maybe 80% fresh.  So no, so inferences, no maintenance required, right? So these kind of things, it was, it was like very custom, right, to a customer's need.  So in those cases, we cannot replace it, right? In those cases, we have to now optimize it. So they were using scalar UDFs, one by one, one by one, it was happening, right?  So what we did, we just changed it to vectorize. And now, say 10, 15,000 images are at, in parallel are being processed by.  Spark. And yeah, this is IoT machine, right? So every day they get like, I don't know, 100,000 images from different sources, correct?  So it really speeds things up. So first instinct is to identify why they are using it. If it is replaceable, replace it with a Spark's native function, right?  If it is not, then make sure that they are doing, implementing that UDF in an optimized way. One more follow-up question.
+
+1:17:29 - Suhash
+  In your experience, like, other than the use case that you mentioned, it's like a binary file and like ML model stuff, like, let's consider the data is only like, the actual distance data, like the normal data.  In that context, have you ever encountered the need for UDF? Like, I just want to know like, how common it is?  That the data engineer will encounter the need for UDF, like, is it okay if a data engineer, like, doesn't even like, is it even possible for a data engineer to be not using UDF, even if he is like three or four years of career experience he is having, like, Yes, yes, exactly.
+
+1:18:23 - sanjeev kumar
+  UDS are quite common, still, because a lot of times there will be, like, very complex cases, like, for example, even for normal data, right?  I have seen customers doing, I don't know, some kind of accumulators, accumulators that they are building, so they read it, they build an accumulator in Spark, they keep the numbering of it, and then they do some custom logging for that, for each, in every batch, right?  So, scenarios are not, like, very common. I think Spark has evolved so much now, that it has a native function for most of the things, right?  So, I would say, in 80% of the cases, I I am able to get rid of UDFs natively. It's just that customer probably, or the user, the developer probably doesn't have knowledge about one certain thing that, okay, this can be natively implemented by, say, lag and lead functions.  lag and leak functions, you can do UDFs for that, but if you don't know that Spark has a lag and lead function, it can automate which was the previous function that you do, the value that it has seen, it can do that, right?  But I have seen customers implementing that themselves also, the similar thing. Those things I can remove, but there are chances, like every customer will have like something very unique that Spark doesn't have.  Okay, okay. So, yeah, there is always a chance, but we use it, but there should be a very valid reason why you are using it, why.  It has a lot of penalties, performance and cost. fine. Yeah. Thank you. Sajunya. Okay. Any other questions? Then let's move to Available Now Trigger.  This is important. This is actually a little bit specific to data engineering and specifically streaming. This is also an important topic, but I want to save five minutes for that later.  Asindu, were you able to take a look at Available Now Trigger? I think you were using that last time.  Yes, Anjeev.
+
+1:20:32 - Asindu Gayangana
+  So normally that API working as a stream, sorry, stream. So while we use a stream. So when we use Available Now, Available Now, there is two trigger types.  So if we use those two trigger types, we can work that one as a batch pipeline. It means when we use those two.  Available now and once. So it works as an event-driven system. Once the event occurs in the defined source storage or source layer, it will automatically extract that file.  So available now, what this is, it parallelly process the batches. Meanwhile, once trigger, it is not parallelly process. It is ideal.  It process whole data in one batch, I think. So it is not ideal for the huge dataset. So the available now is ideal for the huge datasets.  it parallelly, it's parallel to the processors, parallel to the process.
+
+1:21:47 - sanjeev kumar
+  Asindu Gayangana, do you have your code ready? Could you share that on screen so that everybody knows what are we talking about?  Okay. I just do some changes.
+
+1:21:59 - Asindu Gayangana
+  So...
+
+1:22:00 - sanjeev kumar
+  not problem if you can quickly find it it's fine otherwise okay yes yes i can find it okay so can you see my screen yes i do one changes as well uh as compared to last week sanjeev i just partitioned by load date so okay that's fine no not a problem i think uh your screen is like yeah no it is clear here yeah fine can't you see my code yeah i can see it now so so it is for everyone right so here as in so the topic that next we are going to discuss is about incrementalization and item potency right what asindu did so  He did incrementalization is very important. have already talked about it, right? Because you need to automatically understand your job needs to understand, okay, from till where I have already read my data and from where I need to start.  That's what Spark read stream that it checkpoints it and understands it automatically. So Asindu used it. This is great.  Otherwise you can without read stream. So Spark has two APIs. One is batch API spark dot read and spark dot read.  Stream. It's an streaming API. If you want, just take a look at it and read about it. Very important, right?  You don't have to know streaming. You can do everything without read dot stream also. read dot spark read streaming APIs for usually like real time data and whatnot, right?  But you can also use the same streaming read stream API for batch workloads. And that's what most advanced users will do, right?  Because it has lot of advantages. We'll talk about this in detail a bit more later on. I will specifically have a session to focus on this one.  But here I just want to address one thing that Asindu had it here. So ReadStream automatically handles incrementalization. In spark.read batch, which Nikolaos, I see that you are doing and others also are doing spark.read, completely fine, no problem there.  But then incrementalization part, you need to handle yourself. We will come to that later on. Now, even ReadStream, what available now does, this is the trigger.  So now, like I mentioned, ReadStream is a streaming API. When you code this, your spark engine will think I need to run 24 seven.  I just cannot stop because I need to stream the data. Right. But you can, because there is a, there's an argument called trigger by default.  It is 500 milliseconds. What it does every 500. from of it Thank So here you see, he has given that in the first block of code load volume slash def dot.  He has given a path landing bucket slash sales. Spark is going to take a look at that path every 500 milliseconds to see if something new has arrived or not.  So it keeps polling that directory. And it does that every 500 millisecond. It will never stop. It will continuously keep on running.  Right. But, and why does that? yeah, exactly. Because this is the streaming API. But then you can trick it to be a batch by changing the trigger to available now.  What it does, once you set this trigger, your whole streaming job becomes a batch job. So it is going to go to this particular sales directory, read whatever it has seen, read there as a batch.  So process it, and then stops the stream. It will not keep on running continuously. But you might ask, what advantage do I get?  Why not just use read stream? Sorry, spark.read. Why is streaming API? The reason being, it does a checkpoint. see, in the df.write stream, there is an option called checkpoint location.  And there it does as inducing volumes, dev, bronze, sales, and local checkpoint. Here, this is where it keeps the offsets file names that it has already processed.  Just by using this read stream and providing a path, the incrementalization is automatically handled by spark, right? If you don't do that, then you have to make sure that just source directories have proper date folders.  If they arrive, like if they are arriving, if they're arriving today, then there should be a directory with today's date.  Tomorrow, then another directory with tomorrow's date. And then your orchestrator, whenever you pass. If you're running it for today, it should make sure that, okay, by dynamically, you will do current timestamp and find out today's date and go and read today's data, right?  So this, this kind of custom logic, you need to build yourself, but with this, all those complexities are gone, right?  So this is what available now does. It will, it will go in, go to the source directory, whatever data is available from now till, till the last run that was run.  It's going to do a diff, find out, okay, these files are not available in my checkpoint. Let me process them.  So in the, in your sales directory, maybe while it is running the job, it will keep on, there might be a job that is, that keeps on writing into the same directory.  It will completely ignore that. When you trigger the job until the previous, till the previous checkpoint that was a file that was processed, it's going to do that.  In a batch fashion, and then it will just stop the job. And then they, like Asindu was talking about, then there is this available now trigger, available once trigger, I don't want to go into that because available now is the latest and greatest API.  Earlier there was this available once that was not very efficient, right? For large amount of dataset, exactly for the reasons what, what Asindu said, but, but don't want to overcomplicate it, available now trigger makes a streaming API behave like a bad job, right?  With all the good, good functionalities of incrementalization, checkpointing that it has, right? Any questions here? Yeah. So Nikolaos and others, for later, right now, whatever you keep doing, keep on doing it.  Maybe a couple of weeks down the line, I would ask you to convert your job to read stream, right?  Because I want to speed. It's okay, what's the difference you see with your current implementation versus readstream, right? It's very nice if you can experience that.  And if you talk about this, then in an interview, they would know that you understand Spark well, right? And that's one of the basic criteria, right?  In today's data engineering job profile. Sanjeev, sorry. And then we will talk about, sorry, just one minute. And then we will talk about more details.  So here in the bottom, Asindu has like max bytes per trigger. These are rate limitations. We will talk about this is another advanced concept.  You should know. We will cover that later on, right? But yeah, I will stop here and then wait for some comments or feedbacks.
+
+1:29:54 - Asindu Gayangana
+  Sanjeev, for interrupting, but... I can't use this one. So I want to, I tried to use this max bytes per partition.  So then we can set a maximum threshold to the each partition, but it doesn't work. So is it, should we set this configuration in batch level or spark level?
+
+1:30:21 - sanjeev kumar
+  Yeah, but where did you, this, this needs to be set on df readstream, on readstream API, not writestream API.  Okay. You're setting it on readstream earlier because I see max file per trigger 100 there.
+
+1:30:39 - Asindu Gayangana
+  No, actually I set it in the readstream, but since it is, doesn't working, I delete it from readstreaming and comment it out in here.
+
+1:30:49 - sanjeev kumar
+  When you say it doesn't work, what do you mean?
+
+1:30:55 - Asindu Gayangana
+  So when I set this configuration, so... To the Redis stream, the Redis stream was failed. So I will need to look at it.  Oh, really? I just wanted to know. Yeah. I just wanted to know is it working when we set up in the Redis stream, as you know.  So that's what I wanted to do.
+
+1:31:20 - sanjeev kumar
+  See, you have max byte per trigger, max bytes per partition and max partitions per trigger. Do you know which one was?  Only this one isn't working, Sanjeev.
+
+1:31:34 - Asindu Gayangana
+  Is your table partitioned?
+
+1:31:38 - sanjeev kumar
+  Is your source partitioned? that partitioned? I think it is not partitioned at that time.
+
+1:31:46 - Asindu Gayangana
+  Yeah, exactly.
+
+1:31:47 - sanjeev kumar
+  Partition. Yeah. Yeah. Because if you see, it's no, this is your target table. But okay, it's a bit advanced topic, but your source table, the table that you have in .  If this is not partitioned, because this is partition pruning, right, max bytes per partition in the table. It probably is looking for a partition.  And it doesn't find it and then it fails. Partition by that you have, it's for your target table, the table dev bronze dot sales.  It's not for the source one. But we can talk about it in more detail, Asindu. I will, these are rate limiting and optimization techniques that we will have a proper couple of two or three sessions because this is very important because mostly when people use power, they will have optimization issues and then we have to go into this.  Okay. So I think we are, we are over time now. Any other feedback before we close the call? Okay.  Then, thanks a lot, everyone. Have a great weekend. Thank you. Thank you, Sanjay. Thank you, everyone.
+
+1:33:09 - Kousalya (nanduri1120@gmail.com)
+  Thank you. Have a great weekend.

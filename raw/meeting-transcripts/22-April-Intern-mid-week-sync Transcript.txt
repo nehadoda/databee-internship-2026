@@ -1,0 +1,141 @@
+Impromptu Google Meet Meeting - April 22
+VIEW RECORDING - 12 mins (No highlights): https://fathom.video/share/cNEX8m3s1mbYxESH-byKiGsEKNdxH3Q3
+
+---
+
+0:04 - Neha Doda
+  No, no, it's okay because actually I just turned it off because I wanted to restart my computer because my camera was not working, so I just turned it off.
+
+0:18 - Kousalya 
+  Yeah, Neha, how was your week?
+
+0:22 - Neha Doda
+  Yeah, it was good, although I'm like having some cold.
+
+0:30 - Kousalya 
+  Yeah, take care. Neera, thank you so much. How long have you been in Sweden? No, actually, I'm currently working remote from India.  Okay, okay, you're working from India. So it's like around 8.
+
+0:56 - Neha Doda
+  Yeah, yeah, yeah, it's 8. So did you get any information about the like our meeting on Saturday or Sunday because like we need to plan accordingly yeah yeah no Neha okay you don't have an update for that
+
+2:39 - Kousalya 
+  Thank you. Hello, Filip.
+
+4:07 - Filip Cedermark
+  Hello, can you hear me?
+
+4:10 - Kousalya 
+  Hi, Filip.
+
+4:12 - Filip Cedermark
+  Yes, can you hear me? I can hear you.
+
+4:19 - Neha Doda
+  Good.
+
+4:24 - Kousalya 
+  Yeah, Filip, how are you?
+
+4:25 - Neha Doda
+  How was your week? Yeah, thank you.
+
+4:28 - Filip Cedermark
+  I'm doing well, I think. You may have heard that last week was a bit difficult for me outside of work, but I've been able to pick it up a bit these days, so it's been good.  I'm making progress, and I'm starting to look into dbt more a bit now after the session.
+
+5:43 - Kousalya 
+  Yeah, like, do you guys want to talk about anything?
+
+5:51 - Neha Doda
+  Yeah, we can talk. Are we expecting, like, a book as well? Or is there any information? What about them?
+
+6:01 - Kousalya 
+  No, speak a bit more.
+
+6:12 - Filip Cedermark
+  I'm looking a bit into Dbity, which is like a not really like a language per se, but like a framework, which you use SQL.
+
+6:26 - Kousalya 
+  Yeah, I also explored a little about it.
+
+6:30 - Neha Doda
+  I actually installed it on my like computer because I think it works with Visual Studio. Yeah, exactly.
+
+6:40 - Filip Cedermark
+  I haven't done anything yet.
+
+6:43 - Neha Doda
+  I just like read about it that it works on SQL for transforming data. Yeah, so I thought like I can link it with my profile because I'm already doing data analytics using Power BI.  So. It's a good idea to learn transformations through dbt.
+
+7:05 - Filip Cedermark
+  Yeah, they're gonna do something similar, but more for like the modeling part, because I have worked with dbt a little bit in one of my previous internships, like very small, like exposure to it, but not very deep.
+
+7:22 - Neha Doda
+  So I'm gonna also be using it in visual code and trying to connect it to my Databricks environment or like, Yeah, and Databricks was also like a new thing because I haven't explored that yet as well.  So I like learned a little bit about that as well, because it's also like a good thing to upscale.  So yeah, I read a little about it also because it's a free edition and I think it's a great way to learn.  time. Thank
+
+8:00 - Filip Cedermark
+  Through Databricks. Yeah, I agree. It's very frequently used in a lot of places from what I've seen, like from when I was applying to jobs, a bunch of them were using Databricks or Databricks on top of some other like environment.  So I think being at least familiar with it is very good.
+
+8:21 - Neha Doda
+  Yeah, because I earlier started before like starting this internship, I was looking into Microsoft Fabric. But that's Microsoft doesn't provide like any free environment for free edition for learning learners.
+  ACTION ITEM: Email Sanjeev re: Databricks vs dbt focus - WATCH: https://fathom.video/share/cNEX8m3s1mbYxESH-byKiGsEKNdxH3Q3?timestamp=517.9999  But Databricks is almost a similar platform to learn. So I thought it's, it should be like added to my profile.  So, so I will just talk with Sanjeev if it's, it's relevant and like, I should go for it or not, or whether I should choose dbt.  for my profile.
+
+9:01 - Filip Cedermark
+  Yeah, mean, you can do both because like a Databricks is more of like an environment and dbt is like a way to write code.  So you can you can definitely do both. There's like no issue.
+
+9:14 - Neha Doda
+  Yeah, when I was thinking the same that both can be explored at the same time. Absolutely, I think so at least.  But I would like to focus on one at one time. So I just need to figure out that what I need to like focus on first.  So yeah, that's fair. If it's coming, think then we can just wind it up because we don't have so much to talk about.  Do you have anything to talk about, Filip?
+
+10:11 - Kousalya 
+  Nothing really more than what I've already said.
+
+10:16 - Filip Cedermark
+  Saving most of it for the Saturday meeting.
+
+10:21 - Kousalya 
+  Yeah, and also like last weekend I forgot. This weekend maybe in the Saturday meeting we can discuss regarding the timings of this meeting.  And since like most of the members will be present, we can have a nice, we can decide on the time properly.
+
+10:38 - Filip Cedermark
+  Yeah, sounds good.
+
+10:43 - Kousalya 
+  Okay, then we can wind it up. Yes.
+
+10:46 - Filip Cedermark
+  All right. Have a nice evening and talk to you again on Saturday.
+
+10:50 - Kousalya 
+  Yes, see you again on Saturday.
+
+10:52 - Neha Doda
+  Bye bye. Bye.
+
+11:06 - Kousalya 
+  Hey, hey, Deepika, you just missed Fathom and Neha. have just left. Okay, okay, no problem.
+  ACTION ITEM: Ask Raj re: Deepika's Slack removal; request re-add - WATCH: https://fathom.video/share/cNEX8m3s1mbYxESH-byKiGsEKNdxH3Q3?timestamp=676.9999
+
+11:13 - DEEPIKA ELANGOVAN
+  Always in late time, we do call. Apologies for it.
+
+11:19 - Kousalya 
+  Yeah, like this weekend, we'll decide in the morning, like if any, like before your classes, around 11 or so.
+
+11:25 - DEEPIKA ELANGOVAN
+  Okay, sure, sure. And also like I got removed from that Slack channel course.
+
+11:31 - Kousalya 
+  Yeah, I thought like there might be some issues from your side. I'll ask Raj regarding that.
+
+11:36 - DEEPIKA ELANGOVAN
+  Okay, okay, because there is some, something called workspace looks like it ran on free trial for 14 days or something like that.  So after that, like it got removed.
+
+11:45 - Kousalya 
+  Yeah, I also like, I also like tried to, I thought like after this meeting I'll message you because I thought you would join.
+
+11:52 - DEEPIKA ELANGOVAN
+  I thought like I will move this call, like I didn't give you. Yeah, yeah. Okay.
+
+11:58 - Kousalya 
+  I'll ask Raj regarding that. For sure, thank you so much.
+
+12:01 - DEEPIKA ELANGOVAN
+  Okay, yeah. Bye, Kousalya.

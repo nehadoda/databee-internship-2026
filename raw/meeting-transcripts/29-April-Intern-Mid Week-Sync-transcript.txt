@@ -1,0 +1,181 @@
+Impromptu Google Meet Meeting - April 29
+VIEW RECORDING - 19 mins (No highlights): https://fathom.video/share/Z-pTMfRyZLgzRbTp3tX6DN5AoALdsycH
+
+---
+
+0:00 - Kousalya (nanduri1120@gmail.com)
+  Good morning, let's see, that should hear me now, bye, good morning.
+
+1:00 - Neha Doda
+  Hello.
+
+1:04 - Filip Cedermark
+  Good afternoon.
+
+3:27 - Kousalya (nanduri1120@gmail.com)
+  Yeah, so how was your weekend? you have any chance to go through the time that Sanjeev has given the content?
+
+3:42 - Filip Cedermark
+  I have, yes. I've also started getting started with DBT now. They have an intro course on their website where they kind of go over everything, so I'm following that today.
+
+4:00 - Kousalya (nanduri1120@gmail.com)
+  Hello Asindu, I was just talking about getting started with dbt today and going through their like starter or like introduction course that they have on their website and getting set up and start using it today.
+
+4:39 - Raj kumar
+  Hello, how are you guys? Good, good. And understand what's going on. Are we expecting any more guys today? Is it the same setup every time?
+
+5:13 - Filip Cedermark
+  We did discuss a bit earlier today about following this meeting earlier because it would be better for more people.  Yeah.
+
+5:26 - Raj kumar
+  Actually, Sugash and Asindu was in a different meeting with me separately, but Sugash will join in a few minutes here.  Okay. That's a little delay. And Kousalya, you said one more person. is that? Deepika. Deepika. Yeah, so you should join, right?  Yeah, she is. Great. I think it's always good to have your connect guys because weekly ones, yeah, it's a bit lengthy period.  So, Connect and learn yourself. That's always good. Yeah. How are things, Filip, with you? How is everything going? I think it's going pretty good.
+
+6:11 - Filip Cedermark
+  I did have mentioned like the last, during one of our previous meetings, that I have had to kind of put my work here to the side a bit.  There was a bunch of stuff going on.
+
+6:26 - Raj kumar
+  But I'm a bit more focused now.
+
+6:27 - Filip Cedermark
+  I've been learning the Databricks platform and I'm getting set up with DBT right now. I'm going through their like starter slash intro course that they have on their website.  So I'm set up and I'm to get started with getting more familiar with that moving forward. Okay.
+
+6:43 - Raj kumar
+  Okay. Yeah. So each of one, you're going to have your own kind of a path or how you are interested.  You will go in that way. And already we are dividing from this week for the role specific. So that is also going.  to happen. And probably we will utilize your effort, what you are creating for regular integration, right, for our one of the internal kind of MVP.  So anyone is using in Medallion architecture, it can be DBT or Databricks or Snowflake, but anyone is having n-to-n Medallion architecture?  Do you know?
+
+7:31 - Filip Cedermark
+  I'm basing my work off of Medallion architecture because that's what I feel is like works the best generally. So I've been working with it so far and I'm gonna continue with it, I think.
+
+7:44 - Raj kumar
+  Okay, so that means you will have multiple layers in any one of the cloud, right? Yes, that's the plan.
+
+7:51 - Filip Cedermark
+  I currently have the schemas set up for bronze, silver, and gold, which I'm using.
+
+7:57 - Raj kumar
+  Exactly. Okay, and the... the... What dpt are you going to use over there?
+
+8:02 - Filip Cedermark
+  I am now because it is something I want to look into more. I have worked with it a little bit at a previous internship when I was at PostNode.  And I think when it's time to start getting out and working at real projects, dpt is pretty widely used.  So it's something I'm to look into. So I'm going to use it from now on, I think.
+
+8:26 - Raj kumar
+  Okay, okay. And will you have any of the scheduling? Airflow or maybe Azure Data Factory or something? Any scheduler, are you planning to have it?
+
+8:40 - Filip Cedermark
+  Databricks seems to have scheduling built in to the platform, or at least something like jobs and runs. So you could use that.  But you are planning to integrate with the dpt, right?
+
+8:56 - Raj kumar
+  So that has to be scheduled somewhere.
+
+9:02 - Filip Cedermark
+  Like I said, I haven't worked with dbt too much, so I don't know exactly how deep it goes, but I do know you can use it for transformation logic, and I did use it a bit for quality checks as well, so like I said, I'm going to look into it more.
+  ACTION ITEM: Connect w/ Sanjeev re: E2E output + scheduler - WATCH: https://fathom.video/share/Z-pTMfRyZLgzRbTp3tX6DN5AoALdsycH?timestamp=554.9999
+
+9:23 - Raj kumar
+  Yeah, all right. Yes. Maybe I will connect with Sanjeev also on that. The thing is, someone's the entire end-to-end output we will utilize for in another need.  So that time you guys will have a maturity of integrating with them, a real platform also. So let's see.  And except you, is anyone, Eliyat or this Asindu or Sukhash, anyone using medallion at this stage, do you know?  Yes, right.
+
+9:59 - Asindu Gayangana
+  that's So... I follow the Medellin architecture. But unfortunately, my trial period is ended in the Databricks. So I have to use the manage table, but it follows Medellin architecture.  Yeah, because after 14 days of trial, I cannot connect it with the external platform from Databricks.
+
+10:33 - Raj kumar
+  So where are you connecting externally?
+
+10:38 - Asindu Gayangana
+  It means normally when we connect, it means normally when we start our Databricks, we should be able to connect to the AWS, normally AWS, so as you or Google, but after trial period, you  We only can connect with the AWS, I think, but all the free trials are ended for my ID and credit cards.  So I couldn't be able to create another AWS account, free account. So I used Managed Tables, but it follows the Medellin architecture.  So initially load the data to the bronze layer that partition by load date. So then create a silver layer.  It follows another partition strategy that's suitable for the data analyst. It means when we get example as sales, I partition bronze layer using the load date.  Yeah. Yeah.
+
+12:00 - Raj kumar
+  Yeah, how much data objects, how much tables you have over there?
+
+12:05 - Asindu Gayangana
+  It's just three tables, because I used a simple data set, but it contains around millions of data. I used an auto-loader function to load data automatically to the bronze layer, but I didn't create a gold layer till yet.  Okay, okay.
+
+12:30 - Raj kumar
+  And any scheduler we used separately?
+
+12:34 - Asindu Gayangana
+  No, Raj kumar, I used the Databricks scheduler, shop band, shop scheduler.
+
+12:42 - Raj kumar
+  Okay, okay. Yeah, yeah. So let's see which one can be suitable. So that's something we will understand. And the thing is integrating with another project is of course somewhere.  It will be going in a mature way. will plan that, okay? Yes. And another one, I want to have a one-to-one connect with most of you guys.
+  ACTION ITEM: Book 1:1 w/ Filip (15 min) for Apr 30 - WATCH: https://fathom.video/share/Z-pTMfRyZLgzRbTp3tX6DN5AoALdsycH?timestamp=801.9999  So tomorrow is Thursday. I think from tomorrow also it's possible. So let's see. Philippe, do you have time tomorrow?  We will book a 15-minute time.
+
+13:41 - Filip Cedermark
+  Yeah, tomorrow works. Asindu, you're also available, right?
+
+13:46 - Asindu Gayangana
+  Sorry, Raj kumar, I couldn't be able to join tomorrow, but I can join even Friday, Sunday, or Saturday.
+
+13:56 - Raj kumar
+  Okay, so actually I'm going to be a occupied in the coming days. So today, we are going to have the discussion about those dbt part.
+  ACTION ITEM: Schedule Slack 1:1 w/ Asindu for Apr 29 2:30 - WATCH: https://fathom.video/share/Z-pTMfRyZLgzRbTp3tX6DN5AoALdsycH?timestamp=850.9999  Maybe we can cover that along with that, Asindu. OK. I think you are going to send those documents, right?  You already sent? Yeah. Yeah, that's fine. Yeah. Let's connect. And are you available today around 2.30? Yes. OK. We will make it.
+  ACTION ITEM: Send headline to Neha - WATCH: https://fathom.video/share/Z-pTMfRyZLgzRbTp3tX6DN5AoALdsycH?timestamp=876.9999  We will, let's connect in Slack today. Neha, we can wait for some more time. I think yesterday's talk was, yeah, went OK, right?  And I will provide the headline to you so that I supposed to give in the morning, but I'm got occupied during the day, can give you.
+
+14:59 - Neha Doda
+  Nope. Nope. You're No problem. Kousalya, who else?
+
+15:08 - Kousalya (nanduri1120@gmail.com)
+  Deepika is there, Fugash is there. Eliad is shook, which he has not.
+  ACTION ITEM: Schedule 1:1s (15 min) w/ Deepika, Eliad, Nicholas - WATCH: https://fathom.video/share/Z-pTMfRyZLgzRbTp3tX6DN5AoALdsycH?timestamp=916.9999
+
+15:17 - Raj kumar
+  And Nicholas also. Fugash is here in the office, I can talk to him. But the remaining people, Kousalya, let's plan for that 15 minutes fall.  Yeah, yeah. In the coming days. Okay. All right. Anything else, guys, before I drop?
+  ACTION ITEM: Schedule in-office 1:1 w/ Filip for May 4–5 - WATCH: https://fathom.video/share/Z-pTMfRyZLgzRbTp3tX6DN5AoALdsycH?timestamp=945.9999
+
+15:50 - Filip Cedermark
+  Nothing, sir. All right.
+
+15:56 - Raj kumar
+  Yes. Filip, let's see some, maybe some... Time next week, if we can meet in the office, we can, within Monday or Tuesday, we'll see that.  Absolutely. All right. Yeah. Thank you, guys. Bye for now. Thank you.
+
+16:15 - Filip Cedermark
+  Have a nice evening. Thank you. Let's see, do we have anything else to talk about or discuss?
+
+16:32 - Asindu Gayangana
+  Filip, did you implement a dbt project?
+
+16:37 - Filip Cedermark
+  Yeah, I'm using, well, I'm starting, like, I only just installed it this morning and I'm going through the, like, their intro course that they have.  So I'm getting set up now, so I don't have anything yet, but I'm gonna, it's gonna get started.
+
+16:53 - Asindu Gayangana
+  Okay, so I think it can connect to the Databricks, I'm not sure.
+
+17:03 - Filip Cedermark
+  I think so. From what I've seen there, there should be some sort of Databricks connector that they have. I'll have to figure out exactly how that works, but it should be possible.  Okay.
+
+17:15 - Asindu Gayangana
+  I have gonna...
+
+17:16 - Neha Doda
+  I connected it with Microsoft SQL Server, but I don't know about Databricks.
+
+17:32 - Filip Cedermark
+  Let's see, I was gonna say we can talk more on Saturday, but this week's meeting was cancelled, right?
+
+17:45 - Asindu Gayangana
+  Yes. Yeah, guess Sandu wasn't here.
+
+17:49 - Filip Cedermark
+  So in that case, we'll talk more next Wednesday, will be our next meeting then?
+
+18:00 - Asindu Gayangana
+  Yes, but if I think it will be next Wednesday. Alright.
+
+18:06 - Filip Cedermark
+  In that case, if no one else has anything they want to lift or discuss, I'm gonna start on lunch.  Getting hungry. Yeah, think that's all for today.
+
+18:21 - Neha Doda
+  can leave. Yeah.
+
+18:23 - Filip Cedermark
+  All right. Then have a nice evening and we'll talk on Wednesday if nothing else.
+
+18:29 - Neha Doda
+  Yeah. Okay. See you, Filip.
+
+18:31 - Asindu Gayangana
+  you. Bye.
+
+18:33 - Neha Doda
+  Bye. Bye.
+
+18:36 - Asindu Gayangana
+  Bye.

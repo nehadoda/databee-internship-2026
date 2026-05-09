@@ -1,0 +1,166 @@
+Impromptu Google Meet Meeting - May 06
+VIEW RECORDING - 15 mins (No highlights): https://fathom.video/share/rVtwttkSMezv8yYcHWr99DcYYTofNkiw
+
+---
+
+0:07 - Kousalya (nanduri1120@gmail.com)
+  How was your weekend? It was nice, Kousalya.
+
+0:15 - DEEPIKA ELANGOVAN
+  How was the climate there in India?
+
+0:18 - Kousalya (nanduri1120@gmail.com)
+  Yeah, the summer has started. It's very hot. Almost 40 degrees above every day. Oh, yeah, we are just attaining 15 degrees.  Let me start with my update.
+
+0:50 - DEEPIKA ELANGOVAN
+  So last week I didn't progress much, but this week I started with Databricks Asset Bundles and Terraform, like how we can use it together.  Whether in implementing CICD in data engineering. So I just go through an overview level. It was interesting to know that Terraform is used for creating infrastructure and creating the catalog storage for those things and all.  Databricks Asset Bundles is used for running the pipelines, jobs, handling those things. So instead of directly accessing it over UI and perform, this Databricks Asset Bundle is something which we can run from ZLA also, seems.  So by this way, we are easily able to set up the resources, schemas, catalogues, datas, and then we can run the pipelines also through commands, it seems.  So we need to set complex infrastructure that rather than using UI directly, this way would be easy. So still I am trying to do some hands-on and trying to understand more.  So this is from my end.
+
+2:02 - Filip Cedermark
+  Maxis, I can mention a bit about what I've been doing too. I'm still kind of playing around with dbt a bit.  I got set up in the middle of last week and I started, I've taken their like introductory course where they go through like all the setup and they give you some sample stuff or some exercises to do, but I am still getting used to it.  I haven't used it like very much before. So getting everything, like figuring out how to work efficiently and like how to, what are the different like practices and stuff that you should do is taking a bit of time to adjust it too.  But I'm going to continue working with it from now on. And I mentioned this last week as well. So hopefully there should be some improvements until Saturday at least.  Something to show. I've to do. You know, Mm hmm.
+
+2:58 - DEEPIKA ELANGOVAN
+  Mm Mhm. Mhm.
+
+3:02 - Neha Doda
+  Filip, can you just like tell like what are you using to study? mean are you following YouTube or any other?
+
+3:13 - Filip Cedermark
+  It's a bit mixed. A lot of YouTube tutorials have been pretty helpful but on DBTS official website they have their own like getting started like page or course where they have not only like a bunch of documentation but also some videos that go through like their UI and different stuff.  Like I said they have some exercises and like guides for getting set up. So getting starting with that was pretty helpful.  And outside of that it's yeah like YouTube tutorials, reading documentations, asking like Claude or ChatGPT at times if you like really feel stuck.
+  ACTION ITEM: Send dbt intro course link to Neha - WATCH: https://fathom.video/share/rVtwttkSMezv8yYcHWr99DcYYTofNkiw?timestamp=236.9999
+
+3:58 - Suhash Raja
+  But it's just you had to just kind of.
+
+4:00 - Filip Cedermark
+  Nowhere to look for the information because it's always out there. Nowhere to look.
+
+4:07 - Neha Doda
+  Yeah, because I also started with dbt last week, so I just wanted to know if there are any such videos in particular that we can follow.
+
+4:18 - Filip Cedermark
+  Yeah, I would recommend, and it kind of depends on what you want, but I would, if you haven't done it, I would recommend the dbt intro course.  I could send you a link.
+
+4:28 - Neha Doda
+  Yeah, I have explored too many, but I'm not like following any single of them. So basically, I follow some content from one and other from like chat GPT or something.
+
+4:46 - Filip Cedermark
+  Yeah, but I can link you the dbt intro course. Yeah, yeah.
+
+4:51 - Neha Doda
+  Apart from this, I haven't done much of the things because I was busy with some other, I mean activity that was like a site.  to me by Raj. So I was busy in that. So from my side, that's all. Interesting.
+
+5:12 - Suhash Raja
+  From my end, I've been caught up with the fever and cold. So I'm just now recovering. And most probably we'll do something tomorrow.  And I'll have something to show up on Saturday.
+
+5:35 - Filip Cedermark
+  But then in that case, if you're sick now, will you still be able to attend the event? Or are you going to be resting?
+
+5:43 - Suhash Raja
+  Yeah, yeah. I will be coming. I've been sick from last Friday. So now I'm on the recovering stage. Oh, you're getting better now.  Yeah, yeah. Okay, I see.
+
+6:00 - DEEPIKA ELANGOVAN
+  Anyone worked on Databricks asset bundles previously? is something new for me.
+
+6:08 - Filip Cedermark
+  I haven't gotten that far yet. Like I said, I'm also using Databricks, but I'm still pretty surface level. I haven't really gone into the individual like tools and everything that they offer.  Okay, okay.
+
+6:23 - DEEPIKA ELANGOVAN
+  You, Suhash?
+
+6:26 - Asindu Gayangana
+  Did you go through that? How to use the asset bundle?
+
+6:31 - DEEPIKA ELANGOVAN
+  It is kind of like, it is kind of like some group of YAML files combined together to perform some certain tasks.  Like Terraform handles some set of tasks and then Databricks CLI handles some set of tasks. Like Terraform handles that creation of resources and storage, permission, catalog.  So those things Terraform handles. Running the pipeline, jobs and all this is our Databricks.
+
+7:02 - Asindu Gayangana
+  Okay, it means when we deploy that asset bundle, does it create those pipelines in different environments?
+  ACTION ITEM: Share Databricks Asset Bundles video link w/ Asindu - WATCH: https://fathom.video/share/rVtwttkSMezv8yYcHWr99DcYYTofNkiw?timestamp=428.9999
+
+7:11 - DEEPIKA ELANGOVAN
+  Yes, yes, like we can create something they do, test, stage, prod, and all it seems, through data bundles. Did you follow any video series?  Actually, I was trying to follow one video, I just halfway in it, maybe I can share you the link, you can try to follow.  Apart from that, I tried the code generated by Claude, but since the free edition, it has some issues implementing that code, sharing with it and trying that hands-on.  Like, I keep going, getting into some error, then I shared that error to Claude, it will give me some other solution.  So like that it is going on today.
+
+7:51 - Asindu Gayangana
+  Okay, no problem. Can you share that link? Ah, link I don't share, YouTube link I don't share. So from my end, I develop a sales pipeline following the Medallion architecture.  So I completed it till a code layer. So when I develop in that, I follow the procedure that it means that in same pipeline, it can be run as it can run for daily data indication for day for daily data indication.  as well as backfill. That pipeline, we can use that same pipeline to load historical data as well. So I parameterized that my silo layer.
+  ACTION ITEM: Present sales pipeline (medallion) on Sat - WATCH: https://fathom.video/share/rVtwttkSMezv8yYcHWr99DcYYTofNkiw?timestamp=531.9999  So that's how I did that. This is the progress of for this week.
+
+9:00 - Filip Cedermark
+  Nice. If it's finished, do you want to present some part of it on Saturday? Because I'd be interested in looking at the finished thing.
+
+9:12 - Asindu Gayangana
+  I mean, regarding my code, Filip?
+
+9:16 - Filip Cedermark
+  I mean, for the Saturday meeting, if you're going to be presenting some of it. Because it seems like it's pretty far along.  It'll be interesting to look at how you've done it.
+
+9:27 - Asindu Gayangana
+  you want, I can share the screen today. So, have you found that?
+
+9:38 - Filip Cedermark
+  I would be interested in looking at it at least.
+
+9:42 - Asindu Gayangana
+  Okay, I will share.
+
+10:10 - Suhash Raja
+  Can you see my screen?
+
+10:15 - Filip Cedermark
+  Are you sharing your, it looks like you're sharing the Meet window and not if you have the, if you have your pipeline on another window.
+
+10:27 - Asindu Gayangana
+  I will share it.
+
+10:28 - DEEPIKA ELANGOVAN
+  Can you see my screen right now?
+
+10:44 - Asindu Gayangana
+  Yes. Okay. So this is the sales pipeline. So I'm we'll go through one by one. So, this is...
+
+11:06 - DEEPIKA ELANGOVAN
+  It got stopped as in, though. And the screen is also...
+
+11:11 - Asindu Gayangana
+  So, I will connect through my hotspot. Can you see the screen right now? Yes, I can see the screen.
+
+12:16 - DEEPIKA ELANGOVAN
+  Yes, it's a bit blurred. Is it blurred? No, it's good. Okay.
+
+12:25 - Asindu Gayangana
+  So this is my initial... It's stopped again. Maybe there is a data issue. Is it stuck?
+
+12:42 - Filip Cedermark
+  Yeah, your screen share stops. I don't know if it's like a connection issue or... Yeah, maybe.
+
+12:50 - Asindu Gayangana
+  So... In that case, maybe, because like I said, at some point, it would be interesting to look at it.
+
+12:55 - Filip Cedermark
+  But maybe we can save it for Saturday. Yeah.
+
+13:01 - Asindu Gayangana
+  Okay, I will see it on Saturday, so you guys can follow up. Cool, looking forward to it. So, did you use a dbt, cloud dbt film?  I think so, yeah.
+
+13:20 - Filip Cedermark
+  Not dbt, but, well, Databricks, and I'm using it in VS Code, but I'm connected to my workspace.
+
+13:30 - Asindu Gayangana
+  Okay. I think everyone's gotten a chance to present a bit, so if no one else...
+
+14:00 - Filip Cedermark
+  If anything to add, then maybe we can finish a bit earlier. Yes.
+
+14:08 - Suhash Raja
+  Yeah, sure. Thanks for coming. Thank you so much. All right.
+
+14:14 - Filip Cedermark
+  Have a nice evening.
+
+14:16 - Asindu Gayangana
+  Have a nice day. You too.
+
+14:18 - DEEPIKA ELANGOVAN
+  Bye-bye. Bye. Bye.
+
+14:21 - Asindu Gayangana
+  Bye.
