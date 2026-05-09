@@ -52,3 +52,92 @@ Work against the **AdventureWorks** database (`Person.Person` table).
 25. Find people where `FirstName` starts with `A` or `LastName` ends with `e` and `FirstName` does not contain `z` and `BusinessEntityID` is between 10 and 200
 26. Find people where `FirstName` has exactly two vowels and `LastName` starts with same letter as `FirstName` and ID is not between 50 and 100
 27. Find people where `FirstName` contains `ar` only once and `LastName` length is greater than `FirstName` length
+
+---
+
+## Week 2 — Dashboarding (Mid-Advanced)
+
+> Assumes interns are already comfortable connecting to data sources and building basic visuals. Each exercise is framed as a concept — implement using whichever tool you use (Power BI, Tableau, or Looker Studio).
+
+---
+
+### Concept 1 — Building Calculated Metrics (not just aggregations)
+
+*Real dashboards don't just sum columns — they compute business KPIs that mean something to the stakeholder.*
+
+- Define 3–4 metrics in your tool's calculation layer:
+  - Total Sales, Average Order Value, Sales per Customer
+  - YoY % change, MoM % change
+- The point: understand the difference between a raw field and a *defined metric* — and why centralising metric definitions matters (one source of truth, not per-report recalculations)
+
+| Tool | How |
+|------|-----|
+| Power BI | DAX measures in the model |
+| Tableau | Calculated fields in the data pane |
+| Looker Studio | Calculated fields in the data source |
+
+---
+
+### Concept 2 — Time Intelligence
+
+*"Show me this month vs last month vs same period last year" — every customer asks this.*
+
+- Build a date-aware trend visual showing current year vs prior year on the same axis
+- Add period selectors (month / quarter / year) that update all visuals simultaneously
+- Key question to answer: how does your tool handle a missing date dimension?
+
+| Tool | How |
+|------|-----|
+| Power BI | `SAMEPERIODLASTYEAR`, `TOTALYTD` DAX functions + Date table |
+| Tableau | Built-in date parts + table calculations (`LOOKUP`, `WINDOW_SUM`) |
+| Looker Studio | Date range controls + `SAME_PERIOD_LAST_YEAR` comparison |
+
+---
+
+### Concept 3 — Actual vs Target / Variance
+
+*Every ops, sales, and finance team tracks performance against a plan.*
+
+- Create a small target table manually (one target per territory or month) and join it to the sales data
+- Build a visual showing actual, target, and variance % side by side
+- Add a status indicator — green/amber/red based on a variance threshold
+
+| Tool | How |
+|------|-----|
+| Power BI | Blend via data model relationship + DAX variance measure + KPI visual |
+| Tableau | Data blending or union + reference lines + calculated field for variance |
+| Looker Studio | Blend data sources + scorecard with comparison |
+
+---
+
+### Concept 4 — Audience-Layered Design (Summary → Detail)
+
+*A single report must serve an exec and an analyst. Drill-through is the pattern.*
+
+- Build a 2-page report:
+  - Page 1: Executive summary — 3–4 KPI cards, one trend, one ranking
+  - Page 2: Detail view — full table, filters, breakdowns
+- Wire up navigation so clicking a dimension on Page 1 takes you to filtered detail on Page 2
+- Discuss: when to use drill-through vs tooltips vs separate reports
+
+| Tool | How |
+|------|-----|
+| Power BI | Drill-through pages + back button |
+| Tableau | Dashboard actions (filter action between sheets) |
+| Looker Studio | Page navigation + report-level filter passing |
+
+---
+
+### Concept 5 — Access Control (who sees what)
+
+*Non-negotiable in enterprise. Data teams get asked this before go-live on every project.*
+
+- Define at least 2 roles with different data visibility (e.g. by territory or region)
+- Test that each role sees only its own data
+- Discuss: static roles vs dynamic (username-based) — when each applies
+
+| Tool | How |
+|------|-----|
+| Power BI | Manage Roles (static) or `USERPRINCIPALNAME()` (dynamic) |
+| Tableau | Row-level security via user filters or entitlement tables |
+| Looker Studio | No native RLS — discuss as a limitation; workaround via separate reports or data source filters |
