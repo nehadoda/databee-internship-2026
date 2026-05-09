@@ -4,7 +4,7 @@
 
 ---
 
-## Session 7 — May 9, 2026 *(upcoming)*
+## Session 8 — May 16, 2026 *(upcoming)*
 
 **Attendees:**
 
@@ -13,21 +13,132 @@
 **Part 1 — Weekly sync**
 
 1. Week check-in — what did you work on? Blockers? Wins?
-2. Session stream split — confirm DE+DevOps / ML / DA structure and logistics *(carried over)*
-3. Filip — dbt silver layer demo: quarantine/dead-letter table with reason tags
-4. Deepika — CI/CD artifact separation: Bundles vs Terraform for catalog, schema & checkpoints *(pros/cons)*
-5. Nikolaos — metadata-driven DQ framework walkthrough
+2. Deepika — E2E Databricks + Unity Catalog infra deployment demo (Terraform + GitHub Actions) *(committed for this session)*
+3. ~~Filip — dbt silver layer demo: quarantine/dead-letter table with reason tags~~ → *(carried over — Filip absent Session 7)*
+4. ~~Nikolaos — metadata-driven DQ framework walkthrough~~ → *(carried over — Nikolaos absent Session 7)*
+5. Asindu — DQX data quality implementation in silver layer walkthrough
+6. Sanjeev — Deepika's MLOps path *(to be defined and shared)*
+7. Sanjeev — Spark Definitive Guide: specific chapters for DE interns to focus on
 
 **Part 2 — Technical deep-dives**
 
-6. Elliot — MLflow deep-dive: model logging, feature stores, serving endpoint
+8. ~~Elliot — MLflow deep-dive: model logging, feature stores, serving endpoint~~ → *(carried over — Elliot absent Session 7)*
+
+**Notes:**
+
+*(To be filled after session)*
+
+---
+
+## Session 7 — May 9, 2026
+
+**Attendees:** Sanjeev Kumar (mentor), Kousalya, Deepika Elangovan, Neha Doda, Suhash Raja, Asindu Gayangana
+**Absent:** Filip Cedermark *(texted unable to join)*, Elliot Eriksson, Nikolaos Biniaris
+
+**Agenda:**
+
+**Part 1 — Weekly sync**
+
+1. Week check-in — what did you work on? Blockers? Wins?
+2. Session stream split — confirm DE+DevOps / ML / DA structure and logistics *(carried over)*
+3. ~~Filip — dbt silver layer demo: quarantine/dead-letter table with reason tags~~ *(Filip absent — carried over)*
+4. Deepika — CI/CD artifact separation: Bundles vs Terraform for catalog, schema & checkpoints *(pros/cons)*
+5. ~~Nikolaos — metadata-driven DQ framework walkthrough~~ *(Nikolaos absent — carried over)*
+
+**Part 2 — Technical deep-dives**
+
+6. ~~Elliot — MLflow deep-dive: model logging, feature stores, serving endpoint~~ *(Elliot absent — carried over)*
 7. Spark streaming optimization — rate limiting, `maxBytesPerTrigger`, `maxFilesPerTrigger`, partition pruning *(Asindu's `maxBytesPerPartition` issue + broader context)*
 8. Spark Definitive Guide walkthrough — group reading/discussion session
    - Reference: [Spark: The Definitive Guide](https://analyticsdata24.wordpress.com/wp-content/uploads/2020/02/spark-the-definitive-guide40www.bigdatabugs.com_.pdf)
 
 **Notes:**
 
-*(To be filled after session)*
+---
+
+### 1. Week Check-in
+
+- **Neha Doda** — Started dbt basics: installation, setup, intro videos, CLI commands. Connected dbt to Microsoft SQL Server locally. Also assigned by Raj to write website content on data platform modernization (separate from internship tasks).
+  → **Sanjeev**: Stay on DA track. Primary focus: Power BI (3+ years experience, PL-300 certified) — practice deeply (DAX, time intelligence, KPIs, access control, Power BI Service). dbt is the right tool for SQL-based transformations alongside BI. Also explore **Tableau** and **Looker Studio** — concepts are generic across tools. Raj has upcoming opportunities for dashboarding resources.
+- **Deepika Elangovan** — Researched Databricks Asset Bundles (also referred to as Databricks Automation Bundles) + Terraform. Key findings: Terraform handles infrastructure (catalog, storage, permissions); DABs handle pipeline/job deployment via `databricks.yml`. Hitting errors with free edition; iterating with Claude for troubleshooting. Got accepted to **Chalmers Master's in Biomedical Engineering** (starts September) — wants to include ML/MLOps given it's part of her program. Wants to be included in MLOps track.
+- **Suhash Raja** — No update (sick all week, now recovering). Revealed he already has **Databricks Associate Data Engineer certification** (taken Feb 2026, studied from Spark Definitive Guide + Raj's PySpark book). Plans to go full throttle on DE tasks this week.
+- **Asindu Gayangana** — Updated PySpark pipeline: optimized for both daily incremental runs and backfill using same pipeline. Completed gold layer tables. Currently researching **Databricks DQX** for YAML-based data quality expectations in silver layer.
+
+---
+
+### 2. Stream Specialization — Paths Confirmed
+
+Sanjeev recapped and confirmed specialization paths for each intern:
+
+| Intern | Track | Focus |
+|---|---|---|
+| **Neha** | DA | Power BI (primary), dbt for transformations, Tableau / Looker Studio |
+| **Deepika** | DevOps → MLOps | E2E Databricks infra (Terraform + DABs + Azure); MLOps path TBD |
+| **Suhash** | DE (Databricks specialist) | SCD, CDC, incremental ingestion, Unity Catalog, DLT, Lakeflow, DABs; target DE Pro |
+| **Asindu** | DE (Databricks + Spark) | DQX, Unity Catalog, AutoLoader, declarative pipelines, Lakeflow; read Spark Definitive Guide |
+| **Nikolaos** | DA | Same dashboarding advice as Neha (confirmed by Sanjeev) |
+| **Filip** | DE + dbt | dbt silver layer + quarantine table *(absent)* |
+| **Elliot** | ML / Snowflake | MLflow, Snowflake Cortex *(absent)* |
+
+**Key point from Sanjeev**: Strong data engineering fundamentals matter more than platform choice — any company will take you if your fundamentals are solid (Spark, CDC, SCD, medallion architecture). Databricks is a strong choice given market growth, but don't limit yourself.
+
+---
+
+### 3. Databricks Asset Bundles (DABs) — Technical Discussion
+
+- DABs = implementation on top of Terraform, managed via `databricks.yml` YAML file
+- **State management advantage over plain Terraform**: in a mono-repo with 10 projects, Terraform rebuilds the whole state on any change. DABs treat each sub-project atomically — one project's deployment doesn't affect others.
+- DABs renamed to **Databricks Automation Bundles** in recent docs (some older docs still say Asset Bundles)
+- Known limitation: inherited Terraform state issues still surface; Databricks actively working on engine changes
+- **Deepika's new capstone task**: End-to-end Databricks workspace + Unity Catalog deployment on Azure using Terraform + GitHub Actions. Must include: security (VNet isolation, hub-and-spoke model), proper separation of infra vs pipeline deployments.
+- Deepika confirmed she maintained separate infra and code pipelines in previous experience — relevant here.
+
+---
+
+### 4. Spark Streaming Rate Limiting
+
+Deep-dive with Asindu and Suhash:
+
+- **`maxFilesPerTrigger`**: limits files per micro-batch. E.g., 100 new files + `maxFilesPerTrigger=10` → 10 sequential batches of 10 files each
+- Within each batch, Spark distributes files across workers in parallel (e.g., 4 workers → ~2.5 files each)
+- Batches are **sequential**, processing within each batch is **parallel**
+- Rationale: prevents overwhelming compute with massive data volumes in a single micro-batch; matches processing capacity to cluster size
+- Asindu confirmed understanding of `maxFilesPerTrigger`; watermarking noted as advanced topic — not required now
+- **Partition pruning**: Suhash familiar; `maxBytesPerTrigger` to be read up on
+
+---
+
+### 5. Spark Definitive Guide
+
+- Sanjeev emphasized this book as essential for all DE interns — common interview questions come from it
+- Suhash confirmed he has already read it (used it to prep for Databricks Associate certification)
+- Suhash shared PDF in Slack; index accessible via Adobe bookmarks panel
+- Sanjeev to define specific chapters for Asindu to focus on (too many chapters to read all)
+
+---
+
+### 6. Architecture Diagrams
+
+Sanjeev: all interns should capture their pipeline designs as architecture diagrams.
+- Interviewers frequently ask candidates to draw an end-to-end architecture on the spot
+- As a DE, you will transition towards solution architecture thinking — knowing which tool fits which layer is essential
+- Start now: whenever you design something end-to-end, create a proper diagram alongside it
+
+---
+
+### Action Items
+
+| Task | Owner | Due |
+|------|-------|-----|
+| Review Power BI interview prep doc; identify areas to practice | Neha | Next session |
+| Explore Tableau and Looker Studio | Neha | Ongoing |
+| E2E Databricks + Unity Catalog infra deployment on Azure (Terraform + GitHub Actions); research VNet isolation / hub-and-spoke | Deepika | Next session |
+| Define Deepika's MLOps path; share with her | Sanjeev | Next session |
+| Implement SCD Type 1 & 2, CDC, incremental ingestion in Spark 3; scale with Filip's Faker library; include DABs | Suhash | Next session |
+| Define Suhash's Databricks specialization plan (Unity Catalog, DLT, Lakeflow) | Sanjeev | Next session |
+| Implement DQX in silver layer using YAML expectations | Asindu | Next session |
+| Define Spark Definitive Guide chapters for Asindu | Sanjeev | Next session |
+| Draw architecture diagram for current pipeline | All DE interns | Ongoing |
 
 ---
 
