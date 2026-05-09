@@ -4,6 +4,63 @@ A running log of all intern midweek check-in calls. Latest first.
 
 ---
 
+## Midweek Sync — May 6, 2026
+
+**Attendees:** Kousalya, Deepika Elangovan, Filip Cedermark, Neha Doda, Suhash Raja, Asindu Gayangana
+**Absent:** Elliot Eriksson, Nikolaos Biniaris
+
+### Intern Progress Updates
+
+- **Deepika Elangovan** — Researched Databricks Asset Bundles + Terraform for CI/CD in data engineering. Key findings: Terraform handles infrastructure (catalog, storage, permissions); Databricks Asset Bundles handle pipeline/job deployment via YAML files and CLI — supports multi-environment setup (dev/test/stage/prod). Still doing hands-on; iterating with Claude-generated code and hitting some errors.
+- **Filip Cedermark** — Set up dbt mid-last-week, going through the official intro course. Still getting familiar with practices and workflow. Will have something to show by Saturday. Offered to share dbt intro course link with Neha.
+- **Neha Doda** — Started dbt last week; following mixed sources (YouTube, ChatGPT). Limited progress this week — busy with a task assigned by Raj.
+- **Suhash Raja** — Recovering from fever/cold since last Friday. Plans to work on something the next day and have an update for Saturday.
+- **Asindu Gayangana** — Completed sales pipeline (Medallion) through gold layer. Pipeline parameterized to support both daily incremental runs and historical backfill using the same code. Attempted to screen-share but had connectivity issues — deferred to Saturday (May 9) session.
+
+### Action Items
+
+| Task | Owner | Due |
+|------|-------|-----|
+| Send dbt intro course link to Neha | Filip | ASAP |
+| Share Databricks Asset Bundles video link | Deepika → Asindu | ASAP |
+| Present sales pipeline (Medallion, bronze→gold) | Asindu | Saturday May 9 |
+| Have dbt progress to show | Filip | Saturday May 9 |
+
+---
+
+## Midweek Sync — April 29, 2026
+
+**Attendees:** Kousalya, Filip Cedermark, Neha Doda, Asindu Gayangana, Raj Kumar *(dropped in briefly)*
+**Absent:** Deepika Elangovan, Elliot Eriksson, Nikolaos Biniaris, Suhash Raja *(joined late)*
+
+### Intern Progress Updates
+
+- **Filip Cedermark** — Just installed dbt; going through the official intro course. Confirmed using Medallion architecture (bronze/silver/gold schemas set up). Plans to integrate dbt into the silver transformation layer. Confirmed dbt has a Databricks connector.
+- **Asindu Gayangana** — Databricks 14-day trial expired; switched to Managed Tables (no external cloud connection). Using AutoLoader to load data to bronze (partitioned by load date), silver complete, gold not yet started. ~3 tables, millions of rows. Using Databricks built-in scheduler.
+- **Neha Doda** — Connected dbt to Microsoft SQL Server locally.
+
+### Raj Kumar's Inputs
+
+- Role-specific stream split starting this week.
+- Plans to use intern Medallion architecture pipelines for an internal MVP — confirmed Filip and Asindu have end-to-end Medallion set up.
+- Will connect with Sanjeev on end-to-end output and scheduler integration.
+- Wants 15-min 1:1s with all interns: Filip (Apr 30, in office), Asindu (Apr 29 at 2:30 via Slack), Deepika/Elliot/Nikolaos to be scheduled via Kousalya.
+
+### Logistics
+
+- Saturday Apr 26 session was cancelled (Sanjeev business trip). Next meeting: Wednesday May 6.
+
+### Action Items
+
+| Task | Owner | Due |
+|------|-------|-----|
+| 1:1 with Filip | Raj | Apr 30 (in office) |
+| 1:1 with Asindu | Raj | Apr 29 at 2:30 (Slack) |
+| Schedule 1:1s with Deepika, Elliot, Nikolaos | Kousalya | This week |
+| Connect with Sanjeev re: E2E output + scheduler | Raj | TBD |
+
+---
+
 ## Midweek Sync — April 22, 2026
 
 **Attendees:** Kousalya, Neha Doda, Filip Cedermark, Deepika Elangovan *(arrived after others had left)*
