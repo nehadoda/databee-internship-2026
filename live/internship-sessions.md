@@ -4,6 +4,37 @@
 
 ---
 
+## Session 10 — May 30, 2026 *(upcoming)*
+
+**Attendees:**
+
+**Agenda:**
+
+**Part 1 — Weekly sync**
+
+1. Week check-in — what did you work on? Blockers? Wins?
+2. Sanjeev — Analytics engineering step-by-step path for Neha *(assigned Session 9)*
+3. Sanjeev — Deepika's MLOps path *(carried over Sessions 7, 8, 9)*
+4. Neha — Direct Lake mode + Power BI Fabric Capacity pricing model research share-out *(assigned Session 9)*
+5. Deepika — Live Terraform + DABs E2E demo: Databricks workspace on Azure *(deferred from Sessions 8 & 9)*
+6. Asindu — End-to-end pipeline demo with DQX plugged into silver layer *(carried over Sessions 8 & 9)*
+
+**Part 2 — Technical deep-dives**
+
+7. Suhash — Multi-job DABs mono-repo experiment: `databricks.yml` per-folder isolation *(assigned Session 9)*
+8. Suhash — DLT deep-dive: streaming table vs materialized view vs Delta table (pros/cons, use cases) + SCD type 1 & 2 in declarative pipelines *(assigned Sessions 8 & 9)*
+9. Nikolaos — Metadata-driven DQ framework live walkthrough *(carried over Sessions 8 & 9)*
+10. Nikolaos — Tableau connection to gold layer (manual CSV export path) *(assigned Session 9)*
+11. Filip — dbt progress: incremental ingestion, SCD type 1 & 2, Databricks artifacts *(carried over Sessions 7, 8, 9)*
+12. ~~Sanjeev — Spark Definitive Guide: specific chapters for DE interns~~ → *(carried over Sessions 7, 8, 9)*
+13. ~~Elliot — MLflow deep-dive: model logging, feature stores, serving endpoint~~ → *(carried over — Elliot absent multiple sessions)*
+
+**Notes:**
+
+*(To be filled after session)*
+
+---
+
 ## Session 9 — May 23, 2026 *(today)*
 
 **Attendees:** Sanjeev Kumar (mentor), Kousalya, Filip Cedermark, Neha Doda, Suhash Raja, Deepika Elangovan, Nikolaos Biniaris
