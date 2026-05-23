@@ -4,6 +4,28 @@ A running log of all intern midweek check-in calls. Latest first.
 
 ---
 
+## Midweek Sync — May 20, 2026
+
+**Attendees:** Kousalya, Neha Doda, Filip Cedermark, Suhash Raja
+**Absent:** Deepika Elangovan, Asindu Gayangana, Elliot Eriksson, Nikolaos Biniaris
+
+*Short 11-minute check-in. No blockers raised; mostly status updates.*
+
+### Intern Progress Updates
+
+- **Neha Doda** — Busy week (Swedish classes + family commitments). Working on the Power BI storage modes presentation assigned by Sanjeev (import, direct query, composite). Also exploring Microsoft Fabric alongside internship work.
+- **Filip Cedermark** — Moved from learning dbt to actively using it on the internship project. No concrete demo yet but making progress. Plans to reach out to Raj/Nikolaos to get credentials for a separate project that was discussed earlier. Will drop his GitHub username in the new group channel Raj created.
+- **Suhash Raja** — Continuing with streaming and transformation work. Plans to share DABs deployment code in the repo from last week's progress.
+
+### Action Items
+
+| Task | Owner | Due |
+|------|-------|-----|
+| Drop GitHub username in Raj's new group channel | Filip | ASAP |
+| Share DABs deployment code in repo | Suhash | ASAP |
+
+---
+
 ## Midweek Sync — May 6, 2026
 
 **Attendees:** Kousalya, Deepika Elangovan, Filip Cedermark, Neha Doda, Suhash Raja, Asindu Gayangana
