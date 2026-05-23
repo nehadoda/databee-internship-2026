@@ -4,9 +4,10 @@
 
 ---
 
-## Session 8 — May 16, 2026 *(upcoming)*
+## Session 8 — May 16, 2026
 
-**Attendees:**
+**Attendees:** Sanjeev Kumar (mentor), Kousalya, Filip Cedermark, Neha Doda, Suhash Raja, Deepika Elangovan, Asindu Gayangana, Nikolaos Biniaris
+**Absent:** Elliot Eriksson
 
 **Agenda:**
 
@@ -14,19 +15,111 @@
 
 1. Week check-in — what did you work on? Blockers? Wins?
 2. Deepika — E2E Databricks + Unity Catalog infra deployment demo (Terraform + GitHub Actions) *(committed for this session)*
-3. ~~Filip — dbt silver layer demo: quarantine/dead-letter table with reason tags~~ → *(carried over — Filip absent Session 7)*
-4. ~~Nikolaos — metadata-driven DQ framework walkthrough~~ → *(carried over — Nikolaos absent Session 7)*
-5. Asindu — DQX data quality implementation in silver layer walkthrough
-6. Sanjeev — Deepika's MLOps path *(to be defined and shared)*
-7. Sanjeev — Spark Definitive Guide: specific chapters for DE interns to focus on
+3. ~~Filip — dbt silver layer demo: quarantine/dead-letter table with reason tags~~ → *(carried over — just started dbt yesterday)*
+4. ~~Nikolaos — metadata-driven DQ framework walkthrough~~ → *(partially discussed; live demo deferred to next session)*
+5. ~~Asindu — DQX data quality implementation in silver layer walkthrough~~ → *(practiced but not in pipeline yet — carried over)*
+6. ~~Sanjeev — Deepika's MLOps path~~ → *(not covered — carried over)*
+7. ~~Sanjeev — Spark Definitive Guide: specific chapters for DE interns to focus on~~ → *(not covered — carried over)*
 
 **Part 2 — Technical deep-dives**
 
-8. ~~Elliot — MLflow deep-dive: model logging, feature stores, serving endpoint~~ → *(carried over — Elliot absent Session 7)*
+8. ~~Elliot — MLflow deep-dive: model logging, feature stores, serving endpoint~~ → *(carried over — Elliot absent)*
 
 **Notes:**
 
-*(To be filled after session)*
+---
+
+### 1. Week Check-in
+
+- **Filip Cedermark** — Spent the last two weeks learning dbt-core: reading material, setting up, connecting to Databricks environment. Started actual implementation yesterday. Using the Faker CDC generator he built previously as the data source — will now run all transformations through dbt instead of PySpark notebooks. Using the Databricks connector, so dbt runs on top of Databricks compute and creates materialized objects in the background.
+  → **Sanjeev**: Confirmed dbt-core + Databricks connector means Databricks compute handles execution. Focus next on core dbt engineering concepts: incremental ingestion, data cleaning patterns, SCD type 1 & 2. Understand what artifacts dbt creates in Databricks (materialized views, tables, etc.) — as an engineer you're expected to know what the tool is doing underneath.
+
+- **Neha Doda** — Covered all areas from the Power BI report doc: implemented static and dynamic RLS, time intelligence functions, drill-through, and page navigation. Ready to move to Tableau.
+  → **Sanjeev**: Instead of presenting the dashboard next session, prepare a short presentation on Power BI connection/import modes — import, direct query, and composite — covering when to use each based on data size, latency requirements, and cost. Also research the old license-based pricing vs the new Fabric Capacity model; create a comparison including what Direct Lake is and why it matters. These are hot interview topics for analytics roles.
+
+- **Suhash Raja** — Created a Databricks Workflow job and a declarative DLT pipeline for a single batch CSV load. Understands the difference between Workflow jobs and declarative pipelines (delta live tables). Deployed using Databricks Asset Bundles (DABs). Deployed to Databricks platform via GitHub Actions CI/CD. Using retail data from Databricks Marketplace; sticking with DBFS storage to avoid cloud costs.
+  → **Sanjeev**: Collaborate with Deepika this week — she has strong DABs experience and has built a sample. Also connect with Filip on using his Faker library to generate 5–10 GB of data for high-volume pipeline testing. Go deeper into declarative pipelines: implement SCD type 1, SCD type 2, auto CDC; understand append flows, change flows, restart, backfill, and full refresh patterns. Read up on UC managed tables vs UC external tables, and the difference between streaming tables, materialized views, and Delta tables (pro/cons, which layer each belongs to). Build a full end-to-end pipeline covering ingestion → transformation → data quality in DLT.
+
+- **Deepika Elangovan** — Started implementing Databricks infrastructure via Terraform but hit many errors. Azure portal access issues (Gmail vs Microsoft account conflict). Free trial expired — now on pay-as-you-go (spent ~57 SEK this week). Screen-shared architecture and slide deck covering: 5 Terraform modules (Compute, Networking, Security, Unity Catalog, Workspace), remote backend for state files (versioning + prevent state corruption), GitHub Actions CI/CD flow. Walked through Terraform commands (init, plan, apply, destroy). Issue: compute resource creation failing in Sweden Central region.
+  → **Sanjeev**: Recommend Sweden Central first; West Europe is fine if unavailable. Great use of Claude for code generation — ensure you understand what every resource does, as interviews will test that. Nice to see architecture diagrams alongside the code. Plan to show a live run next session once issues are resolved.
+
+- **Asindu Gayangana** — Limited progress this week. Focused on understanding CI/CD for Databricks but not yet confident. Tried both CLI and UI approaches. Plans to use two separate free-edition accounts (one for CI, one for CD). Has practiced DQX in a notebook but has not plugged it into the pipeline yet. Also created a manual architecture diagram using Roto.io.
+  → **Sanjeev**: Next session — show full end-to-end pipeline demo with DQX plugged into the silver layer. Keep working on the CI/CD approach.
+
+- **Nikolaos Biniaris** — Converted entire pipeline (bronze → gold) from `spark.read` to streaming with `trigger(availableNow=True)`. Made data quality checks metadata-driven using Databricks column-level comments: a comment like `DQ: not_null` on a column is picked up by a utility function that translates it into an actual DQ rule at runtime. Null/failed records are routed to a quarantine table; clean records pass downstream.
+  → **Sanjeev**: Approach is close — the utility function that translates comment tags into SQL rules is the right idea, but wants to see it live next session to validate completeness. Also: Sanjeev had a chat with Raj — recommendation is for Nikolaos to spend ~50% of time on his existing strength (data analysis / visualization) and 50% on DE work. He has Tableau + Streamlit experience (no Power BI due to Mac). Next step: use Spark SQL to build gold layer data models (star schema) to serve dashboards. Also collaborate with Neha on visualization practices (RLS, time intelligence, KPIs, access control).
+
+---
+
+### 2. Analytics Engineering — Role Deep Dive
+
+Discussion triggered by Neha's pivot toward Analytics Engineering and Suhash's question on the role:
+
+- **Data Analyst**: receives clean data, builds reports and visualizations. Focus on KPIs, dashboards, front-end consumption.
+- **Data Engineer**: handles high-volume ingestion and cleaning, agnostic to specific business domain. Serves downstream analysts and ML teams.
+- **Analytics Engineer** (sits between the two): takes silver layer data, creates the final aggregated/gold layer for reporting, designs and schedules those pipelines, owns the semantic/data model. Uses tools like dbt for SQL-based transformations. Responsible for the reporting backend — the gold layer is the foundation of the BI tool.
+  - Key point: the semantic layer in Power BI (measures, relationships) is typically the analytics engineer's domain.
+  - dbt became popular precisely because it gave analysts a SQL-based, engineer-grade interface to own this layer independently.
+
+Sanjeev's framing: visualization is the front end; analytics engineering is the back end of the DA role.
+
+---
+
+### 3. Deepika — Terraform + GitHub Actions Architecture (Screen Share)
+
+Key highlights from the walkthrough:
+
+- **5 Terraform modules**: Networking (VNet, subnets), Workspace (Databricks workspace), Unity Catalog, Security (service principals, role assignments), Compute (clusters)
+- **Remote backend**: stores Terraform state in Azure Blob → enables versioning, prevents state file corruption when multiple people run pipelines simultaneously, supports rollback to previous state
+- **State file comparison**: on `terraform plan`, Terraform compares the desired config against the current state file — shows what will be created, updated, or destroyed
+- **Terraform Destroy**: deletes all resources in the managed resource group — no orphan resources as long as everything is within the same resource group
+- **Standard commands**: `init` (initialize providers), `plan` (dry-run diff), `apply` (deploy), `destroy` (tear down)
+- **Folder structure**: `main.tf` (what to build), `variables.tf` (parameterization — no hardcoding), `outputs.tf` (post-run output values, used by downstream pipeline runs), `provider.tf` (target cloud platform)
+- **Architecture flow**: code pushed to GitHub → GitHub Actions retrieves secrets → Terraform pipeline runs → resources created in Azure resource group
+- **Current blocker**: compute resource creation failing in Sweden Central; evaluating West Europe as fallback
+
+**Sanjeev's note for all interns**: data engineers don't need to be Terraform experts, but should understand what resource groups, VNets, and IaC workflows are — it comes up in interviews and you'll interact with platform teams on these topics.
+
+---
+
+### 4. Specialization Strategy & Session Feedback
+
+Sanjeev asked the group for feedback on the mixed-stream session format:
+
+- **Suhash**: Weekly calls are valuable — hearing different personas' perspectives is useful. Wants more cross-team collaboration (e.g., Filip ↔ Suhash for dbt vs SDP comparison).
+- **Deepika**: Finds it interesting — DE and CI/CD are entirely new for her; the breadth is a good foundation.
+- **Neha**: Sometimes feels disconnected from deep DE topics, but passive listening still yields value. Acknowledged that CI/CD will eventually be relevant as her analytics engineering path matures.
+- **Sanjeev's rationale**: As roles grow toward architect-level, broad awareness matters. Selfish reason for DE interns to hear BI content: as a data engineer you'll be asked about Power BI import modes — your consumers are analysts, so you need to understand their constraints. 200-level knowledge of adjacent domains is the goal.
+
+**Specialization positioning (updated):**
+- **Neha**: Analytics Engineering path — Power BI → analytics engineering (dbt / gold layer ownership)
+- **Nikolaos**: Same path — Tableau/Streamlit → analytics engineering via Spark SQL gold layer models; continue streaming/DQ work in parallel
+- **Filip & Suhash**: Future collaboration task — produce a structured dbt vs SDP comparison (Databricks pushes SDP when customers are unhappy with dbt, and vice versa; knowing both is a differentiator)
+
+---
+
+### Action Items
+
+| Task | Owner | Due |
+|------|-------|-----|
+| Prepare Power BI presentation: import vs direct query vs composite mode (size, latency, cost tradeoffs) | Neha | Next session |
+| Research Power BI pricing: license-based vs Fabric Capacity model + Direct Lake; create comparison | Neha | Next session / following |
+| Start Tableau exploration | Neha | Ongoing |
+| Collaborate with Deepika on DABs | Suhash | This week |
+| Connect with Filip to get Faker library; generate 5–10 GB test data | Suhash | This week |
+| Implement SCD type 1 & 2, auto CDC in declarative DLT pipelines | Suhash | Next session |
+| Understand append flows, change flows, restart, backfill, full refresh in DLT | Suhash | Next session |
+| Read: UC managed table vs UC external table; streaming table vs materialized view vs Delta table (pros/cons, use cases) | Suhash | Next session |
+| Build full DLT pipeline: ingestion → transformation → data quality | Suhash | Next session |
+| Continue dbt implementation; focus on incremental ingestion, SCD type 1 & 2, data cleaning | Filip | Next session |
+| Research what artifacts dbt creates in Databricks | Filip | Next session |
+| Collaborate with Suhash on DABs experience | Filip | This week |
+| Resolve Azure compute issues (Sweden Central → West Europe); demo live Terraform run | Deepika | Next session |
+| Plug DQX into pipeline; demo full end-to-end pipeline with DQX in silver layer | Asindu | Next session |
+| Implement Databricks CI/CD (two free-account approach) | Asindu | Next session |
+| Demo metadata-driven DQ framework (column-comment approach) live | Nikolaos | Next session |
+| Start analytics engineering: build gold layer data models (star schema) in Spark SQL | Nikolaos | Next session |
+| Collaborate with Neha on visualization practices (RLS, time intelligence, KPIs) | Nikolaos | Next session |
 
 ---
 
