@@ -6,7 +6,8 @@
 
 ## Session 9 — May 23, 2026 *(today)*
 
-**Attendees:**
+**Attendees:** Sanjeev Kumar (mentor), Kousalya, Filip Cedermark, Neha Doda, Suhash Raja, Deepika Elangovan, Nikolaos Biniaris
+**Absent:** Asindu Gayangana, Elliot Eriksson
 
 **Agenda:**
 
@@ -14,22 +15,131 @@
 
 1. Week check-in — what did you work on? Blockers? Wins?
 2. Neha — Power BI storage modes presentation: import vs direct query vs composite *(assigned Session 8)*
-3. Deepika — Live Terraform run: E2E Databricks workspace + Unity Catalog on Azure *(demo deferred from Session 8 — issues to be resolved)*
-4. Asindu — End-to-end pipeline demo with DQX plugged into silver layer *(carried over from Session 8)*
-5. Nikolaos — Metadata-driven DQ framework live walkthrough (column-comment approach) *(carried over from Session 8)*
+3. ~~Deepika — Live Terraform run: E2E Databricks workspace + Unity Catalog on Azure~~ → *(deferred — ran out of time; next session)*
+4. ~~Asindu — End-to-end pipeline demo with DQX plugged into silver layer~~ → *(carried over — Asindu absent)*
+5. ~~Nikolaos — Metadata-driven DQ framework live walkthrough~~ → *(carried over — not covered this session)*
 
 **Part 2 — Technical deep-dives & presentations**
 
-6. Filip — dbt progress: incremental ingestion, SCD type 1 & 2, artifacts in Databricks *(carried over from Sessions 7 & 8)*
-7. Suhash — DLT deep-dive: streaming table vs materialized view vs Delta table (pros/cons, use cases); SCD type 1 & 2 / CDC in declarative pipelines *(assigned Session 8)*
-8. Nikolaos — Analytics engineering: gold layer data models in Spark SQL (star schema) *(assigned Session 8)*
-9. ~~Sanjeev — Deepika's MLOps path~~ → *(carried over from Sessions 7 & 8)*
-10. ~~Sanjeev — Spark Definitive Guide: specific chapters for DE interns~~ → *(carried over from Sessions 7 & 8)*
-11. ~~Elliot — MLflow deep-dive: model logging, feature stores, serving endpoint~~ → *(carried over — Elliot absent multiple sessions)*
+6. ~~Filip — dbt progress: incremental ingestion, SCD type 1 & 2, artifacts in Databricks~~ → *(carried over — still resolving setup errors)*
+7. Suhash — DABs CI/CD deep-dive: mono-repo vs multi-repo, `databricks.yml` atomicity, deploy-run patterns *(organically covered)*
+8. Nikolaos — Analytics engineering: gold layer business metrics in Spark SQL *(covered in check-in)*
+9. ~~Sanjeev — Deepika's MLOps path~~ → *(carried over — Sanjeev to define by next session)*
+10. ~~Sanjeev — Spark Definitive Guide: specific chapters for DE interns~~ → *(carried over)*
+11. ~~Elliot — MLflow deep-dive: model logging, feature stores, serving endpoint~~ → *(carried over — Elliot absent)*
 
 **Notes:**
 
-*(To be filled after session)*
+---
+
+### 1. Week Check-in
+
+- **Filip Cedermark** — Slow week due to errors encountered when starting actual dbt usage on the internship project. Current blocker: dbt not recognizing the project file, preventing SQL models from running. Nothing concrete to show yet.
+  → **Sanjeev**: Take time to fix the issue. Path confirmed: basic project → incremental ingestion → SCD type 1 & 2 → eventually collaborate with Suhash on dbt vs SDP comparison.
+
+- **Neha Doda** — Prepared and delivered the Power BI storage modes presentation (see section 2). Also exploring Microsoft Fabric — learning Delta tables and the Lakehouse vs Warehouse distinction in Fabric using DP600 content (Aleksy's YouTube series).
+  → **Sanjeev**: Fabric is a valid platform, used by many customers. Core analytical engineering concepts matter more than platform choice. dbt is the leading tool in this space — will cover once foundations are solid. Sanjeev to prepare a step-by-step analytics engineering path for Neha. Also: recommended Neha scroll through Sessions 1–3 notes in the repo to catch up on foundational concepts (structured/semi-structured data, file formats, Lakehouse) that were covered in common early sessions.
+  → **New tasks**: research **Direct Lake mode** (4th Power BI mode, Fabric-specific) and the **Power BI Fabric Capacity pricing model** (replaced old A1/P1/P2 license model). Come prepared to discuss next session.
+
+- **Suhash Raja** — Limited DE progress this week but pushed CI/CD workflow using DABs for deployment to a separate branch in the repo. Raised questions about production DABs patterns — addressed in section 3.
+  → **Sanjeev**: Still pending: streaming tables vs materialized views vs Delta tables (pros/cons, use cases), SCD type 1 & 2 in DLT.
+
+- **Deepika Elangovan** — Successfully completed end-to-end Terraform + DABs implementation: created Azure resources via Terraform (5 modules), then ran a medallion architecture ETL pipeline (bronze → silver → gold) on a sample CSV file via YAML config and GitHub Actions. Used Claude for code generation throughout.
+  → **Sanjeev**: Excellent progress. Keep using Claude but always understand what it generates — it sometimes uses outdated provider versions. Always direct it explicitly (e.g. "use the latest version of this Terraform provider"). Plan to show a live run next session.
+  → Also: Deepika is stepping into the **MLOps path** (confirmed). She hasn't spoken to Raj yet. Sanjeev to define MLOps plan by next week.
+
+- **Nikolaos Biniaris** — Fixed pipeline issues and moved to the gold layer. Created a set of business metrics using Spark SQL on top of `fact_sales` (enriched with holiday API data) and dimension tables (products, customers). Metrics include: holiday sales performance, CLV (customer lifetime value), product performance, time-based trends, and operational KPIs.
+  → **Sanjeev**: This is exactly the analytics engineering pattern — Neha should align with Nikolaos on this approach. For dashboarding: Databricks free edition and Tableau community edition don't support direct connection. Nikolaos's plan: export gold layer tables to CSV and manually import into Tableau.
+
+---
+
+### 2. Neha — Power BI Storage Modes Presentation
+
+Neha presented a comparison of the three Power BI storage modes:
+
+**Import Mode**
+- Data is copied into Power BI's in-memory model
+- Fastest query performance; no live connection needed; full DAX support (including time intelligence)
+- Limitations: Pro license capped at 1 GB; data is not real-time; requires scheduled refresh
+
+**Direct Query Mode**
+- Every visual fires a live query directly to the source database
+- Always up-to-date; no size limit (data stays in source); good for real-time dashboards
+- Limitations: slower performance (round-trip to database per query); limited DAX support (time intelligence functions not available); source database must always be online; high load when many users query simultaneously
+
+**Composite / Dual Mode**
+- Combines both: some tables in import, others in direct query
+- Recommended pattern: **fact tables → direct query** (frequently changing transactional data); **dimension tables → import** (rarely changing; benefit from refresh scheduling)
+- Balances cost, performance, and freshness
+
+**Comparison summary (Neha's table):** data storage location, speed, latency, memory usage, dataset size suitability, real-time capability, concurrent user handling, DAX support.
+
+---
+
+### 3. Post-Presentation Discussion — Direct Query Optimization & Caching
+
+Sanjeev extended the storage modes discussion with production-level context:
+
+**Optimizing direct query at Lakehouse scale:**
+- When Power BI connects to a Lakehouse (Databricks, Snowflake, Fabric) in direct query mode, the fired SQL query needs to scan potentially terabytes of data.
+- **Data layout optimization** is the engineer's responsibility:
+  - **Partitioning** (Suhash explained): organize data in folders by a common filter column (e.g. date, country). A query for "last month" skips all other partitions — no full scan.
+  - **Clustering / Liquid clustering**: like database indexing, co-locates related rows physically on disk. Speeds up point lookups and range scans.
+- **Database-level caching** (production pattern):
+  - Schedule the exact set of queries a critical dashboard fires (e.g. CEO dashboard) to run at 6 AM as a scheduled job on the warehouse.
+  - Results are loaded into the database's disk cache. When users log in at 8 AM and click the dashboard, the query is already cached → near-instant response even in direct query mode.
+  - Cache is invalidated as soon as the underlying table is updated → direct query fires again → re-cached. No stale data is ever returned.
+
+**Nikolaos's question — why not use import with a trigger instead?**
+- Import + trigger works well when data changes infrequently (e.g. daily batch).
+- For streaming tables (data arriving every second/millisecond), continuous import re-runs would explode Power BI storage and cost.
+- Direct query is more practical at scale and increasingly unavoidable given Power BI's Fabric Capacity pricing — customers often trade performance for cost savings by leaning on direct query.
+
+**Mono-repo vs multi-repo — raised as conceptually parallel**: both import/direct query and mono/multi-repo are "flavors" — neither is universally correct; the right choice depends on scale, team structure, and cost constraints.
+
+---
+
+### 4. Suhash — DABs CI/CD Patterns (Screen Share)
+
+Suhash shared his DABs deployment setup: single declarative pipeline job, workflow action with three steps: validate bundle → deploy bundle → run bundle job. Sparked a detailed production discussion:
+
+**Mono-repo vs multi-repo:**
+- **Mono-repo**: one root git repo with multiple project folders (`my_first_job/`, `my_second_job/`, etc.). All code in one place — easy to manage and navigate.
+  - Risk: a code change in one folder accidentally triggers redeployment of all other jobs — a hard no in production.
+- **Non-monorepo**: each project is its own separate git repo. No cross-contamination, but managing hundreds of repos becomes a nightmare.
+- **Both patterns are used in production**; depends on team preference. Know the pros and cons of each.
+
+**`databricks.yml` as the unit of modularity (key takeaway):**
+- When `databricks.yml` lives **inside a project folder**, that folder becomes an atomic deployment unit. `databricks bundle deploy` on that folder only deploys that project — other folders are unaffected.
+- When `databricks.yml` is at the **root level**, the entire repo is treated as one unit — any change deploys everything. This is the wrong pattern for multi-project mono-repos.
+- Deepika: confirmed same architecture from her implementation; wants to experiment with a two-job setup to validate isolation.
+
+**Deploy + run:**
+- `deploy` + `run` together is a dev/QA pattern only — deploy and immediately trigger the job for integration testing.
+- In production: deploy only; jobs are scheduled via Databricks job scheduler, not triggered by the deployment pipeline.
+
+**DABs YAML auto-completion in VS Code:**
+- Suhash asked about getting proper Databricks DABs YAML key auto-completion (Red Hat YAML extension was not recognizing Databricks-specific keys).
+- Suggestion: install the **Databricks VS Code extension** — it understands `databricks.yml` schema and should provide context-aware completions.
+- Deepika: also recommended **YAML Lint** as a fallback for syntax validation and indentation fixing.
+
+---
+
+### Action Items
+
+| Task | Owner | Due |
+|------|-------|-----|
+| Research Direct Lake mode (Power BI / Fabric) and Fabric Capacity pricing model; compare with old license model | Neha | Next session |
+| Push Power BI storage modes presentation to `action/` folder in GitHub | Neha | This week |
+| Define analytics engineering step-by-step path for Neha | Sanjeev | Next session |
+| Define Deepika's MLOps path | Sanjeev | Next session |
+| Continue resolving dbt project file error; progress on incremental ingestion | Filip | Next session |
+| Experiment with multi-job DABs mono-repo setup (two separate folders, each with own `databricks.yml`) | Suhash & Deepika | Next session |
+| Read: streaming table vs materialized view vs Delta table (pros/cons, use cases); SCD type 1 & 2 in DLT | Suhash | Next session |
+| Install Databricks VS Code extension for YAML auto-completion | Suhash | This week |
+| Live Terraform + DABs E2E demo | Deepika | Next session |
+| DQX pipeline demo (end-to-end with DQX in silver) | Asindu | Next session |
+| Connect Tableau to gold layer (manual CSV export if needed); continue analytics engineering models | Nikolaos | Next session |
 
 ---
 
