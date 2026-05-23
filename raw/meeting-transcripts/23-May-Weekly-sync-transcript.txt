@@ -1,0 +1,415 @@
+Impromptu Google Meet Meeting - May 23
+VIEW RECORDING - 74 mins (No highlights): https://fathom.video/share/Xs8bdVaQs3MryxKzk1WJ2f2M33TdyTC2
+
+---
+
+0:01 - Kousalya (nanduri1120@gmail.com)
+  How was your week? It was good.
+
+0:08 - Neha Doda
+  How about you? Good, thank you.
+
+0:19 - Kousalya (nanduri1120@gmail.com)
+  Hello, Filip, good morning. Good morning. Hi, Filip, good morning. Good morning, everyone. How's doing? Sorry, one more time? didn't.
+
+0:53 - Filip Cedermark
+  Just mentioning, how is it going?
+
+0:54 - sanjeev kumar
+  Oh, um, this weekend, you guys. Is it planned or just same old, same old? It's summertime, right? So I'm expecting some fun activities from you guys.
+
+1:11 - Filip Cedermark
+  Yeah, mostly the same, with the exception I played some badminton yesterday. was fun. So I'm feeling it now. I'm a bit sore.  You have to be regular, Yeah, of course.
+
+1:29 - sanjeev kumar
+  Yeah, same thing happens with me. So I like playing badminton with my wife and other friends. But then if there's a gap, then it's a pain a couple of days.  Yeah, that's the same thing that happened here.
+
+1:42 - Filip Cedermark
+  It's been a while since we last played. Maybe like, yeah, not too long. Maybe like two, three weeks, maybe.  You lose it pretty quick if you don't keep it up. That's right.
+
+1:56 - sanjeev kumar
+  What about you, Neha? I don't think think The kids are keeping you so busy, you don't have anything to plan and no time to plan.
+
+2:05 - Neha Doda
+  Yeah, actually, nothing in my mind.
+
+2:13 - sanjeev kumar
+  Hi, Suhash. Good morning, Suhash.
+
+2:19 - Filip Cedermark
+  Hi, Suhash.
+
+2:20 - Kousalya (nanduri1120@gmail.com)
+  morning.
+
+2:28 - sanjeev kumar
+  Then let's wait a couple of more minutes and we'll get going with the agenda. Okay. Then let me share my screen and then we can start.  Okay. So yes, as usual, let's, so this is today's agenda. So we will have weekly check-ins and there are a couple of carried over things from past week.  Let's see, like for example, something from Neha, Deepika, Sindhu, Nicholas, Filip, Suhash, and let's see like how far we go, right?  We had some action items on all of us last week and we will see how far we have, we have made progress there.  Okay. Then, yeah, while we do the weekly check, weekly check-ins, blockers, and wins, please feel free to give your updates too.  So I would say. Filip, yeah, you are on top of my screen. Yeah, sure.
+
+4:06 - Filip Cedermark
+  So this week has been pretty slow, unfortunately. I had to spend a lot of time trying to solve errors.
+
+4:21 - sanjeev kumar
+  Sorry to cut you off. Okay, we are recording, right? Okay, I can say recording. Okay, just wanted to make sure.
+
+4:28 - Kousalya (nanduri1120@gmail.com)
+  Yeah, okay.
+
+4:31 - Filip Cedermark
+  So like I said, it's been a pretty slow week, because I've had a bunch of issues that I've had to kind of sort out as I started using dbt on my actual internship project.  So I don't have too much new, at least like too much new things to show, unfortunately.
+
+4:51 - sanjeev kumar
+  Okay, okay.
+
+4:53 - Filip Cedermark
+  Because I'm still trying to, I've had a bunch of issues, I'm currently having another issue where my... When I try to run my SQL files, it's not recognizing my project file, so it's refusing to even run anything.  Okay, okay. So I'm have to figure that out. Okay, take your time and fix it, no issues there, right?
+
+5:21 - sanjeev kumar
+  Yeah. And let me, as I check in our notes, so DBT progress, incremental ingestion, SED type 1 and 2, and then later on, once you have done this basic project, then you will sit with Suhash to see how SDP and DBT compare with each other, right?
+
+5:40 - Filip Cedermark
+  Yes, that's the plot. yeah.
+
+5:43 - sanjeev kumar
+  Then I think next, Neha, you are on screen. Yeah, hi Sanjeev.
+
+5:50 - Neha Doda
+  I actually explored the different storage mode, as you said in the last meeting that I have To give the presentation, so I prepared like a small presentation where I can compare the different modes and along with that, like we discussed that 50% I am like upscaling myself with the new skills, like I'm preparing for analytics engineer.  So I explored Microsoft Fabric. So like I have, I've started exploring about Delta tables. So, so at the moment I'm doing that.  Earlier I made a clarity on Lakehouse and Warehouse, like how they are being created and used in Microsoft Fabric.
+
+6:39 - sanjeev kumar
+  Okay, Fabric would be your platform of choice for your data analytics engineering skillet, right?
+
+6:49 - Neha Doda
+  No, it's not like my choice, but I am already familiar with it. So I continued with it. But yeah,  But yeah, I just want to bring the clarity on the job of analytics engineer, no matter what platform is being used.  Okay, great, great.
+
+7:14 - sanjeev kumar
+  Fabric is an okay-ish platform. It's good. A lot of customers use it. I have some bias against it, but it's fine.  It's a good platform to start with, right? And there are customers who are using Fabric, and there are interviews specifically on Fabric.  But your point is right, it doesn't matter which platform, just kill up yourself on analytical engineering. Just to let you know, in this space, DBT is like one of the leading tools, right?  So once you get your concepts clear on the engineering part, just explore these tools, and we will talk about it.  By then, we will have Filip and a few other people who will have other platform that they have tried, and they can share experience with you.  But what you have Plan right now, it's absolutely fine. Then in the end, like once we are done with this update, then we will hand over the screen to you and you can share it with us.  Okay, then Suhash, you are next on my screen. You are on mute. You are on mute, yes.
+
+8:30 - Suhash
+  But Suhash, one more thing.
+
+8:33 - sanjeev kumar
+  Neha, but are you clear on what is your path for analytical engineering? Do you need some support there?
+
+8:44 - Neha Doda
+  I can make a plan for you, like what exactly step by step you should do for analytical engineering?
+
+8:49 - sanjeev kumar
+  Yeah, that would be helpful for me.
+
+8:52 - Neha Doda
+  Because maybe I'm doing the right way, but it would be a surety on the top of it that I have a...
+
+9:06 - sanjeev kumar
+  Let me just quickly check. So we have, give me a second, right? So the current plan is more on dashboarding part of the analytics, but yeah, I will make a plan and, and share it with you.
+
+9:27 - Suhash
+  Yes, so this week, I didn't get to work much on the data engineering part, but I have uploaded that CACD workflow file, used to utilizing DAB for deployment, the repo as a separate branch.  So, so that anyone can view it. Apart from that, like, I have few doubts on the few questions. Around it, which I might ask you a little later in the call, like, regarding CICD or SDP?  What is it? Like, yeah, kind of relating to each, like, once I explain, then I will ask my doubts, like, sure, sure.  Let's, let's do it after the first round.
+
+10:20 - sanjeev kumar
+  yeah. Okay, great. And, and just to make sure, so you, you would also supposed to prepare, prepare or, like, read upon the stream, because you are focusing specifically on database right now.  So, tables, materialized views, normal data tables, pro and cons, what use cases you will use it for, right? one and two handling, yeah, these things, you, you are working on, yeah, yeah, like, I haven't completed it yet.
+
+10:51 - Suhash
+  No, not at all, not at all. So, whenever you do, whenever you have time, that's a tag, inshallah. Great.
+
+10:57 - sanjeev kumar
+  Okay, then Deepika. Hello Sanjeev, good morning.
+
+11:02 - DEEPIKA ELANGOVAN
+  So this week, I was able to successfully implement the end-to-end implementation of Terraform, Databricks, asset bundles. So the hands-on was so interesting, like there were lots of issues, but by figuring out each issue and by checking what exactly and how to fix it, it was quite interesting to learn.  At least to overview level, I got a picture like how a platform is being set up for Databricks. So it was interesting for me to learn and work on a hands-on like this.
+
+11:34 - sanjeev kumar
+  Great. So could you explain like, and if we get time, I think I would love to see what you have implemented, how you have implemented, give my feedback and also get some learning from Yeah, I'm looking forward to it.  Yes. Could you explain like what exactly you, not the details of the ULAN codes, but just what you actually implement component component-wise.
+
+12:00 - DEEPIKA ELANGOVAN
+  So with the help of, like I used Azure as a cloud provider, then with the help of Terraform, like I created the resources required for the Databricks workspace, and then with the help of Databricks asset bundles, tried to, I tried to run a job with, I tried to create an ETL pipeline, and running a small job with a sample CSV file, sanjeev kumar, I performed, I performed like the data medallion architecture that bronze, silver, and gold architecture with a simple CSV file.  So the previous time I ran was like, I manually created the notebooks, and then that orchestration in the Databricks workspace directly, but this one with the help of YAML files, and GitHub Actions, like I was appraised by the way, like how we created the pipeline in Databricks workspace with the help of GitHub Actions, then like how we performed all those, all those data cleaning process, and then providing that aggregated put the too.  So just then, So I did work with the help of Cloud. was a learning experience only for me, sanjeev.  Absolutely.
+
+13:07 - sanjeev kumar
+  You should definitely use Cloud wherever possible because no company in the team or no developer anywhere in the world, if they are not using it, it's their fault.  So what you're doing is great. Just make sure since we are in learning phase, you understand what exactly it is writing.  It makes a lot of mistakes at the moment, right? Yeah, like it will be guiding it in some other direction, then like if we have to...  I've seen it uses some older version of the code. It's not... So sometimes when we guide it, make sure you use latest version of this particular Terraform provider and whatnot.  make sure that you are the manager of Cloud, right? Exactly.
+
+13:48 - DEEPIKA ELANGOVAN
+  Because it asked me to destroy the resources in Sweden Central and asked me to go with Europe resources. But like I was still like working with Sweden resources itself.  But... At one point, I was able to identify the resource and deploy it successfully, but it took a lot of trials with it.  Yes, exactly.
+
+14:09 - sanjeev kumar
+  But thanks, Deepika. We will try to go to that. Sure. Nikolaos, the next one on screen. Yeah. Hey. Hi.  So, we are in the first round where we have check-ins and what you have been working on, any blockers, anything.  Yeah.
+
+14:34 - Nikolaos Biniaris
+  I fixed a bit the whole pipeline. And then I went to the gold layer. And as we said, I tried to create a lot of different business metrics.  And you were going to do it in Spark SQL, right?
+
+14:52 - sanjeev kumar
+  Yes.
+
+14:52 - Nikolaos Biniaris
+  Through Spark SQL, I went to my main tables, which was a fact sales. I created the fact sales. So that is enriched with my API, which is holiday data.  And then I have my dimensions, products and customers. And using Spark SQL, I created a lot of different business metrics.
+
+15:13 - sanjeev kumar
+  Exactly. And Neha, so exactly what Nikolaos is doing, right? This is what you want to get to. So he has done a little bit of data engineering part also, but you don't have to worry about it.  But just imagine you have certain tables available, and then you are actually modeling the data to be consumed by dashboard.  So that is the part you have to focus on. So what Nikolaos is doing, you have to probably align with him to see what he's doing, how he's doing, right?  Yeah. So I think both of you have to follow.
+
+15:48 - Nikolaos Biniaris
+  have created examples of holiday sales performance, customer behavior analytics like CLB pro. Product performance, time-based trends, and operational, different KPIs.  Great.
+
+16:06 - sanjeev kumar
+  Yeah. Nice. And one more thing. Neha, you were talking about, you were reading about Delta tables, right? Yes. So that part is also important.  Maybe I think you missed a couple of sessions in the beginning. We actually, the first month, we had like a common session where every stream had joined.  So we did talk about what is a Delta table? What is a table format? What are the different file formats available?  What is a lake house? What is a Delta Lake? The basic concept side, because you are now moving towards engineering side.  So it is expected, even not in a very detailed level, like others in the team. But yeah, you need to know what is a lake house?  Why it is even called lake house? What is warehouse and Delta Lake? Right. So, so if possible, you have access to this.  Okay. This GitHub, you have access to it. So. segue What you can do, you can just scroll through it.  Yeah, if you can see my screen, all the sessions are here in internship, dash. I also share the link.  All the sessions are built here. You can just go to the initial ones, right? And just go to the bottom.  Yeah, just go to the bottom, go to the initial ones, like session one or two, three. Just see like what exactly we were actually talking about, right?  And get some idea about, like we did talk about something very basic. Structured, semi-structured data, what it should, right?  So from here you will get a quick guidance on what exactly, as an engineer, right? Not data engineer, analytics engineer, you should know.  Irrespective of data engineer, ML engineer, or DevOps person, right? You must know these things, okay?
+
+17:58 - Neha Doda
+  So, yeah, I will definitely. I directly go through this document, but yeah, I want to correct what I said.  I was just trying to say because I am following some YouTube videos for this DP600 on, like, by Aleski.  I don't know. I follow, usually follow his videos. So I was just focusing on these concepts in Microsoft Fabric, although I have the basic knowledge of what is a lake house and what is a warehouse and what are delta tables.  But I was trying to how to create a lake house or a warehouse or then pipelines in Microsoft Fabric.  yeah, so I'm just trying to use these concepts in Microsoft Fabric. Makes sense. Yes, ma'am.
+
+18:45 - sanjeev kumar
+  Okay. So, Nikolaos, is that all from your, from your side?
+
+18:51 - Nikolaos Biniaris
+  Yeah, the business metrics, because I had some issues with the whole pipeline. So I was trying to create this at first and then when everything.  was running. Then I started with metrics.
+
+19:03 - sanjeev kumar
+  OK, great. And what about your dashboarding tabular? I think tabular was the... Yeah, this is next.
+
+19:10 - Nikolaos Biniaris
+  I want to, because I don't have direct access to connect the Databricks free edition with Tableau, because both are in community editions, so they don't support any kind of connection.  I have to figure out how I will do it. Probably I will take the tables in CSN format, my gold layer tables, like the metrics and the facts and dimensions.  And probably I will just do a manual import to Tableau.
+
+19:40 - sanjeev kumar
+  OK, yeah, yeah. Sure, sure. Yeah, but then thanks a lot, Niklas. Yeah. OK, great, guys. So I think next, Neha, I will hand over the screen to you, and you can take us through whatever you have prepared, the differences between composite, model, import, mode, export.  Sorry, direct query mode, direct lake mode, if you're doing on fabric. So whatever you have prepared. Yeah, please share what you have.
+
+20:26 - Neha Doda
+  Can you see my screen? Yeah, yeah, you can see. Yeah, I am just trying, I was just trying to put it on full screen, but it's not happening.  So is that okay? Yeah. Yeah. So basically I have prepared for the storage mode in Power BI. So mainly there are three storage mode in Power BI.  Okay. The first one is import mode. Second one is direct query. And the third one is the composite mode.  I don't know why it's not moving to the next slide. Let's do one thing. Can you reshare again? I was just trying to check if it is happening again.  Can you see it now? Yeah. No, but it's not moving again. I don't know. I'm going to the next slide.
+
+22:35 - sanjeev kumar
+  No, it's not going to the next. Even in, so this is in slideshow mode. So can you come out of it and try to scroll?  Yeah, I tried it in the other mode as well.
+
+22:45 - Neha Doda
+  But I don't know because when I don't share it, it's moving.
+
+22:48 - sanjeev kumar
+  But otherwise, maybe in instead of sharing the window, can you share your whole screen? Okay.
+
+22:56 - Neha Doda
+  Yeah, I can try it out. Yeah. I think you can see. So basically, I'm going to talk about what is the storage mode and what are the various kinds of storage modes we're using.  Close this window, the pop-up of Google Meets. Just close it, it will appear again if you need.
+
+23:49 - sanjeev kumar
+  Great. Please go ahead. Okay.
+
+23:53 - Neha Doda
+  So I'm going to talk about what are the various storage modes. So what is actually a storage mode in Power BI?  And what are the various storage modes in Power BI? So first of all, a storage mode is basically how we store data in the Power BI.  So maybe we can bring the data in the Power BI or we can connect it with a database. So I have just tried with the cloud.  So this is just an example of think of it like a supermarket versus a farmer market. In the supermarket, we have everything on the shelf, but it may not be fresh.  But when we go to a farmer market, we have everything in fresh. So the supermarket is the import mode.  And the farmer market is. Basically, a direct query where we are going every time to database, and then we are querying the database to get the data.  So this is just a general example. So the first I'm going to talk about is the import mode. In the import mode, what we do is we copy the data into Power Query, and it is fastest because the data sits into the memory of the Power BI.  So we can query very fastly, and we don't need any live connection because the data is inside the Power BI memory.  And the limitation of this Power BI memory is that, I don't know, I'm getting nervous. It's okay, not a problem, take your time.  Yeah, the limitation of the Import mode is that, that we need to refresh the data, we have every time, like every, maybe every hour, or maybe depending upon your requirement, we have to schedule it, it's not real-time, indirect query, we can connect the data with the real-time data, and you need not to refresh it, and yeah, I was talking about the limitation of its data size, that the Power BI Premium Pro users have a limitation of 1 GB, we can only import data up to 1 GB, yeah, it has a premium capacity, but that will have an increase in the memory cost as well, that would also take, and next is the direct query mode, indirect query is that, that we connect the data, we connect with the database, and then we build a dashboard and  But the benefit of direct query is that you always get an up-to-date information and there is no limitation on the data size because the data is residing in the database.  So you can query as big as your database and it's beneficial for real-time querying, good for the data because the data, if it is changing every other minute, so it's good for that.  But yeah, it's slower in performance in direct query. The limitation is only that it performs slow because every time when we will query the data, it will go to the database and then the query will return the result and it will take time.  So there is a performance issue. And another limitation of direct query is that it has limited data. DAX functionality, because there are some functions that do not work in direct query, and those are time intelligent functions.  So we cannot use all the DAX functions in direct query mode, and this is the advantage of import mode that we can use all the DAX functions.  And the other limitation of direct query is that source database must be available. It means that you need to be available all the time in the database.  There needs to be an internet connection, there needs to be a connectivity. Because if you want to make real-time reporting, the database needs to be connected with the report all the time.  And next is the dual and the composite mode, which can have, like, the best of both the worlds, you can say.  You can have. You Tables in the direct query mode and then tables in the import mode. We can have both because like in the star schema, usually there are fact tables and then there are like dimension tables.  So if we want to make a composite model, we prefer to keep the dimension models in import mode and then the fact tables in the direct query Because fact tables usually have transactional data and it keeps on changing, so it needs to be, it is better to keep them in the direct query mode.  And whereas the dimension tables, they rarely change, so it can be updated using the schedule refresh so we can keep them in the import mode.  So this way, we can like save a lot of cost involved in. And then this is basically the comparison based on like the data storage, the speed, the latency, because the data storage, if we talk about the factor data storage in import mode, data will sit inside the memory.  So it has its own limitation that in import mode, if you have the pro capacity, then we can only store up to one GB, but if we have premium, then we can store like more, depending upon the subscription.  And in direct query, the data will stays in the database, so there is no need of worrying about the memory.  And in dual, we can have like both of these. So I will just like, this is just an example of like, how it look likes in Power BI.  Just a second. If you can see this, basically this is a report that I already prepared. It's not the, I mean, the actual one.  If you see this one, the one without blue, this one is the, I'm just scrolling my arrow here. These are the tables which are in import mode.  If you can see, if I hover over this, I can see the import mode in the data model. But if I hover over this, this one is in the direct query mode.  Basically, I have tried to create a data model where I can present the storage mode as mixed mode. I haven't, like, shown it separately.  I actually created this report using import mode, but just to show that how it looks like in Power BI, I've just connected these tables, this person count, country region.  Gen, person, person, three of these tables, although they do not share any information and they are not connected, just to show it in the Power BI, I just implemented this.  So these three tables are in direct query mode. If you can see these three blue lines, these are in direct query mode and all the other tables are in import mode.  So this is how it looks like in Power BI and here we can like change the modes as well.  If you want to change the mode of the table, we can change it to any other mode whenever we want.  And I will go back here. So these are the differences. So if I talk about the speed import mode is very fast because the data sets inside the Power BI.  I handle. handle. handle. The query is faster. Whereas in direct query, it's quite slower. So it has a performance issue when we connect data in the direct query mode.  Again, the latency, because you need to query the database and then the database will send back the result. So it's quite higher in terms of direct query.  Whereas it's low in terms of import mode and it's moderate in terms of dual because you can manage the tables in whatever way you want.  Some of the tables we can connect to import and others to direct query. Then again, memory usage, because if the data is inside the Power BI, it's high.  But in direct query, since it is connecting to the database, so the storage is involved in the database. that indirect query memory usage is quite high.  Sorry, low. And then the dataset size. It's small in terms of import mode. In import mode, we use where the dataset size is usually small.  But if we see that the dataset size is high, so we prefer using direct query. And in real time, real time querying, real time data, I've already discussed that it is mostly in the direct query because it's not possible with import.  Import has to refresh the data every like 30 minutes or every time that we schedule. And then how many users can handle.  So basically, if there are many users who are going to access the Power BI report, then import mode works well.  Whereas in direct query, it can overload the database because more number of users will keep querying the database. So it will be out.  High load on the database, and then I already talked about DAX, that the full support of DAX functionality is only with the import mode, but not with the direct query, but in dual mode, it's again like mostly supported because if some of the tables, those are in import mode, they can be supported fully with the DAX, but not the tables that those will be connected with the direct query.  And the main advantage of import is again the fastest performance, and the main advantage of direct is real-time, because if there is a constraint that we need to report on the real-time data, direct query is the best choice, but if we want performance and size is not an issue, then import is better than direct query, and dual is the balance between the cost.  Cost and speed. And this is vice versa that import mode has a limitation that it doesn't suit for real-time querying.  And in direct query, it is slow and expensive. Yeah, because the data, we need to connect it with the data.  And then, so it will be expensive. We will have a huge cost involved with querying and then computing and then again with the storage of the data.  So, that's all from my side. Thanks a lot, Neha.
+
+36:36 - sanjeev kumar
+  Any questions from the team? Can you please keep sharing your slide, Neha? Yeah.
+
+36:45 - Neha Doda
+  Yeah, sure.
+
+36:47 - sanjeev kumar
+  First of all, thanks a lot, Neha. It was really well presented and really well delivered. I don't know why you were nervous.  I did not see that. I did not feel that you were nervous. If you would not have said that, I would not have finished.  Yeah, actually, the thing is, it's been quite a long time.
+
+37:04 - Neha Doda
+  I'm giving this presentation after a long time, these sessions are to practice, right?
+
+37:09 - sanjeev kumar
+  So yeah, it's completely fine. So just to let you know, this is one of, as an analytical engineer, you are responsible for figuring out what exactly needs to be done, right?  Like for usually we, as a data engineer also, if it doesn't go to analytics engineer, then it comes to data engineer.  So we should be in a situation to understand these, these kinds of visualization, integration, touch points, and suggest to a customer what makes sense, right?  Another thing. So I have a couple of questions for Neha, like maybe as a follow up thing, you can work on that path.  See, import mode is great. But like Neha mentioned, it's not suited for all kinds of use cases. Direct query is also great, especially on a higher.  And when you work with big data, like we are trying to do, there's a higher chance that, that you will, you will bump into higher scale data than a small dataset site.  So, and import mode could also be costly. So anyway, now the next step for a data engineer or a data analytics engineer is if you are using direct query, right, it will be slower because it has to go to that database and try to find it.  And it can, that query could be fired on any kind of database, maybe, I don't know, Oracle systems and whatnot, but we are talking here right now about lake houses.  Like when dashboards connect to lake house, lake houses where you keep data on scale, a lot of data, it should be able to query.  There, the responsibility of an engineer is to find out how I can optimize such query direct queries so that it is.  that can take And, in we're if So there are a couple of things you have to keep it in mind, and I think this task goes to everyone, maybe except Deepika, you need to find out like if you are in Lakehouse perspective, I'm telling you, right?  I'm not telling like when you're firing query to Oracle or whatnot. There are certain things that you have to keep in mind.  What is your data layout? Like, for example, when you're querying, how are you querying? What kind of query you are firing?  Are you partitioning the data? What is the data layout? Are you clustering the data? What kind of optimizations you have done, right?  So these things are very important in making these direct query faster and faster at scale, right? Maybe a question if you guys know already, could you explain or maybe Neha or Niklas or any of the DE people, right?  Could you explain like what are the things you will look at to improve the direct query performance?
+
+40:06 - Suhash
+  You have partitioning is one thing and then we can have incremental refresh of the data. Maybe super click and there is actually a set of data that for viewing once like incremental refresh so that the data is all there already in the Power BI platform.  No, no.
+
+40:29 - sanjeev kumar
+  So yeah, your first answer was correct, like partitioning. The second part is not correct because incremental refresh would mean like maybe you are running an import mode.  Instead of importing whole 100 GB of data every time, you are importing incrementally like daily new data that has arrived, you're going to import it into Power BI.  But this direct query is about no import into Power BI at all. Just fire the query directly from there.  That query comes to your database, which stores the data. Then add the query there, and that database will only return the data set that query has requested for.  So it will scan the 100 GB data, for example, and return only maybe 1,000 records or something like that, which is required in the dashboard.
+
+41:16 - Suhash
+  Okay, and then I have only one.
+
+41:19 - sanjeev kumar
+  So very good point. Partitioning, could you explain to everyone, like, what exactly do you mean by that?
+
+41:24 - Suhash
+  Like, for example, if you want to review the sales by each country region, like, in the gold layer, we can have the calculation and, like, we have the data relating to each country in a separate folder and classified by, that is one example.  Another example is, like, by date, so that if we partition the data by date, then you. If we want only the last month's data, then, uh, we can skip out the remaining days, uh, files, uh, so that, um, the necessary to scan through all the data is avoided.  Yeah.
+
+42:17 - sanjeev kumar
+  So rightly said, so also partitioning, so data layout optimization. If you want to like sound more, uh, technical, you have to say data layout optimization is something that you have to keep it in mind to make these queries faster.  In that comes like, I don't know, like, uh, said, uh, partitioning is one of them in data, which is a concept called clustering, right?  Liquid clustering or whatnot. So we cluster like indexing, right? There is also a concept of clustering. We can talk about it.  That's a bit of a deep dive topic, but maybe Suhash, that's important for you, right? Uh, okay. Clustering, these kind of optimizations we can do, right?  There is one more thing that we do. So as a data engineer, I have done this for my customers where we had certain latency, like say four seconds of latency.  The maximum was allowed for any kind of direct query doesn't matter on how much data I'm doing. So we had to think of various ways to make that possible.  There is one more way that you have an idea, maybe, is it in the data engineering part or from the analytical engineering part?  direct query, when you fire, it comes to your base platform where your data is being stored in your case.  it would be Databricks, in others case, it could be in Snowflake or directly to Fabric, right? So those platforms, there is another thing called caching, database caching.  So what happens in the case of like, import mode is what? Like everything is cached in memory, right, but inside Power BI, right?  Indirect query. So what happened, whichever database is serving that data, that data, that platform also has something called memory cache.  Right? So what? What we used to do, we knew that, okay, at the start of the day, like it, it doesn't apply in all the cases, but yeah, in some cases, this can really give you a good performance.  So what we used to do, we had, we just kept the set of queries, a dashboard, maybe it's a very important dashboard, right?  Maybe for the CEOs and whatnot, a lot of analysts need it, right? So we get the list of queries that get fired and in a direct query mode from a dashboard, right?  And every day at six o'clock in the morning, we will schedule that to run on the warehouse, like whichever warehouse, so database also has a warehouse, snowflake is a warehouse, right?  Every day morning, we will go and run it as a scheduled job, all those queries. So what it will do, it will just go and put everything in, in disk cache, like there are caches like memory cache of that next time when, when users start logging at 8 AM in the morning, this.  If clicking those dashboards, that query database has already seen at six o'clock in the morning, so it remembers it.  Okay. And it doesn't go and do the full query of the data again. It just fetches it from the cache and returns it.  In these cases, direct query can be very fast, right? Because data is already available. But then there is also a concept of like, since these are data warehouses, lake houses, right?  Data is, data keeps on, if there is some update in the data, that query cache will be invalidated. In that case, those, those direct query will again go and query them.  But so, so these are like technical details. But just want to let you know, like there are other ways where, which as a data engineer or analytics engineer, you should be aware of how, how it works behind the scenes, right?  So we will talk about that in bit detail later. Maybe right now it is not needed. Any feedback? Any questions?  How does the invalidation happen since you like the query automatically detects it or like so what happens whenever you do a query cache so if you fire query like select star from salary table where name is sanjeev right so what it will do you when you run it right it's gonna get that data and keep it in memory so next time before fire that it's not going to look at into the table and scan it again physically no it's will just say okay this query has been run and this is the result for it will return it right now for now there is also a job that might be running right to update the table as soon as the table is updated there is always a link so the cache the the database systems right they keep a track of whether table is being updated or not right as soon as it is that okay there is some change in the data it will you  Immediately invalidate that, that cache in the memory now, because it makes sense, right? Because it is made sure that no wrong data is returned.  So if you don't insert that memory, then you, you're gonna, you probably have a wrong, wrong data that will be returned, right?  So any update in your source table will invalidate the cache. And in that time, there will be a direct query again performed, and it will cache into the memory again.  next time you fire again, select star, this, this, this, for sanjeev, it will check, okay, there is no invalidation, okay, I can use the memory cache, right?  So, so these kind of things happen. Yes, Niklas, you had a...
+
+47:43 - Nikolaos Biniaris
+  Yeah, I would like to ask on top of this detail, if we use this cache, memory cache in our query, and it gets, like, invalid, like, destroyed, if they...  Data changes. Why don't we just use an import with a trigger function instead of direct query? Why don't we use?  Like the import instead of direct query. And like with if it exists like a trigger, like if the data change, it will get imported instantly.  Because direct query is like that even five minutes of changes in data. If they don't make sense, you don't need to direct query.  Yeah, exactly. Now let's reason about it.
+
+48:35 - sanjeev kumar
+  So when you talk to a customer and customer might ask you about it, you can reason about it. You can say, okay, we can still keep it in import mode.  As soon as the data changes, I'll, I'll send a trigger and start updating it. Right. So now let's talk about the complexities here, right?  How will you detect that change has happened on the dataset? So there are ways to do it. There are sensors, functions, and directly Thank  What not? You can detect that table triggers. So that's, so one complexity you have to handle, right? Next, what if your table that you, that you are doing, it's a streaming table, right?  Like the data could be like arriving every second, every few millisecond. it's the continuous streaming tables are very common, right?  In that case, what would happen? You have to keep on doing that import run continuously, right? And that could explode the usage of data in your Power BI storage, right?  So yes, what you said makes sense in certain cases where, okay, as soon as the data comes, and maybe it is being updated infrequently, maybe say every six hours, six hours, or maybe once a day, right?  For those scenarios, it makes sense, right? You can just, as soon as data gets triggered, you create an import mode, and then it may be, it will take a couple of minutes, refresh, there will be a stainless update, your  Because that import mode also has to properly import it, right? Incrementally import. So in those cases, it will work, but not in all cases, right?  And I'll tell you from my experience, a lot of times customers will try to drill you on that. I want that part to be done because if it can be imported, it can be imported.  They will go for that as a first choice, right? But not everything can be. And then you have to like properly give them reasoning.  What you should do? What kind of optimizations are needed? So that's where our analytics engineer or data engineers capabilities are tested, right?  yeah. Does that answer, Nikolaos, or did that confuse you? Yeah, yeah.
+
+50:51 - Nikolaos Biniaris
+  It answers. Yeah, that was my question because direct query, I think it's neat. On very rare occasions, because it's more, it adds so much complexity for most cases, like, probably, like, that definitely is the case.
+
+51:14 - Neha Doda
+  I'll tell you one more thing.
+
+51:15 - sanjeev kumar
+  So, but, but if the big data won't get more and more, but a lot of customers try to like, don't do it because it will definitely be slower, right?  Then earlier, there used to be this tab, sorry, Power BI's capacity model, right? Like A1, P1, P2, something like that.  And if you do everything in import mode, it will just not be a bit possible with even licensing. For example, I don't remember them exactly.  You have to go to P2 and P2 is like twice the cost or three times the cost. To avoid the cost, customers will start depending more and more on direct queries, even though that feels slower, but they They have to save.  So it's not always about I want the fastest, but when you go to the real world cost, how much it is costing me will be the first question ever asked.  So whenever you try to propose a solution, you are trying to do something. You always have to think about how much this solution will cost, right?  So, so yeah, it's a big factor in those cases. One more thing. So, Neha, so you talked about three modes, but now Power BI has changed its model to be a fabric capacity tied model.  You know that? No.
+
+52:43 - Neha Doda
+  If you want to be an analytics engineer, that question might come up and then you have to read about what is directly.
+
+52:51 - sanjeev kumar
+  So there is direct query and in fabric, there is a concept called direct lake. You must read about it.  That's very. It's a very powerful tool and you should read how it works. So maybe that's a task for you for next, next one, where you can ask properly what is Power BI's current fabric capacity model?  Because I'm telling you, so you need to understand the cost aspect of anything. Just don't be a technical guy.  You give me a problem. I'll write a code for it. No, don't do that. If you want to be a wholesome person, always think about how much does this solution cost?  Is it optimal? Is it performant, right? So always know how things are priced or costed, right? Or I don't know, what is the pricing model of it?  So you have to try to do some research on that and also work on direct link.
+
+53:48 - Neha Doda
+  Can you say it again? Direct link. Okay, direct link. Yeah. Yeah. And what was the mode you talked about?  The new mode you are saying because I cannot see it.
+
+54:00 - sanjeev kumar
+  In our lake is the mode, just like import mode, direct query mode, dual mode, there is a direct lake mode.  Think about it. But then you also read about the pricing model of Power BI. Okay. These two things you have to read upon.  Yeah.
+
+54:19 - Neha Doda
+  Okay. Great. Then I think we just have a few more minutes.
+
+54:25 - sanjeev kumar
+  I think next, you had something, but I think the time is quite less. We need more time for your work.  Suhash, you had some questions, right? Let's get on to that.
+
+54:45 - Suhash
+  Yeah, sure. Yeah, you can stop presenting. But thanks a lot.
+
+54:50 - sanjeev kumar
+  This was a great presentation. I think a lot of learning for all of us. If possible, Neha, could you check this in?  And ship, uh, GitHub that we have. So there is an action folder inside that you can create your directory with your name and then check it in.  These are the deliverables from you.
+
+55:10 - Neha Doda
+  So I think Suhash has committed some code.
+
+55:12 - sanjeev kumar
+  Deepika has committed some code, uh, our presentation and whatnot. So these are like very deliverables. So please do that.  And if you don't know if you need some support there, like which branch and which folder, I think in midweek sync, you can ask others like others.
+
+55:30 - Suhash
+  Yeah, one minute, sometimes it's my screen. Yeah. Yeah. So, um, in this one, I just created, um, a basic job, uh, with the declarative pipeline.  And I, um, so I, I utilized the init, uh, Databricks bundle. It for creating this job and updated the query within it and for the deployment, yeah, so I have created this workflow action where I do the validate bundle and deploy bundle and then run the bundle job.  While running the job, I'm providing the job name, like in the resources. Yeah, so this is just for a single job.  It is like this. So when it comes to a production environment, how the repo will be structured? sure it will.  Will it be like for each pipeline, you will have a separate project and then like will you call the triggering from here or you will have the scheduling within each job and you allow the Databricks to take care of the scheduling?  So that's a very good point and detailed question.
+
+57:25 - sanjeev kumar
+  I think all the analytics engineer and data engineer should know a little bit about, not DAPS, like CI, CD part of it.  Okay, so see, there are two modes of managing your code in Git, right? Or any kind of CI tool, continuous integration tool.  Mono repo and decentralized repo, right? Mono repo, one parent repo and inside that you have my first job, my second job, my third job, my fourth job.  But inside that every job folder, you have this my first job, right? So this is your job one pipeline.  So Here, everything into an ingestion of the data transformation cleaning will go. Maybe tomorrow you want to have an ingestion pipeline through APIs.  Then that will be your second job, third job ingestion through some databases, right? So you group them together or maybe some, yeah, so you can have folders for them.  This is the monorepo architecture. You have one repo inside that every direct, you will just create a directory and keep your code there.  It has its advantages, right? I think you guys should read about different ways of managing your code repo, right?  It has advantages, like everything is in one place, it's easy to manage, it's intuitive, right? It's very nice to look at.  But then there are problems. If you deploy or do the change in say job one or first job, what will happen to the others?  Will they also be deployed? Then that's a wrong pattern, right?
+
+58:58 - Suhash
+  Yeah. So when you deploy. deploy.
+
+59:00 - sanjeev kumar
+  Even though you do one line code change in some project, some other folder, you have to make sure that doesn't go and deploy all other jobs, right?
+
+59:09 - Suhash
+  That's the wrong pattern.
+
+59:11 - sanjeev kumar
+  If you catch one line, that line only has to go and get deployed. Even though there is no code change in other jobs, if they are getting redeployed, that's a bad pattern, right?  In production, should not happen, right? Now here, to do that, Databricks Asset Bundles has something called, they do atomic deploys.  Here, where is your, can you expand your MyFirstJob folder?
+
+59:43 - Suhash
+  Yeah. Exactly. You see, there is this Databricks.yaml file.
+
+59:48 - sanjeev kumar
+  This YAML file is, decides the atomicity of your project deployment. This file will tell, because under good, it is just terraform, right?  So it keeps the state of this project separately because there is a databricks.yaml file here, right? Now, if you create a second project, like my second job, then you will create another YAML file inside that and that will manage that particular job.  Inside that folder, you can bundle hundreds of pipelines. That's not a problem, right? But that folder becomes the unit that will be deployed.  State will be managed and maintained. Just do one thing, right? If you remove this YAML file and put it outside the root directory, right?  You don't put it inside my first job, my second job, my third job. In that case, that becomes a very bad pattern where exactly what I explained in the beginning.  Even if you do change in your first job, all the jobs are going to get deployed because databricks.yaml decides the modularity of your code, pipeline deploy.  Now, since you've moved it into... Root folder, when you do the deployment, if we just think like all this, my job, one, my job, two, everything needs to be deployed, right?  And another thing, so that's one part, when you, the question that you asked about scheduling, so first of all, deploy run is usually not done in production, we deploy it, and we schedule it based on like whichever schedule I want to run, deploy and running usually done for done in QA and dev environment for doing integration testing.  So as soon as I deploy, just run it, my, my test that I set up, and I need to see whether it runs and to end or not, I don't have to go and go and click on it and should do something in QA or test environment, right?  So it's for that.
+
+1:01:49 - Suhash
+  Yeah.
+
+1:01:50 - sanjeev kumar
+  In test, you do deploy run, fine. But usually in production, we don't do deploy run, we just deploy and leave it.  Okay, okay. I would also like some opinion from Deepika. Deepika, what do you think about it?
+
+1:02:05 - DEEPIKA ELANGOVAN
+  Sanjeev, not only I'm also thinking like I had one repo, one pipeline, so there is no confusion on which job to run.  So it does take that route one and it runs that job successfully. But what happens if we take another job and I was thinking like how to pick up that job and run?  Yes, exactly. So I would like to experiment on this, right?
+
+1:02:25 - sanjeev kumar
+  So just create another job, another folder. And this is very common scenario in production with customers. Since you are doing a POC and test, you just create something simple, but that's not the production case.  In real time, there will be multiple projects being created here, right? In that case, how will you handle? So keep that in mind.  Databricks.yml file is the deciding factor of modularity of your project deployment. If you put it in every folder, that folder, then you just do Databricks bundle deploy and you give the name of my folder.
+
+1:03:04 - DEEPIKA ELANGOVAN
+  But Sanjeev, if we give like target environment div or stage or this, then it will pick up only that environment and deploy it.  So it won't disturb the other job. If we give the target environment and that particular job name, so if we give command like that.  No, no, I'm not talking about that. So yes.
+
+1:03:27 - sanjeev kumar
+  So if you give prod directory, prod is going to go to prod, QA, that's target deployment environment. I'm not talking about that.  Okay, okay. But in target environment, you have say my first job and my second job, two folders, right? Which one it's going to deploy?
+
+1:03:47 - DEEPIKA ELANGOVAN
+  For example, in Suhash example, he has used like my first job as the job, right? For example, if he is having something like second job, if he mentioned that particular job name, won't it?  And the particular, uh, workflow. Yes, exactly. No. So yeah, that's the point.
+
+1:04:07 - sanjeev kumar
+  So if you, it all depends on database.yml part. If you don't put it inside, if Suhas has not put this inside this, what would happen if you do database bundle deploy my first job?  It's not going to do that. It's going to deploy everything for it. My first job is not a modular thing.  It is just a folder. But since he has put it database.yml file here, now internally, the way it is implemented, right?  No, okay. My first job is a proper module. I need to just go and deploy this. So if there are other folders, my second job, my third job, it will just go and ignore it.  Right. So, so I would like you guys to try that out. Right. And see how it behaves. One of the very common questions customer get frustrated with.  When they have mono, repo. So in monorepo, in same root file, there could be multiple projects that they deploy or write code in, but when they do the deployment, just say like, for example, I am from sales team, I have my own folder in that, in that folder, I have created 10 pipeline, fine.  Now there's a finance team, they also are, they have created a folder here, right? And they are managing their own folder.  What if I do a deployment or change in my sales folder, but finance teams projects are also getting deployed?  That's a hard no, that must not happen, right in production. So yeah, just explore this a bit. It's a bit more technical part, but this is how you manage it.  This is one of the very common things customers ask us, how will we manage it? And if you have a non-monorepo concept, like every project  is its own completely separate project also. Then these kind of problems won't come. But then just imagine if there are hundreds of projects you are creating, then management is like a nightmare, right?  So find balance.
+
+1:06:15 - Suhash
+  So Sanjeev, like when you say about non-monorepo, like, so should we consider this pattern as non-monorepo or like this is monorepo only?
+
+1:06:24 - sanjeev kumar
+  It would depend on what your next project is going to go. If you're going to create another project, say my second job, just in the same root folder, then it's a monorepo.  One repo is called Apple projects bundle here. Okay, okay. If you completely create a new git repo itself for your my second job.  Okay. Completely unrelated. Just, just a duplicate copy of it.
+
+1:06:53 - Suhash
+  Okay. That becomes non-monorepo. Okay. Okay. Okay. Makes sense. And... So in production environment, mostly will it be non-monorepo in that case?  No, we cannot say that.
+
+1:07:07 - sanjeev kumar
+  It all depends on how a customer, it's a flavor, right? Some customers like that, some customers will like monorepo architecture.  So it's not fixed. It depends like what kind of team you have and what is their preference. So in production, both patterns could be used.  Both patterns have pro and cons, like Neha said, right? Import mode is great, but it has pro and cons.  Direct query is slow, but it has its pro and cons. Similarly, both these concepts of organizing your code has pro and cons.  And I think as a retaliation, we should be aware of that. Okay, okay.
+
+1:07:51 - Suhash
+  And the third question I have is like... uh Like in, like, so I'm new to DAP and I'm trying to have auto-completion and because like, I'm not sure about the YAML, well, generating the YAML file, like, I'm not sure about the path.  Give me a second.
+
+1:09:42 - sanjeev kumar
+  Yeah, Suhajus was here. Let's please go ahead.
+
+1:09:47 - Suhash
+  So, since like for the auto-completion of the YAML file parameter key keys for DAP, like For now, I'm using the Red Hat one, but it's not helping me with the correct YAML keys under the, like, if I type target, then it's not providing, like, what are the other options available?  it is a bit, like, to a start. Have you installed Databricks CLI in your local?
+
+1:10:29 - sanjeev kumar
+  Yeah, yeah, yeah. Hmm. Okay, then, maybe, for that development, right, I think you will have to use VS Code.  You are using Linux?
+
+1:10:39 - Suhash
+  No, VS Code. VS Code is what I'm missing.
+
+1:10:42 - sanjeev kumar
+  Oh, I'm not sure about that.
+
+1:10:44 - DEEPIKA ELANGOVAN
+  VS Code would automatically suggest, like, what exactly is this, but all those indentation error, it will help identifying it.
+
+1:10:51 - sanjeev kumar
+  Yeah, so, like, Deepika, I expect it to suggest auto-completion, but I am not sure. Maybe some plugin is missing in your VS Code.
+
+1:10:59 - Suhash
+  Thank
+
+1:11:01 - sanjeev kumar
+  So maybe, so see, Databricks CLI is in your local, but in VS Code, there is a Databricks plugin probably that you need to install, so that it understands, okay, Databricks, DApps, Syntaxing, what do you think, Deepika, what have you observed?
+
+1:11:19 - DEEPIKA ELANGOVAN
+  I have installed all those CLI, but I'm not sure which one is exactly required for this one. It was like auto-companning me for me every time whenever I make some changes.  But here we didn't show you any suggestions, Suhash, for you, like whenever you are making some changes.
+
+1:11:37 - Suhash
+  No, it is providing suggestions, but that is like completely a different product directed one, not database.
+
+1:11:46 - DEEPIKA ELANGOVAN
+  Oh, there is one more tool also, like YAML Lint, where like I used to use it previously before this auto-comparation things exist, where like I used to copy-paste that YAML, and it will just modify all those indentation errors, it will beautify that.  Syntax, and then I can paste it over to my code again, and I can use that. But actually, if you will, VS Code does provide, maybe I can help you with it.  Yeah, yeah.
+
+1:12:11 - Suhash
+  If you guys can see them.
+
+1:12:15 - sanjeev kumar
+  Okay, guys, then we are a over.
+
+1:12:18 - Suhash
+  What do you think?
+
+1:12:19 - sanjeev kumar
+  Any pending questions? Do you have enough for next week to work on? Or what do you think?
+
+1:12:29 - Neha Doda
+  Yes, I'm sorry.
+
+1:12:30 - Suhash
+  Nice.
+
+1:12:30 - sanjeev kumar
+  It's really good to hear all the progress that you guys have done. Please working the same way, and then we'll have more discussions around it.
+
+1:12:42 - Suhash
+  I will try to work on another job and bundle also once we have it.
+
+1:12:45 - DEEPIKA ELANGOVAN
+  Because apparently, like, Shari is stepping into the machine learning path. Yes, of course, of course. You have to. That's task on me to actually define it.
+
+1:12:52 - sanjeev kumar
+  Did you get a chance to speak to Raj, Deepika, already?
+
+1:12:55 - DEEPIKA ELANGOVAN
+  No, Sanjay. know that. Okay, not a problem. So, but yeah, that's on.
+
+1:13:00 - sanjeev kumar
+  Me, by next week, I'll have that MLOps part ready, right? Okay, maybe this week, if you have any suggestions to start on something, Sanjeev from...  Yeah, so please start on MLOps if you can, otherwise next week, I will sure try to give you a plan, like what exactly in MLOps you have to do.  Okay, sure. Yeah. Thanks so much, Deepika. Thank you so much. It's possible next time we'll spend some time to see your...
+
+1:13:29 - Neha Doda
+  Yeah. Thank you very much. Have a nice weekend. Bye bye.
+
+1:13:33 - sanjeev kumar
+  Thank you all. Yeah, thank you everyone.
+
+1:13:36 - Neha Doda
+  Thank you. Thank you.
+
+1:13:39 - Kousalya (nanduri1120@gmail.com)
+  Yeah, bye all. Bye. Bye.

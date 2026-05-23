@@ -1,0 +1,513 @@
+Impromptu Google Meet Meeting - May 09
+VIEW RECORDING - 60 mins (No highlights): https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C
+
+---
+
+0:00 - Kousalya (nanduri1120@gmail.com)
+  yeah good morning hello hello am i audible yeah yes hello sanjeev good morning hello hi everyone hi sanjeev good morning good morning what are you doing
+
+1:00 - sanjeev kumar
+  Yeah, Sanjeev, I'm very good.
+
+1:04 - Kousalya (nanduri1120@gmail.com)
+  Thank you. How are you?
+
+1:06 - sanjeev kumar
+  Yeah, I'm also doing well.
+
+1:10 - Kousalya (nanduri1120@gmail.com)
+  How was your week? How was your trip?
+
+1:13 - sanjeev kumar
+  Yeah, it was good. I had some business trip last week. Yeah, yeah. So, yeah, and there was this, yeah, because of that I could not attend last time, but yeah.
+
+1:28 - Kousalya (nanduri1120@gmail.com)
+  Hi, Deepika. Hello, hi, Deepika.
+
+1:30 - DEEPIKA ELANGOVAN
+  Hi, Neha. Hi, Sanjeev. Good morning. Good morning. Hi, Sanjeev.
+
+1:36 - Neha Doda
+  Hi, Neha.
+
+1:37 - DEEPIKA ELANGOVAN
+  Good morning. Good morning. Good morning.
+
+1:55 - sanjeev kumar
+  Hello, hi, Suhash.
+
+1:59 - Suhash Raja
+  Hi, Suhash. Let's wait for one more minute and then we can get going.
+
+2:48 - Kousalya (nanduri1120@gmail.com)
+  Phillip has texted in the group that he is not able to join today. Yeah.
+
+2:55 - sanjeev kumar
+  Okay.
+
+2:56 - Kousalya (nanduri1120@gmail.com)
+  Yeah, yeah.
+
+3:01 - sanjeev kumar
+  Okay, then, then we can get started. And as people join, we can, we can do that. Fine. So I hope I saw the recording of past two midweek things.  Good progress, I would say, but let's get going with the, with our normal agenda, right? So for Nicholas and Neha, I had, I have made some plans.  And for Deepika, you too, we will start to like, because from now on, we are supposed to be specializing in our stream, right?  The only part is ML that Raj is, is trying to handle, right? I don't have too much expertise there.  And I would like to do some justice to, to our interns, right? Who want to do for him? That's why he's looking for some logic.  So there. But yeah, so for data engineering, data analysis, and DevOps. We will have now a bit more like mid-level, mid-level difficulty work, right?  And let's see like how it goes. Okay, then let me share my screen. Yeah, so let's go here. Okay.  Yeah, so we will start with the quick check-in. Stream split we have already talked about. Yeah, Philip, if he joins, there was some DBT demo that he wanted to do.  I think he will not join, he missed this. Deepika, there was one thing on you that you had to research, and it would be nice if you could give us some information on this one.  Nicholas, we will talk about it. So I had a mid-week sync with Raj, and there we came up with a plan like probably because  Niklas and Neha both of you have some experience for data analysis. So I have created some tasks for you on specialization level, like mid-level.  So I think these parts you guys are already very well aware of. But now we would like to start working on these.  Right. So I will talk about it in a bit detail, but just wanted to give an update. And then there were a couple of other things.  Then we will see what deep dive we will do, right? There were other Spark specific thing that we wanted to work on.  So we'll see, like, we'll work on that. And there is another thing I wanted to highlight. So there is this, you guys, especially, this is especially for the data engineers, right?  Deepika, you and Neha, you can ignore this one. But for the data engineering deep dive, when you go into the  Interview, right? You should make sure that you go through this book. Like very important. I'll tell you. So, where is the index in this one?  The index is missing. Yeah. Okay. There will be a version of this PDF, which will have index also. Here, there are a lot of chapters, but what I will do, I will list down the chapters that you should read because there will be interview questions from this.  If you go for any company that is using Spark, right? Most of them are using Spark as their engine.  So you should know a lot of these things. You should understand how Spark works. And these questions are like quite common.  Even when I take interviews, I always keep a 10 to 15 minute section to check, especially in the data engine.  So I would like to prepare a little bit on this one, a bit more detail on what topics, on what chapters you should focus on.  I will give you a bit more information there. Does it make sense?
+
+7:34 - Neha Doda
+  Yes. Okay.
+
+7:35 - sanjeev kumar
+  Then, then I think let's go ahead and let's start with the week checking. I think Neha, you can start.
+
+7:46 - Neha Doda
+  Yeah, I started with actually the basics of DVD because last time, like we discussed that instead of going with Databricks, I should, like I can explore DVD.  So I'm doing SQL side by side. I'm like revising the queries. And I have also done like the introduction to dbt, like installing its setup.  And then I'm just watching the introduction videos. And along with that, I have tried like few of its commands using command props, like connecting to the database.  I tried connecting it with Microsoft SQL server. And apart from this, actually, I was assigned with an activity from Raj.  So I was doing that. So actually, he told me to write some content of data platform modernization for the website.  Okay.
+
+8:53 - sanjeev kumar
+  Okay. Yeah.
+
+8:54 - Neha Doda
+  So because he asked me that, and because I showed interest that, uh, uh, Apart from learning, I want to contribute or participate in another activity.  Okay. You got it. No problem. that's separate from internship.
+
+9:11 - sanjeev kumar
+  So you can keep doing that. That's not a problem. And Neha, one thing I want to ask, since you have experience in data analysis part, do you have dashboarding experience?  If yes, which dashboards? I mean, visualization tool. Yeah, I have used Microsoft Power BI.
+
+9:28 - Neha Doda
+  Okay. Okay. Great.
+
+9:30 - sanjeev kumar
+  So for you, I think, so keep doing the DBT work. DBT. So very first thing that comes in mind for a data analyst is like, you should be very good at visualization, getting the data and trying to make good dashboards out of it.  And the, the added advantages, if you can use tools like DBT to do your own transformations and your own KPI calculations, that's even better, right?  Right. But what I would recommend you and also to. well. I will And I also had sync with Raj.  We would like to align you guys towards this because he will get opportunities where there will be need for resources who can do dashboarding, right?  So maybe, and also could you tell me like, what is your expertise level in that? Like for how long did you work with Power BI?  I have worked for more than three years. Okay, then you feel quite comfortable with Power BI, right?
+
+10:36 - Neha Doda
+  Yeah, I'm comfortable in like building dashboards and reports. Using that, creating measures, then like using Power BI services, scheduling refreshes, and then giving access rights on Power BI service.  Okay, great, great. And, and what about all these things?
+
+10:59 - sanjeev kumar
+  So these are
+
+11:08 - Neha Doda
+  Yeah, I'm quite comfortable with the DAX using like time intelligent functions and then, of course, creating KPIs using DAX.
+
+11:19 - sanjeev kumar
+  Will you be able to take interviews on Power BI? Yeah, I can take the interviews. I just wanted to check, like if you need something to practice on, I think this will be the right time to start doing that.  Like for example, a couple of things like access control also. So have you worked on this part, like which user has access on which dashboard and whatnot?
+  ACTION ITEM: Review Power BI interview doc; confirm practice areas to Sanjeev - WATCH: https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C?timestamp=702.9999  Yeah, yeah. I have worked on access controls, yeah.
+
+11:49 - Neha Doda
+  Okay, great, great.
+
+11:49 - sanjeev kumar
+  So it means you have touched a lot of things. Do you think there is something that you would like to practice on?
+
+11:57 - Neha Doda
+  Oh, I can just... I just... I will see this document and then I can let you know, because I have recently completed its certification, so I have touched all the components of Power BI, but still for the interviews, I would like to take one more look at it so that I can confirm your name.
+  ACTION ITEM: Explore Tableau and Looker Studio - WATCH: https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C?timestamp=740.9999  Yeah, exactly. And make sure that whatever is your strength, keep your grip on that.
+
+12:31 - sanjeev kumar
+  And also, in the market, Power BI is one of the most used tools, but also keep in mind that these concepts are quite generic to any kind of reporting tool.  And if you can just put your hands on Tableau or Looker, that also will be great. Yeah, I can do it.  Yeah, great. So please make sure that you do some progress here, because Raj was mentioning that this will be like very handy, and whenever he gets some kind of opportunity, it will be easy and quicker for him to get you guys to that role, right?  So yeah, please do that.
+
+13:15 - Neha Doda
+  Yeah, I can do that because before, like when I started Power Gay, before that I have done like a little research on Tableau.  So I'm quite familiar with this, like with the tool, but yeah, I can just go into with like, again, the Tableau and Local Studio both.  Great, nice. And I think same advice I'll give to Niklas also when he joins.
+
+13:39 - sanjeev kumar
+  Right now he's focusing a little bit on the data engineering part, but that common part is done. So I think he also probably can jump in now.  Okay, then who do we have next? Deepika, yes. Hello, Sanjeev.
+
+13:54 - DEEPIKA ELANGOVAN
+  So this week I covered on the Databricks asset bundles. So like when I... checked up on YouTube, there were only some videos only.  So I was using the help of Claude. So with the help of Claude, I was trying to understand like what exactly is Databricks asset bundles and how we can use it separately from Terraform and that.  Like Terraform is used to create only the infrastructure structure like catalogs, schema, then other infrastructure resources. Whereas the Databricks asset bundles, it handles the jobs, notebooks, the pipelines, those things at all.  So I tried to do, I tried to get a small code from Claude and tried implementing in VGS code.  So as often the setup is in local, still then encountering some lots of errors and playing with Claude and just getting back and understanding that errors and still trying to bank unit essentially.  Okay.
+
+14:45 - sanjeev kumar
+  And for the DApps, you are, so which part you are focusing on DApps part? Yes. This tool has been renamed to Databricks Automation Bundle now.  No, I think some places, they have not updated the documents yet. Oh, okay.
+
+15:00 - DEEPIKA ELANGOVAN
+  And that too, with free edition, there were some restrictions, it seems. like, it is keeping on my tune of the code and sharing.  I'm also trying to do the hands-on and checking how it works. Yeah.
+
+15:11 - sanjeev kumar
+  And Deepika, so DAPS part, so usually in your experience, you deal with more of the infrastructure part of the DevOps or infrastructure as a code part or this pipelining part of deployment?
+
+15:23 - DEEPIKA ELANGOVAN
+  So, in my previous experience, handled both infrastructure-related activities as well as the coding-related ones also, Sanjeev. And I tried to maintain different pipelines for those activities.  It didn't have any dependency with infrastructure piping and the code pipeline. But here, it might have some dependency, it seems.  So, in order to manage those dependencies, here they are trying to copy the file to the Azure keyword. And the database asset bundles pipeline, will take that secret from the Azure keyword and it is proceeding under H6.  Absolutely. Yeah.
+
+15:56 - sanjeev kumar
+  So, database automation bundles… … It's also at the moment, section on top of Terraform, how database sees it, if I had, it also had like a couple of good things, like for example, state management per pipeline was better in apps than, than, than Terraform because I have seen was complaining about like, for example, if I have a mono repo and I have like people projects being deployed, I am seeing that to deploy one change in one project, it is going to rebuild the whole state.  of my other projects too. So they were not able to atomic, atomically manage the state. Okay. Incrementally do that.  How daps works is like it puts, it works everything. It bundles everything based on a file called database.yaml that you can those like inside a mono repo, there could be 10 different projects, right?  So every have the database.yaml file and all of them will be then treated atomically. So it will not interfere.  And so there is is a databricks.yamon file inside that, it will create one separate state for all those smaller projects that we have created on the menu.  Oh, I thought only Terraform creates a state file, Sanjeev, but even the database also creates state files. Yes, it will also create the state files and keep it like, for example, because it is an implementation on top of Terraform.
+
+17:23 - DEEPIKA ELANGOVAN
+  The way Databricks wants it to behave, right?
+
+17:27 - sanjeev kumar
+  That's what it does. But now I have heard that they are going to change something in the engine because they are facing, customers are still facing a lot of issues.  It's all derived from the Terraform problems, right? Because it is built on top of that as a complaining, the same Terraform issue they are seeing in dApps also.  So I have heard that they're going to change a lot of things there, but that's for future, right?
+
+17:49 - DEEPIKA ELANGOVAN
+  Okay. Another thing.
+  ACTION ITEM: Update Deepika’s use-case doc re: Databricks E2E deployment - WATCH: https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C?timestamp=1069.9999
+
+17:50 - sanjeev kumar
+  So, this is great, Deepika. And you have already shown demos and I think that is great. And you already have a lot of experience already in that, right?  great. Okay. Now, one thing I would like to focus, want you to focus on, and I have, I have not updated those use case doc for you, but I will do that.
+  ACTION ITEM: Implement Databricks E2E deployment (workspace + Unity Catalog) on Azure via Terraform; add GitHub Actions; prep overview for next week - WATCH: https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C?timestamp=1082.9999  Could you focus on this part? So keep doing what you're doing right now. In your next task to do, could you do a full end to end deployment of database workspace, unity catalog deployment, the entire part of it, end to end using terraform?  Could you set that up and show us your code and give us a demo on that? Yes, Sanjeev.
+
+18:35 - DEEPIKA ELANGOVAN
+  For now I tried only running through local commands, but I will try to do in GitHub actions as well and see how it works.
+
+18:45 - sanjeev kumar
+  Just make sure like when, when you go, when I'm interviewing you, a feeling that you have worked with database, you know how to deploy it end to end, make sure you, you take care of, I don't know, and, and which cloud you are more ...  ... ... Okay, then make sure you know in and outs of Azure deployment, database deployment on Azure, right? Okay.  So even if it has AWS deployment, maybe a little bit of jargons like VPC versus VNet, those things will change, but rest all will remain same.
+  ACTION ITEM: Research Azure VNet isolation/hub-spoke for Databricks - WATCH: https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C?timestamp=1160.9999  And make sure, I am telling you this because I see that you really have good experience. So I would like to really make your life tough by asking this question so that we are ready, right?  Make sure you take care of security, very important, right? Those parts like for example, isolation, VNet isolations. I am not sure whether you have worked on these parts earlier, but if you can do the infra and have a little bit of idea about network isolation, security part of it, right?  Whether it should be deployed in one different VNet, whether it should be hub and spoke model, right? If there's a hub and spoke model, how do you go about it, right?  Mm-hmm. Yeah. If you can. If get an idea on that, then I think your profile will be more complete, right?  So, so please, please keep that in mind. So go as deep as possible in these deployments, try to make a very good, good, good end to end project, right?  And then we will, we will sit together and then we will analyze it.
+
+20:21 - DEEPIKA ELANGOVAN
+  So that will be your next task, but very important, right?
+
+20:24 - sanjeev kumar
+  What you're doing, finish that properly, and then move on to that one. I think that will be your final capstone on, on, on this, this part, the, the, the DevOps part, but then if you show interest in further things, we can take you there, a little bit of data engineering, a little bit of that, right?  But this is your core. I think they should, you should get going with that. Sure, Sanjeev.
+
+20:48 - DEEPIKA ELANGOVAN
+  Sanjeev, I would also like to add you that I got a seat in Chalmers for masters for biomedical engineering, like I did upgrade for data science, AI and cyber security.  But I was denied those goals and I got only biomedical engineering. given the current scenario, feel like even master's would be a better option as the job market is quite challenging for me.
+
+21:11 - sanjeev kumar
+  So like I'm planning to cover machine learning also, Sanjeev.
+
+21:16 - DEEPIKA ELANGOVAN
+  So that because there is a subject of machine learning in the master's program for biomedical engineering. So it would be great if you include me in machine learning also, Sanjeev.  Awesome. Very good strategy, I would say.
+
+21:30 - sanjeev kumar
+  So DevOps, it will be great. Like if you can scale up little bit on MLOps too. Have we done MLOps before?
+
+21:39 - DEEPIKA ELANGOVAN
+  No, no, Sanjeev. have no idea on MLOps before.
+
+21:42 - sanjeev kumar
+  Because the world is moving towards a lot of ML specific AI specific workloads, right? And this is becoming important nowadays, right?  So DevOps will always be there because data engineering will always be there, right? Mechanical engineering. of the normal, of the IT world, right?  But right now, I'm seeing a lot of demand on MLOPS part. Okay. Maybe you should collab with Philip on this.  Not Philip, sorry, Elliot. Elliot, okay. And great, so since you got into this, like, would you still be part of internship, or you have plans to learn?  I wish to be part of internship, Sanjeev.
+
+22:26 - DEEPIKA ELANGOVAN
+  It's starting on September only, so I still have time. Yeah, great.
+
+22:31 - sanjeev kumar
+  I think that will be really nice, Deepika, yeah. And I think all of us have a lot to learn from you.  Even I have a lot to learn from you. Sure.
+
+22:38 - DEEPIKA ELANGOVAN
+  Great.
+
+22:39 - sanjeev kumar
+  Okay, then let's move on to... you, Satya. Yeah. Thanks, Deepika. And yeah, we'll talk a bit more about this one time.  We'll move towards MLOPS too. But it's up to you. Like, maybe I'll take one more minute. Now, when you say, are you still comfortable?  So you are not looking for a... So do you think the task that I gave you just now, too much or would you like to still go ahead, or maybe just do the MLOps part or something like that?  What do you think? Maybe this week I will try to complete whatever you say, Sanjeev.
+  ACTION ITEM: Define Deepika’s MLOps path; share w/ Deepika - WATCH: https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C?timestamp=1414.9999
+
+23:38 - DEEPIKA ELANGOVAN
+  Maybe from next week onwards, I can start MLOps.
+
+23:45 - sanjeev kumar
+  Okay, next week I will give you a more clear path. But for now, whatever we discussed, keep that in mind.  Keep your current work and then we will see whether we should go for the hardcore database deployment part part of it.  Thank Maybe we should move to MLOPS. Okay, Sanjeev, yeah. Great. Then let's move to Suhash. Yeah, Sanjeev.
+
+24:10 - Suhash Raja
+  Sorry, Sanjeev, I don't have any update, like I was sick the whole week, so now I'm better, but yeah.
+
+24:17 - sanjeev kumar
+  Yeah, okay. And then, Suhash, so like, for example, we do have these, where is this? So, I think, Suhash, you also have like good level of experience.  you think these things are good? Would you like to like, does these tasks actually make sense to you? Or is it like too basic for you?  Would you like to go ahead and do something else?
+
+24:45 - Suhash Raja
+  I will do the SED stuff itself, Sanjeev, like stage four.
+
+24:52 - sanjeev kumar
+  You would like to go ahead with this, right? Yeah, yeah, yeah.
+
+24:55 - Suhash Raja
+  Like, I will try to complete as much as I can in this week. Yeah. Because make up.
+
+25:01 - sanjeev kumar
+  A general no to anyone, right? So because now we are not no longer doing the common basic stuff. If you guys feel like, for example, in the case of Deepika, felt like she's like quite advanced in DevOps part.  If you guys feel that these tasks does not make sense to you, you want to move faster, do let me know.  Right?
+
+25:18 - Suhash Raja
+  You will accordingly do things.
+
+25:20 - sanjeev kumar
+  You don't have to like get stuck to things if you think you have already done that and it's too basic, right?  Okay, so and so it's like, maybe I'm forgetting, but you have experience on Spark or no?
+
+25:34 - Suhash Raja
+  Yes, like I have read that book, which you shared me like. Okay. Yeah. So that helped me to that helped me very much in yearning that associate level certification in Databricks.  So I've already done that certification.
+
+25:53 - sanjeev kumar
+  Yeah.
+
+25:55 - Suhash Raja
+  Yeah. Yeah. But from the internship perspective, like I haven't completed history pictured averaging The tasks, but I'm, I was just going through that window functions and stuff, uh, in this week, I'm planning to go full deep dive.  Okay, great. So this, uh, this database certification, what certification is it? Associate Data Engineering? Associate, uh, Associate Data Engineering.
+
+26:17 - sanjeev kumar
+  And so, but, and you have, before the certification, you never worked with Databricks?
+
+26:22 - Suhash Raja
+  No, no, Sanjeev, like, uh, uh, my first introduction was like, uh, with this book, like Raj suggested me, this, uh, PySpark book, which you suggested.  So like, um, since PySpark is the basic for, uh, the data engineering Databricks, uh, then like, um, then I, uh, went through the blueprint of the exam and then like, I got the chance.  I'd taken the exam on February of this year, like two months back. Yeah.
+
+26:52 - sanjeev kumar
+  Makes sense. Then if I understand correctly, you might have already implemented such things while practicing.
+
+26:58 - Suhash Raja
+  Not to a great extent. Sanjeev, but like I have an understanding of what these things are, like a city type one, type two on a theoretical level, but I haven't practiced.
+  ACTION ITEM: Implement SCD Type 1/2 and CDC/incremental ingestion in Spark 3; start small, scale w/ Philip’s lib; include dApps - WATCH: https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C?timestamp=1625.9999
+
+27:10 - sanjeev kumar
+  Okay, great. Then I would recommend to like just go full throttle on these things. Yeah.
+
+27:16 - Suhash Raja
+  And I want you to like exactly start with what we have, like small data.
+
+27:20 - sanjeev kumar
+  And then I think, uh, Philip created that, uh, yeah, some library, right? To create a large amount of data, then go on to the large amount of data.  And, uh, we will talk a little bit detail, details about the spark. That's where we will really learn things that you read in the book, right?  And since you are, so if I assume correctly, you are planning to have Databricks as your, one of your core competencies, right?
+  ACTION ITEM: Define Suhash’s Databricks specialization plan (Unity Catalog, declarative pipelines, workflows/Lakeflow); share w/ Suhash - WATCH: https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C?timestamp=1669.9999  yes, uh, Sanjeev like currently concentrated on Databricks and Azure environment.
+
+27:59 - Suhash Raja
+  Yeah.
+
+28:00 - sanjeev kumar
+  Then, let me make a customized plan for you on Databricks, you should know Unity Catalog, and Databricks as a data engineer, I'm assuming, should know data, you should know Unity Catalog, you should know Spark declarative pipelines, you should know workflow or lake flow, so these three or four components, if you want to really sound, experience in Databricks, you should know that.  Okay. So, you have done your DE certification, so you already know a little bit of that, but I would like you to go a little bit deeper on that, because I work with Databricks a lot, and I know pro and cons, deep dives, limitations, unwarnished troops about it, so let's get deep dive in that, whenever you have an interview with anyone, you should sound experienced, and smart there, right?  And DE associate is fine, but there's a DE pro also, if I'm not wrong, right?
+
+28:59 - Suhash Raja
+  If you want to
+
+29:00 - sanjeev kumar
+  We can, we can prep for that also, like together, I can, I can really give you good inputs, like what exactly you should prepare on.  Okay. Okay. Yeah.
+
+29:09 - Suhash Raja
+  So, okay.
+
+29:10 - sanjeev kumar
+  Then, then for you, I have a clarity that Databricks is your skill set, right? And then I will plan something accordingly for you.  Yeah, sure. But yeah, anyway, those things that we discussed are still important. Spark internals are still important because when I interview someone, or Databricks, I do ask those questions, simple, especially for data engineers, right?
+
+29:35 - Suhash Raja
+  You can join Databricks.
+
+29:36 - sanjeev kumar
+  you're a data analyst, or AIML, probably don't need to know that much spark, but as a data engineer, you need to know, right, that's extra, at least some kind of answer.  Okay, so we will do a couple of things there. Sure. So please get going with these, implement them in spark three edition, show your code, do it end to end in a proper  We implement a little bit of database asset bundles because that is expected if you if you say you have done associate or if you say you have done pro then then I would expect that from you, right?  Sure, sure. So please go ahead and implement these and we will go through them together. Yeah. Nice. Asindu, let's move on to you.  Hi, Sanjeev.
+
+30:28 - Asindu Gayangana
+  So am I audible? Hello? Am I audible? Yeah, you are. Yes.
+
+30:38 - Suhash Raja
+  Okay. Okay.
+
+30:39 - Asindu Gayangana
+  So in last two weeks, I updated my PySpark query pipeline actually. I optimized that pipeline that can handle I've afterwards.  So Thank Backfill and streaming as well. So, and also I implement the core layer tables as well. And finally, I working on and I do some research on data quality tools as well.  So I'm going to go with Databricks DQX for the, for implement data quality in my silver layer and other tables.  So right now I'm, I'm at, at this point to observing the features of DQX in Databricks. Okay. Okay. Great.  Great. Makes sense.
+
+31:54 - sanjeev kumar
+  So I think you, you are making really good progress, Asindu. I'm really happy. So with that. It's just that.  Please explore that. But one thing, so again, similar questions to you, right? Now, since we are specializing now, I would leave a bit more detail.  So data engineering, I understand. But with what focus as your tech? You want to be a general spark developer so that you can go and fit in everywhere or database specific or database is just a means for you to learn data engineering.
+
+32:26 - Asindu Gayangana
+  So I would like to go with Databricks and also some expertise in Spark as well, Sanjeev. So because I choose Databricks because it's I think it is it is the future.  So. So that's why I choose the Databricks for tomorrow in the. Yeah.
+
+32:53 - sanjeev kumar
+  Now, let me ask you a couple of questions. Like, why? Only Databricks. See, I'll tell you, Databricks is a great tool and I work for Databricks.  So I am biased towards Databricks, right? So but I want to, I'm not here to promote a company. I'm here to see the best for my interns, right?  See, if you work with Databricks, it's a great tool. And like you said, it has very good feature feature, future, but don't limit yourself to that.  If you want to be so as the data engineer, right? So in Databricks, we also recruit people who have never worked with Databricks.  You just have to be a good data engineer. Now when Suhash will go to the interview and say he has Databricks Pro or sorry, associate certification, then I will interview him from a different lens.  It will be more rigorous. It will be more on Databricks on top of he should know data engineer or Spark when, right?  So, so don't have that conception that Databricks Databricks. have have job If you learn Databricks, then that's the only way forward.  No, if you want to do it, that's great. And I can train you like anything in that because I work with that in day and night.  Right. But don't have that idea that, okay, Databricks only, you can be a very good data engineer just in AWS, just use Glue, ETL, Athena, and whatnot.  If you know those concepts well, any company will take you. Doesn't matter Azure, sorry, doesn't matter Microsoft or Databricks.  Snowflake, you just need to have very good fundamentals of data engineering. That's it. Doesn't matter which tool, which cloud.  Okay.
+
+34:39 - Asindu Gayangana
+  So, but yeah, the one most important thing here is spark.
+
+34:44 - sanjeev kumar
+  You cannot get around spark and say that you are a data engineer in my mind, right? On data engineer, like I have what I mean, like distributed, like large scale data handling engineers.  Okay. But if you make a So if conscious decision that you would like to specialize on Databricks, think about it, and then let me know.  Right. Okay. But then when you say Databricks specific, then you are focusing on the companies who are working with Databricks only primarily.  Right. Okay.
+
+35:21 - Asindu Gayangana
+  Okay. So, so keep that in mind. I'm not, I'm not saying like it's a good or bad tool.
+
+35:25 - sanjeev kumar
+  Just, just think about it. And one more thing. If you specialize in Databricks, this doesn't mean that Microsoft will not recruit you, but they will only check you.  Fine. Even though you have Databricks experience, can you, can you explain me what data engineering is? Right. So it doesn't mean that it risks you into one, but, uh, yeah, my whole point of taking these two minutes is like Databricks is not the only, uh, only platform that, that you need to learn on any platform that you choose will get you job as a data.  You just have to understand the data engineering concepts. Okay. Okay, Sanjeev.
+
+36:03 - Asindu Gayangana
+  Sure. So I would like to learn Spark as well.
+
+36:07 - sanjeev kumar
+  Go ahead. Go ahead. I would like to learn Spark as well.
+  ACTION ITEM: Define Asindu’s Databricks specialization plan (Unity Catalog, Auto Loader, declarative pipelines, workflows/Lakeflow); share w/ Asindu - WATCH: https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C?timestamp=2170.9999
+
+36:11 - Asindu Gayangana
+  But so I choose Databricks because it's easy to work with Spark. So that's why. Okay. Okay. Great. Great. Then let's do one thing.
+
+36:21 - sanjeev kumar
+  So I will treat you and Suhas as I will give you and Suhas a bit similar structures to us a little bit more specialized, but I think slowly I would want Asindu, you also to be at the same level as Suhas, right?  Because Suhas will say in an interview that he has certification, there will be different questions for you. You will say I have worked a little bit with Databricks and but I have Spark experience, there will be a little bit different set of questions for you.  Okay, so we will focus on that. Okay, then can you tell me, Asindu, like which stage you are on right now in this?  So you are already doing the That's EQX part, right? So I think this initial part you have done, you showed this, I think you showed on Niklas.  So were you able to create all these things like REST API, file handling, cloud storage basics, asset transactions? So these are things you understand well, right?  Yes, but I didn't extract data from REST APIs. Okay, but you know how to extract it, don't have to build it, if you are concerned, then it's fine.
+
+37:33 - Asindu Gayangana
+  No, previously I extracted data from REST API for my own project, hands-on experience. Okay, okay, got it. No, not a problem.
+
+37:46 - sanjeev kumar
+  Then CDC incremental ingestion, CDC and incremental ingestion, this part are you clear? Yes, I'm pretty clear about that, Sanjeev.  Okay, LCT type 1, LCT type 2. how to handle them yes definitely so but did you implement an sd type 1 and sd type 2 in this project in it means uh in this period i didn't implement sd type 2 but in my previous projects i worked with sd type 2 for many cases to handle product tables and other tables to handle product table to store the product prices no no what i mean is like to build sd type 2 which language did you use earlier to build that earlier sql sanjay okay because i'll tell you why building as sd type 2 is it's a complex way because sd type 2 what about late arriving data and this and that a lot of questions will come into that when you say you have done sd type 2 i will ask you those questions right because you you you you  This is what customers will face as a problem. So when you say, so not now, I would say, keep exploring it.  And later on, I will ask you like really deep dive questions on that so that you know what problems will come in and then you prepare for it.  Okay. Okay. We can do that. Okay. And then streaming part, are you guys like a bit, because, oh, yeah, yeah, exactly.  Asindu, you were the one who were, who, who actually did a really good job in, uh, started, who started the work with streaming APIs, actually.  So I think you were more, I think I will have to do a little bit.
+
+39:38 - Asindu Gayangana
+  I didn't use, sorry, I didn't use Kafka to ingest the data, but I used the auto load, sorry, uh, auto loader feature.
+
+39:49 - sanjeev kumar
+  But then when you use auto loader, uh, you need to understand a couple of, so it uses such a streaming.  Behind the scenes. Do you understand this part? What is checkpointing?
+
+40:03 - Asindu Gayangana
+  I know the checkpointing, but watermarking, I don't know about the watermarking, Sanjeev. Not a problem.
+
+40:11 - sanjeev kumar
+  So this is more hardcore structure streaming concept, but it's an advanced topic. So in an interview, if somebody says, I have not worked with streaming, Spark structure streaming, it's not a problem at all.  We just skip it, right? Because this is something that you can easily learn. Okay. Not something that you should focus on, but these things you should know if you are using database specific tools.  And yeah, first for you also, Suhas, like autoloader is one of the things that we will talk about. And Asindu, once you are done through these basic Spark things, right?  Then I would like you to work exactly like we will work with Suhas, where we will work with Spark database specific tools.  What is Unity catalog? What is this auto loader? Like you are doing, uh, what is, uh, what is spark declarative pipeline?  What is lake flow? Right. Uh, those things we will scale up a little bit, right? Okay. Then, uh, silver part, uh, is this what you are doing?  Have you done this? I think you've already done this, right, Asindu? Yes, Sanjay. I completed those things.
+  ACTION ITEM: Implement DQX in silver layer; use YAML expectations - WATCH: https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C?timestamp=2479.9999
+
+41:20 - Asindu Gayangana
+  Okay. And these things you are create table.
+
+41:22 - sanjeev kumar
+  I think you are already comfortable with these things equal window functions. Window function. Merge.
+
+41:30 - Asindu Gayangana
+  I, uh, I use row numbers, uh, but still using, uh, still learning about the DQX to implement data quality expectation using, uh, YAML files.  So to each and every table. Great. Great. Very nice.
+
+41:46 - sanjeev kumar
+  Uh, let's keep doing that. And then later on, we will move on to modeling and in the end, uh, yeah.  Uh, uh, okay. This was for the other thing. Okay. Uh, this is fine. And then orchestration part we will discuss with airflow and non-airflow.  I think for Suhas, I think you don't need to know airflow, but yeah, for those who don't want to be database specific, then we will talk about that.  And then in the end, I would like both of you to do dApps. Very important. If you are saying like, I want to be, I want to interview with the Databricks as a platform, then you need to know a little bit of how do you do CI-CD with dApps.  And I think DEEPIKA can definitely help us, right? So your focus should be this primarily, all these parts, but we will finish it with stage eight.  Without this, I will not mark data engineering candidates as complete, right? This is important. Okay, makes sense. Okay, so I think all of you have something to do.  You are on track. Nice. Okay, now... Question to you guys. Okay, any feedback, any reflections that we have talked about till now?
+
+43:08 - Suhash Raja
+  Sanjeev, I just have one question. The main reason why I chose Databricks is like a free edition is available for practicing or anything like that.  But when it comes to Snowflake or BigQuery, I understand there is a 15-day free trial from Snowflake. So apart from it, if anyone who is pursuing to go on Snowflake or BigQuery, how is the platform for practicing or as we do now?  Because that was a bottleneck which made me to choose Databricks at first point.
+
+43:55 - sanjeev kumar
+  Okay, so if I understand correctly, Snowflake Gives you a 30-day trial period, and for GCP, I don't remember, but yes, I don't think there is a very good story there.  Databricks recently came up with a free edition, which is free, have it lifelong. There will be certain features that will be limited, but yeah, they keep on adding it.  So yeah, database definitely has advantage there. Yes, Asindu, please go ahead.
+
+44:20 - Asindu Gayangana
+  I think GCP gives you three months trial with enough credit limit, so you can do much more things using that.
+
+44:31 - sanjeev kumar
+  Yeah, Suhash, just one thing, if you are focusing on Databricks, just focus on that. I'll tell you why. Exactly the same point that I repeated.  If you know good data engineering, doesn't matter which platform you have used. Other people will take you. Maybe just before interview, go and read a little bit theoretically about BigQuery.  or Snowflake. That's more than enough, because this is how we recruit at Databricks. I had no experience in Databricks at all.  I just had a good experience with data engineering into and dry. And still we do the same. Okay, so just a second.  Give me a second. Yeah, sorry. So, so what I would say, Suhas, if you have, if you have some credibility already to show me Databricks, speak with that for now, because now we are not trying to be journalists, we are trying to be specialists in something so that we get recruited, right?  We do good in interviews. So that is my impression. But you tell me, if you still feel no, you would like to go ahead with Snowflake.  No Sanju, I'm just going to specialize in Databricks.
+
+46:03 - Suhash Raja
+  Since this discussion was coming up between you and Asindu, this is one of the bottleneck why most of them are choosing Databricks.  I felt like that.
+
+46:15 - sanjeev kumar
+  You guys have not made a bad choice. I'll tell you why. Go and research the market, how both the companies or other companies, what Databricks is doing against others, how others are growing.  Like if you see how a company is growing, how many number of customers they have acquired in the past five years, that's how you see where the job market or feature will be.  Go and do a research. Databricks is doing a lot better in a lot of markets. So it's a good choice, but I have nothing against other platforms.  They are also great.
+
+46:48 - Suhash Raja
+  Query is great.
+
+46:50 - sanjeev kumar
+  Snowflake is a great tool, right? Yeah. Okay.
+
+46:54 - Suhash Raja
+  Just want to know if there is anything like, because like when I first started, Like, this is the very big bottleneck for a new company.
+
+47:05 - sanjeev kumar
+  Maybe that's a good feedback for Snowflake and we also have a free edition and probably there will be more practitioners for Snowflake.
+
+47:15 - Suhash Raja
+  Yeah, definitely.
+
+47:17 - sanjeev kumar
+  Makes sense. Okay, okay. So we are going with the plan that we have discussed right now, okay, with all of you.  So Neha, she will do a lot of dashboarding now. She would like to practice based on the plan. Deepika, we will decide the final path for you probably next week because I'll have to discuss a little bit internally with Raj also like how do we go about it.  It will be nice for you to scale up on MLOps. Probably now thinking about Deepika, like to make Deepika as a hardcore DevOps engineer for the whole platform stuff might not make sense then, right?  Right? what do you… If you have decided like you want to do MLOps a little bit, I will come up with it and we will discuss with you, then Suhash we know, Asindu we know, okay, nice, then do we have some presentation or something that you any of you guys would like any of you would like to showcase today?  Okay, nice. Not a problem. So what we can do, let me check.
+
+48:43 - DEEPIKA ELANGOVAN
+  Next week, I will do the presentation on the ETE implementation of Databricks Infrastructure Sanjeev from my end. Oh, you will be able to do that?  Maybe like, not in depth to me, maybe into an overview level, I will try to... Yeah.
+
+49:02 - sanjeev kumar
+  Great. If you can do that, that will be amazing. Right. I will try to work on that. Yeah. Yeah.
+
+49:07 - DEEPIKA ELANGOVAN
+  Okay. Sure. Sure. Sure. Sure.
+
+49:09 - sanjeev kumar
+  Okay. Then deep back modeling. think when he joins, he can, we can see about this one. Okay. So can you guys talk a little bit about spark optimizer and Asindu for you also read this book, the spark definitive guide.  Okay. Asindu.
+
+49:30 - Asindu Gayangana
+  I will tell you. Yeah.
+
+49:32 - sanjeev kumar
+  For any generalist, you need to know these things about spark because if you go to glue, sorry, AWS, AWS also uses spark.  Like for example, glue ETL will use spark. EMR uses open source spark, right? Or their own man is spark.  If you go to Azure, they use fabric. Fabric uses spark, right? If you go to snowflake, snowflake has its own thing.  They have something else. Snowpark, or it's a little bit different in Snowflake, but rest all, if you see the big, very big vendors, right?  Yeah. GCP, GCP, I think uses Spark in Dataproc. They have a lot of tools, but they do also use Spark, like in Dataproc, right?  They, I think it's, a, it's a, wait one second, how does GCP services use Spark? If I'm not wrong, services uses Spark, Apache Spark primarily through, yeah.  So you see that, right? Dataproc is a tool they use for ETL, right? So my point is like, you cannot get around Spark.  Spark is like very widely used tool. Okay. So please make sure you read this book and it's a very long book, but you don't have to read everything.  Especially the first in, the problem is like, I'm not able to find the. the index here. Otherwise I could have marked which one to read, which one to mark.
+
+51:05 - Suhash Raja
+  Suhash, do you have this?
+
+51:07 - sanjeev kumar
+  Sorry? first 10 chapters are like the basic ones.
+
+51:11 - Suhash Raja
+  Yeah. Yeah.
+
+51:12 - sanjeev kumar
+  Do you, do you have the, this book's PDF with the index? Let me, let me check it.
+
+51:19 - Suhash Raja
+  If you could just share that with me, right?
+
+51:22 - sanjeev kumar
+  I will put that in. And I will point out like, because in previous internships also, I pointed out, these are the five or six chapters you need to read to, to get through any interview.  Okay. Nice. And then let's talk about this rate limit. This is a bit more data engineering specific. So yeah.  Please bear with us, right?
+
+51:47 - Suhash Raja
+  Neha and Deepika.
+
+51:49 - sanjeev kumar
+  But, but you guys like, do you understand these points? Like last time you had this, uh, uh, auto loader, right?  Sindhu.
+
+52:00 - Asindu Gayangana
+  So there we wanted to talk about rate limiting, what is max byte per trigger, max file per trigger, what is partition pruning, yeah sorry I know about the max I used max files per trigger so it means as example we use autoload to capture newly landed files using checkpoints so if the if there are thousands of files new files uploaded to that location when we set a max file per trigger to 100 it create 10 different batches and it runs sequentially so it does not read whole new total amount of files in single run so it creates separate batches so that's  Absolutely.
+
+53:02 - sanjeev kumar
+  And this is what is important, right? So that available now trigger that you have used, right? Along with that, you can use these to actually do the rate limiting.  Sometimes the data could be so huge, you cannot just start processing everything in one micro batch, right?
+
+53:20 - Suhash Raja
+  At once. So you limit them.
+
+53:21 - sanjeev kumar
+  It also depends on what kind of computing you're using. Just four machines, you don't want to overwhelm them with like 10 terabytes of data, right?  Maybe you by using this really limiting yours. You are limiting those the amount of data that you will read so that your machine can easily handle that.  So this is the whole concept behind it. So is it working sequentially?
+
+53:48 - Asindu Gayangana
+  No. I don't think it is. It's run parallel. I mean, the separate batches. Is it run sequentially or parallel?  I'll tell you.
+
+54:00 - sanjeev kumar
+  So for example, you have like a hundred files, right? And you set max file per trigger as 10. Yes.  So what it will do, it will read 10 files. So it will make a back, it will make us 10, 10 sequence, 10, 10, like 100 divided by 10 is 10, right?  So there will be 10 set of files in sequence.
+
+54:25 - Suhash Raja
+  Let's see.
+
+54:26 - sanjeev kumar
+  But those 10 files, the first batch that it will pick to process, those 10 files will be processed then in parallel.  Okay. I understand.
+
+54:36 - Asindu Gayangana
+  Yes.
+
+54:36 - sanjeev kumar
+  Because the processing that Spark is doing, it has say four machines, right? So it will take 10 files and then it will send two files or 2.5 files to each machine.  So after it fix that first batch, Spark is going to do a parallel processing, but the. The, the rate limiting that we applied.  So then once it does the first batch, then it will go and pick another 10 files and then parallel processing, another 10 files, then parallel processing.  That's what it will do. Make sense. If it is not clear, do let me know. I will make a quick diagram and then I will try to show you.  Uh, uh, no, Sanjeev, uh, it's clear.
+
+55:30 - Asindu Gayangana
+  Okay, great.
+
+55:31 - sanjeev kumar
+  And yeah, so, so has the same question for you. So do you understand these parts? If not, then please make sure that you read up on them a little bit technical, like a deeper level, but yeah, it's a good thing to know.
+
+55:43 - Suhash Raja
+  Yeah, definitely. So you're like, uh, I know partition pruning, but the other things I, uh, I, I have to learn it.
+
+55:52 - sanjeev kumar
+  So you don't have to remember these parameters, but you have to remember this rate limiting. It's great. And this is what the customers would face in production, these kind of issues, right?  Okay, okay.
+
+56:08 - Suhash Raja
+  Okay, great.
+
+56:09 - sanjeev kumar
+  So I don't think we, I think probably we have covered everything from all these things.
+
+56:16 - Suhash Raja
+  Sanjeev, I shared that book in the Slack channel, but I don't think it is also having the index page.  But if you open the book in the Adobe PDF reader and if you click on the bookmarks, you can see the index.  Oh, okay. Can I do it with the one that I have here?
+
+56:35 - sanjeev kumar
+  Yeah, maybe.
+  ACTION ITEM: Define Spark Definitive Guide chapters for Asindu; share w/ Asindu - WATCH: https://fathom.video/share/kqHx4gMu_XUpoBnQHq4zDoY_U5oe5G6C?timestamp=3395.9999
+
+56:35 - Suhash Raja
+  I think so. Bookmarks.
+
+56:40 - sanjeev kumar
+  Where do I go there? In the left. Oh, yes, exactly.
+
+56:46 - Suhash Raja
+  Okay.
+
+56:46 - sanjeev kumar
+  So Asindu, I will come up with what chapters you need to read, right? There are too many chapters. You don't have to do that.  Okay, great. Thanks. Thanks a lot. Okay, then let me just quickly check midweek sync, DEEPIKA, DEEPIKA is here, so Philip, he has already set up a DVD part, stream getting familiar with the acquisition workflow, Neha, Suhash, Asindu, okay, okay, fine, so I think we have covered a bit, those who have not joined, we can, we can have a sync with them tomorrow, oh sorry, next week.  Then, does everyone have something to work on for next week, these are clear, not clear, do let me know, if we have, then we can drop now, and then we will, and if possible, so see, I would also like you to work on a little bit of your presentation.  Right? Because this is what we will do.
+
+58:02 - Suhash Raja
+  Right?
+
+58:03 - sanjeev kumar
+  So whenever you feel you have done something substantial, put that, put your thoughts in a slide draw, because as a data engineer, you will slowly, slowly transition to a solution architect or something like some kind of architecture architect guy, right?  Because even solution architects will come and talk to data engineers, you should be able to present and design what exactly you are thinking, which block fits where, what is medallion architecture, which tool will come in which layer.  Uh, and, and even, even for DEEPIKA, right? Even for Neha, you should be able to make your stakeholders understand how things are working by drawing a simple architecture diagram, right?
+
+58:44 - Suhash Raja
+  So that that's an important skill.
+
+58:47 - sanjeev kumar
+  And in interviews, you will be asked to draw an architecture diagram, no getting away from that. Right? So you need to have that skill, how you can quickly think and which tools to use.  We will have those. will that skill, Practice sessions. So make sure that you, whenever you design something end to end, try to capture that as an architecture diagram, proper drawing, drawing, right?  Like how exactly things should be presented. It seems trivial, but from my experience, that's a very important skill.
+
+59:17 - Suhash Raja
+  Okay.
+
+59:18 - sanjeev kumar
+  Okay. Then have a nice rest of the weekend and the week ahead. Thank you. Thank you.
+
+59:26 - DEEPIKA ELANGOVAN
+  Thank you all. Thank you. you all.
+
+59:28 - Neha Doda
+  Have a nice day. Yeah, bye.

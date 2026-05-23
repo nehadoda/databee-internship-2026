@@ -1,0 +1,82 @@
+Impromptu Google Meet Meeting - May 20
+VIEW RECORDING - 11 mins (No highlights): https://fathom.video/share/xa6AD1rs4Rk6giaDbLtZanSQanDgtRyX
+
+---
+
+0:00 - Kousalya (nanduri1120@gmail.com)
+  I'm fine. Thank you. How are you? I'm also good. How is your week? How is your week going?
+
+0:13 - Neha Doda
+  It was quite busy.
+
+0:16 - Kousalya (nanduri1120@gmail.com)
+  Generally, is busy because along with this internship, I'm also like learning Swedish. Okay. And then, yeah, because of my kids, they are very small.  I only have like limited time when they are in school. And because it's like summer here, and usually people are out in the evening.  Hi, Filip. Hello. Filip. Yeah, Filip, are you doing? I'm so far. I'm starting using dbt on my actual internship project now, instead of just sitting and learning about it, so I'm progressing a bit on that.  No. Do you want to discuss anything or if you have any questions?
+
+4:02 - Filip Cedermark
+  On my end, there's not much to say.
+
+4:07 - Kousalya (nanduri1120@gmail.com)
+  Like I said, I'm just kind of continuing work on my intention project.
+
+4:13 - Filip Cedermark
+  Only recently started using dbt and progressing with it, so there's not too much to show right now.
+
+4:27 - Kousalya (nanduri1120@gmail.com)
+  I'm also working on the presentation that I was assigned by Sanjeev that day. I have to talk about the storage mode, so I'm just working on that so that I can talk about it.  And along with that, I'm also learning Microsoft Fabric. Okay, yeah. Are we expecting anyone? I don't know. Maybe let's wait for some more time.  Yeah. Yeah.
+
+6:58 - Filip Cedermark
+  Hello, Suhash. Hi, Gossela.
+
+7:03 - Kousalya (nanduri1120@gmail.com)
+  How are you? How are you? How are Good, good.
+
+7:13 - Suhash
+  How was it going, guys?
+
+7:22 - Filip Cedermark
+  Pretty good, pretty good. I've mostly working on my internship project so far. Okay, okay. I've been meaning to connect with either Raj or maybe the Nose to get some credentials for the other project.  I remember we talked about that.
+
+7:46 - Suhash
+  Yeah, okay. I'm also currently working on the internship thing, like the other transformation stuff, like streaming. So yeah, how about you Neha?
+
+8:08 - Neha Doda
+  Yeah, I'm just working on Power BI as a, yeah, so like I am preparing the presentation for that today, the storage mode that are used in Power BI.  Okay, okay, okay.
+
+8:26 - Suhash
+  Neha, you have already worked in a production environment with Power BI or?
+
+8:32 - Neha Doda
+  Yeah, yeah, have like worked in with Power BI already, when I was in India, but not here. Uh-huh, okay, okay.
+
+8:42 - Suhash
+  You worked for a client? Yeah.
+
+8:45 - Neha Doda
+  Okay, okay.
+
+8:49 - Suhash
+  So what kind of data that you operated on Neha? just curious.
+
+8:56 - Neha Doda
+  Mostly with the sales, e-commerce. Uh-huh, okay.
+
+9:00 - Suhash
+  Okay. Okay. Nothing else from me, guys? Maybe I will try to update last week what I completed. The DAB thing for deploying the bundles in the repo.  Maybe you can drop it.
+
+9:48 - Filip Cedermark
+  Yeah.
+
+9:51 - Suhash
+  So much. don't have anything. I'll just continue working on the integer problems. Anything else you guys want to add?  Oh, sorry? Anything else you guys want to discuss? No.
+
+10:24 - Neha Doda
+  No, not on my end.
+
+10:26 - Filip Cedermark
+  Okay, okay. Maybe I'll try, maybe like I said, I'll see if I can get the credentials they were talking about.  And I saw the group channel that Rashindel just created, I can drop my github name in there too. Okay.  So we have access to it, but other than that, there's not too much going on. Like I said, I'm just kind of doing my internship projects.  Okay.
+
+10:51 - Suhash
+  Okay. Thank you, Kousalya, for the meeting. Thank you guys.
+
+10:56 - Kousalya (nanduri1120@gmail.com)
+  Yes. Thank you. Thank you guys. Bye.

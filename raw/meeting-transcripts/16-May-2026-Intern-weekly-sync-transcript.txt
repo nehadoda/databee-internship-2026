@@ -1,0 +1,439 @@
+Impromptu Google Meet Meeting - May 16
+VIEW RECORDING - 73 mins (No highlights): https://fathom.video/share/34zSQg56BbNUjd7uwdoRTZPivDWhs5yY
+
+---
+
+1:24 - Filip Cedermark
+  Good morning, Kousalya. Good morning, Filip.
+
+1:27 - Kousalya (nanduri1120@gmail.com)
+  How was your week?
+
+1:30 - Filip Cedermark
+  It's been good. It's been good. I am actually outside, so I'll remain on mute if there is so much noise.
+
+1:38 - Kousalya (nanduri1120@gmail.com)
+  Yeah, okay. Yeah, that's fine.
+
+1:41 - Filip Cedermark
+  Yeah.
+
+1:42 - Neha Doda
+  Hello, Neha. Yeah. Hi, Kousalya. Hello. Good morning. Yeah. Hi, Filip. Good morning. Hello. Hi, team. Hello.
+
+1:57 - sanjeev kumar
+  Good morning. Hi. Good morning.
+
+2:00 - Neha Doda
+  Good morning. How is everyone doing? Good.
+
+2:11 - DEEPIKA ELANGOVAN
+  How is it going with you Filip? I think it's going good.
+
+2:23 - Filip Cedermark
+  The last like week or so or like two weeks at this point almost have been almost exclusively me trying to like learn and get familiar with DBT so I can start using it in my internship project.  I started getting started with implementing it like just yesterday. So it has been like getting set up and connecting everything up and going through some other official material and things.  But I think I'm starting to get a bit more confident with it. I'm gonna start using it in my project now.  Great.
+
+2:59 - sanjeev kumar
+  And Which, what are you using? Are you using dbt-core? Yeah, I'm using dbt-core.
+
+3:05 - Filip Cedermark
+  Okay, great.
+
+3:07 - sanjeev kumar
+  And do you have some use case that you're trying to implement or just trying your hands on the basic syntactical stuff?
+
+3:14 - Filip Cedermark
+  For now, I'm only, I'm going to start because for my internship project, I did, like, I wrote my, like, the, what's it called?  Like the faker script to generate data. So I'm going to be using that, but with dbt instead of, like, high-spark notebook that I did previously.  I'm just going to try to continue to build off of that. Yeah.
+
+3:40 - sanjeev kumar
+  And do you know, like, dbt-core, what does, what is the engine that it uses to do the processing? Because if I understand it correctly, dbt can be run on Databricks, Snowflake, I don't know, any number of engines.  Yeah, exactly, can be, like, has a connection.
+
+4:00 - Filip Cedermark
+  There's four pretty much every environment, so I don't, I can't say I know like off the bat if like using the Databricks connector means it uses my Databricks cluster, maybe it does, or it uses it.  What is the connector you are using at the moment? The Databricks connector, because I'm connected to my Databricks environment where I have my like tables and schemas and stuff.
+
+4:27 - sanjeev kumar
+  Great. So when you run something from there, like for example, if you create a table, go and check in Databricks, it should be creating some utilized visual streaming table in the backend.  Yeah, it does. Okay, then yes, then a DBT is actually working on top of Databricks. Makes sense. So in that case, you don't have to worry about what it is doing in Databricks.  We just focus on DBT and it just utilizes Databricks compute and objects in the background.
+
+4:52 - Filip Cedermark
+  Yeah, because they like, because it can connect to like files, it can connect to tables and like you said, it makes like materialized views.
+
+5:10 - sanjeev kumar
+  Deepika has been able to do the end-to-end Unity Catalog deployment demo. This was optional for her. But yeah, let's see.  Asindu wanted to do this DQX implementation in Silver. If you are ready, we can also do a walkthrough there, so that others can see.  This is Databricks specific, Databricks has something called... Expectations, and it also has a data quality framework that Asindu is trying to use and implement for his pipeline that he is doing, right?  Let's see if he can show something and we can learn something from there, even though this is database specific, but this is best practices, right?  It doesn't matter which tool you use, same concepts will be applicable with the difference in tactical sugar, right? Then, yeah, this part is on me, like the updated last time, like she would like some ML Ops learning path, so I need to still work on this part, but yeah, we will take this one, and then Spark Definitive Guide, so this was for the core engineering part, where I would, I would highlight certain chapters, I think Suhash already knows about it, he can also help us here.  There are certain definitive spark chapters that I will highlight, which you should read, as a data engineer. So if you are going for an interview, and if you say that you have worked on Spark, then you must know that, right?  Yeah. Like, for example, if you're going for DBT, then just focus on DBT, that should be good enough. But in general, I would say you should have some knowledge of Spark, because it can make you understand how does exactly the distributed system works, how do you optimize parallel processing, what is skew, what is shuffle, what is, yeah, all those terms, right?  It will give you a good overview. Then let me also get, come back here. There was, there were next steps.  Yeah. So for Neha, Neha, you had mentioned that you will review the Power, so you will start working on your visualization tools, right?  So starting with Power BI, if I remember correctly, you already mentioned that you are already quite comfortable with Power BI, and would like to explore Tableau.  Yeah, actually, I just,
+
+8:00 - Neha Doda
+  Last week I explored all the other document that you gave and the areas that were covered in that so although I have done it earlier but I implemented everything that was mentioned in there like RLS and then time intelligent functions and then the page navigation drill through so I have covered all the areas and then like I implemented all of those and yeah in power bi so from this week I can like start with w okay great so something for us to share with us like maybe this week or next week on power bi that you have built yeah I can do that next week um yeah yeah next week we'll have like 10 minutes so that you can get focus what you have done and it will be nice for us to take a look at it yeah okay great then then there were a couple of things about yeah we'll go through this one by one once we
+
+9:00 - sanjeev kumar
+  When we have this check-in path. So a few things with Suhash, Asindu, architecture diagram for current pipelines. Okay, then let's start with the check-in.  Maybe Neha, you can start, like you're first on my screen.
+
+9:19 - Neha Doda
+  Last week, as I mentioned that I covered all the components that was mentioned in that document of this Power BI report.  So I tried to implement RLS, like static RLS and dynamic RLS. Although like, it is visible mainly in Power BI service.  But yeah, I can implement that in Power BI desktop and I can check whether the rules like are there or not.  And then along with that, I also implemented time intelligent functions, drill through page navigations, everything that was mentioned, I have like completed in the last week.  Okay, nice.
+
+10:00 - sanjeev kumar
+  That's nice. So I assume that you have really good experience with the Power BI visualization tool. Could you tell me like what is not covered?  What advanced concept we should still cover so that you can implement that and that will be a learning experience also for you?
+
+10:23 - Neha Doda
+  I think but actually the things that that are like that I want to implement is basically in Power BI service, but I don't have like the access to Power BI service like deployment pipelines, then scheduling, refreshes.  Yeah, but otherwise in report building everything I can like do it through the desktop version. So that depends upon like the complexity, how far you go with the project, what KPIs you're building and then what what  measures you can create that you can go to. Yeah, depending on the use case and the project. But if I talk about the features, they are mainly deployment pipelines, scheduling, refreshes, which is in Power BI service, and you need the license for that.  I have already accessed with their first 30 days like last year. Okay.
+
+11:24 - sanjeev kumar
+  Now, so a couple of points there, right? So did you understand the Power BI import modes?
+
+11:29 - Neha Doda
+  like full import, composite mode, direct query mode?
+
+11:35 - sanjeev kumar
+  Do you know the best practices of which pattern to use when?
+
+11:43 - Neha Doda
+  Pattern in what sense?
+
+11:44 - sanjeev kumar
+  Like, for example, when would you advise a customer to go for full import versus direct query versus composite mode?
+
+11:51 - Neha Doda
+  Yeah, basically, it depends upon the size and like the complexity of like your data set. So based on that,  You can advise like which mode you can use, composite mode or like import mode or direct query mode. Yeah, could you, Neha, could you do one thing for us?
+
+12:09 - sanjeev kumar
+  Could you please make maybe next session instead of presenting your dashboard, could you talk about this part? Because this part is a little bit attached to data engineers also because as a data engineer, you might have to deal with something like, okay, Power BI visualization person is asking for certain things to be imported into Power BI or maybe have a direct query mode.  And direct query is slow, right? Or what not, right? They might have to work on optimizing it. So it will be nice if you could, if you could just make a small presentation on it.  No, don't take like, don't spend too much time there. Just let us know what you understand, how we should think about it, right?  Just as a knowledge sharing session for everyone so that everybody knows how the visualization world works. Yeah, I can like prepare a...
+
+13:00 - Neha Doda
+  Presentation for the different modes, like if import mode, direct query mode and composite mode, where, in what situations we are going to use all of these?  Absolutely, that would be like really beneficial to everyone.
+
+13:11 - sanjeev kumar
+  Which covers the size of the data set and the other situations where we need to like use which one?  Size of the data set, latency requirements of the dashboard, what if somebody wants like really, if it's a CEO based dashboard with where they want results very quickly, what kind of pattern can be recommended, then comes the cost, because as an, as an, as an, I would also like you to think about cost whenever you present any solution, right?
+
+13:39 - Neha Doda
+  Okay. Like which is cheaper? Why?
+
+13:42 - sanjeev kumar
+  Does it make sense to have import mode? Why, why not?
+
+13:45 - Neha Doda
+  Why direct query, right?
+
+13:47 - sanjeev kumar
+  So all those things, please take a look at it. And another thing. So whenever you get time, maybe next for next week or next time or week after that, could you also let us know about the the, uh,  Power BI's pricing model, the older way and the new way. Earlier it was license-based, now it is fabric capacity-based because that is very important and it will be asked because maybe if you just focus on the visualization part, maybe they will not ask you because maybe a DA doesn't need to worry about it, but a complete data analyst should know because you need to recommend, okay, this is the capacity model, maybe we should go for direct query, direct query mode, right?  Since all the compute is available, why you are putting into the, right? Or maybe you can also, you can also talk about, so when you read about fabric compute, sorry, capacity model versus the old one, please create a comparison on top of it, like what does, what each of one, each one of them does, how they are different, what you will recommend, what are the proven points of each?  Bins Because right now that's a hot topic, like whenever you use Power BI, you are moved to Fabric Capacity and then there are pro and cons to that, right?  Also read about, also let us know about Direct Lake methodology with Fabric Capacity Model. There used to be Direct Query, you know what it is, Import Query Composite, but there is, with Fabric Capacity Model, there is a new feature that Azure has come up with that is called Direct Lake.  Yeah. It's a very powerful feature. Please read about it and let us know what you find, right? The good and bad about it.
+
+15:33 - Neha Doda
+  Yeah, I am actually like reading about this Microsoft Fabric Data Lake and then Data Warehouse because I'm preparing for Analytics Engineer along with this DP, like DP 600.  So I can prepare about that. That will be great Neha. Do want me to compare Microsoft Fabric with other data platforms or like just about Microsoft Fabric?  Like what it is doing with it. now, so you are also playing for analytics engineer, right?
+
+16:06 - sanjeev kumar
+  Yeah, yeah.
+
+16:06 - Neha Doda
+  Earlier I thought of like working on data engineer, but I thought that this would be like a drastic shift.  So it's better to focus on analytics engineer so that you get an idea of what's a data architecture along with like data analytics.  I think that's a right call because that's a natural evolution for your role.
+
+16:28 - sanjeev kumar
+  Yeah, later on because data engineer like really vast, like it's not an easy switch. So that's a natural evolution.  And later on, we will talk about DBT. We will talk about other analytics engineering, right?
+
+16:43 - Neha Doda
+  Yeah, yes. So please do that.
+
+16:46 - sanjeev kumar
+  From an analytics point of view, just bring whatever you can on the fabric part and let us know. Then as a follow up question, I think everybody would be able to ask questions like, okay, I am working on DBT.  How it is better or worse than, than dbt? Or maybe what benefits does Databricks bring in, right? When compared to Azure, right?  So those kinds of questions I would expect from all of us because Quas is working on Databricks, Filip on dbt, Nikolaos on Spark, Asindu on, on, on the, on the native Databricks part, right?  Let me open source spark kind of a thing, right? So let's, let's do that.
+
+17:24 - Neha Doda
+  It will be a great addition to the team.
+
+17:27 - sanjeev kumar
+  Okay, nice. Uh, uh, we can move to Suhas.
+
+17:37 - Suhash Raja
+  Yes. So just one more point.
+
+17:40 - sanjeev kumar
+  So right now, uh, just a follow up from Neha's thing that we did. So we did the common, common, uh, enablement part where everybody tried to know a little bit of something, right?  Like how does the whole architecture pipeline work? What's CICD, but now we are trying to like, I, We had a discussion with Raj.  We will keep learning, but we also need to play on our strengths, which we already know. We need to sharpen that as much as possible.  And then also add more skills, she's trying for analytics, engineering and whatnot. Right. So, so we will do that.  But so that's why. So specialization would mean Neha, Suhash, and everybody, right. You will have to like also showcase what you already know.  Right. And along with, uh, learning new things. Okay. let's, let's go. Sanjeev, one question.
+
+18:34 - Suhash Raja
+  What is analytic engineer like?
+
+18:36 - sanjeev kumar
+  Okay. So, uh, Neha, you are an expert. Feel free to, uh, correct me here, but see, uh, data analysis usually used to be like, okay, I will, so data analysis in my mind has two parts.  One, you actually, the way you model the data, how do you model the data? Right. The second part. uh, uh, is creating visualization.  On top of it, that that will be consumed by your user, like, for example, what kind of KPIs and metrics, this kind of drop downs and whatnot, right?  engineer would mean the person is also responsible for creating the final layer of or say gold layer, which will be aggregated here that your dashboards will consume.  How will you schedule the jobs to update those tables? What mode of loading of data you will, you will choose for, for your dashboarding, right?  So, so the visualization kind of is a front end, analytics engineering is the back end of, of DA role.  This is how I understand. Neha, what would you like to add? Yeah, that's correct.
+
+19:47 - Neha Doda
+  And I would like to add on to this. Basically, analytics engineer sits between somewhere between like data engineer and data analytics, because data analytics is purely like building reports and data.  And you get like the data set, which is already cleaned and the data engineering is doing like hardcore cleaning of the, like the data that you're getting, but like data analytics engineer, from analytics engineer, what they actually expect is you have an understanding of what the data architectures from where the data is coming, what are the pipelines and like how the data is flowing and you must like know the, basic transformations like duplicate, duplicate values, removing redundant, redundant values.  So basically, the analytics engineer will clean the data set, but not the hardcore cleaning that a data engineer is doing.  Yeah, they actually do the reporting part. But along with that, analytics engineer will also like create pipeline. And then like scheduling, refreshes, I mean, from where the data is coming end to end solutions, but not the hardcore cleaning part of data engineering.
+
+21:12 - sanjeev kumar
+  Just to make it more, just to add a few more things here, right? So exactly like you mentioned, a data engineer could be agnostic to business rules.  They don't need to, like, it's always good to know that. But as a data engineer, many a times I have worked with, like, telecom companies, I did not know the full context of what exactly use cases being uploaded, being implemented.  Just let me know what kind of source you want, from where you want to upload the data, how fast the data should arrive, should be streaming, batch, what kind of general cleaning rules should be there, how you want data to be available in silver layer, in what format, what schema, what structure.  My responsibility was to deal with huge amount of data, right? Because I will serve analysts also and machine learning, learning people also data science, they will ask terabytes of data and analysts will not, they don't care about terabytes of data, they need aggregated short to the point data right for their reporting.  So this is data engineering, then analysts will come like for example, when I work, I have I interact with a lot of teams that have data product teams, like for some financial data products, that's where analytics engineer will sit, whatever data engineer is provided in say silver layer, the cleaned and finally consumable layer, analytics engineer will be sitting in a data product teams, like for example, I don't know, like finance data product, or anti money laundering data product or something like that, right?  They will sit there, they will take a look at the silver data, they will create their own aggregated or analytical based tables, like what they want to actually report on, because out of the silver data.  Billions of record, you might need just past one month of data or maybe certain sections of the data, right?  So that's where analytics, analytical engineer sets. That's its responsibility to see out of such huge data set what makes sense and to my business, right?  For say, anti-money laundering, reporting and whatnot, right? So this is where analytics engineer sets. They will be responsible for creating those pipelines for the final layer, goal layer that we call, or aggregated layer.  That is the base of your visualization tool. Okay.
+
+23:36 - Suhash Raja
+  So the semantic layer in Power BI, those things will be done by analyst itself, Sanjeev or the analytics engineer will do it?
+
+23:43 - sanjeev kumar
+  No, it will be done by the analytics engineer. Okay. Okay. Okay.
+
+23:49 - Suhash Raja
+  Okay. Okay. And they will, they will touch upon the goal layer also, like within the data engine.
+
+23:55 - sanjeev kumar
+  Ideally, a good data analyst should touch upon that, but it's not a mandatory need. I have seen some analysts just focusing on visualization tools, but then in that case, they are heavily dependent on some data engineer in that data product team that is doing that last mile goal layer creation, right?  But that's why DBT is such a huge craze within data analysts, because it gives data analysts a very easy SQL based interface to actually create analytical engineering pipelines, like very easy.  It's that's how it came into the picture. And that's what that's the audience. It primarily tries to serve. Thank you.
+
+24:41 - Suhash Raja
+  Yeah. So what I did in this week is like, I tried creating a job and I tried creating a declarative pipeline with just just for the single batch load.  And I could understand the difference between Workflow job and the declarative pipelines, the predominant decorators used in declarative pipelines or the delta-like tables, which was previously called.  And then I utilized DAP for deploying this job and pipeline into the Databricks workspace using the Databricks bundle. And then I moved further onto the CICD path, and I tried to deploy this job and pipeline created using Databricks to the Databricks platform using GitHub Actions.  And so I touched on like four different things. A very minimal, like just a single job, single work, like reading a CSV file and loading it into a delta table.  But I just get to understand the entire flow, like, like, the main thing I learned is that the difference between a job or task and workflow and declarative pipelines makes sense.  So now do you understand the concept?
+
+26:32 - sanjeev kumar
+  So actually, there are two points I want to highlight before I forget, right, then I'll come to it. So since you talked about dApps, I would really recommend you to get in touch with Deepika in your mid week scene, because she really has good experience in that she has created one sample also like where she has used dApps.  Deepika, please feel free to stop me or correct me, right? I would like you to collaborate internally and get it reviewed by Deepika to see whether what else could be improved?  Are you on the right track on what not? Maybe Deepika also can probably can learn from you on that part.  Right. So please collaborate that there. Then now, since you are already doing, you're trying to right now, like properly understand database landscape, like what is workflow job?  What is workflow ETL, like SDP, particularly pipelines, what is the orchestrator and whatnot. Once you are done, I would recommend because we are moving forward now.  Now, make sure you do a high volume pipeline runs, not just on some sample 10 MB, 20 MB of data, Please use, if you don't have your own utility, please use Philips, that Faker library, try to create like maybe 5 GB, 10 GB of data, try to run the same thing.  I would like you to like exactly understand how SDP is working. What did, I would like you to implement that SCD type one, SCD type two, auto CDC in, in database.  Let's leave. SDP pipelines. What are append flows? What are change flows? So everything you should try to do. How will you do a restart?  How will you do a backfill? How will you do a full refresh? Right? All those engineering constructs, you need to touch end to end.  Right? So when you go in an interview, I say you have worked with Databricks, you will be expected to know these things.  And I'll make sure that I will tell you like what exactly are tested or what exactly will be asked.  But yeah, these two points I wanted to tell before I forgot. Then, okay, so you implemented this end to end.  Could you tell me like, what kind of data are you using? So did you use volumes to load the data, sample data?  Yeah, yeah, yeah.
+
+28:43 - Suhash Raja
+  Like, like, like, I use the retail, simulated retail data from the marketplace and Databricks. And, yeah, and then like, I excluded the cloud, cloud thing with us.  I'm just keeping the DBFS storage itself. Based on the previous experience, found that nothing is changing in the notebook or job, where the data is only the volume path is changing for each cloud, like APFS is colon slash slash for Azure and S3 colon.  Like, and so, so I thought like, okay, let me use the DBFS storage itself. So that like, I don't, I don't want to like, I already did the connection once.  So I keep the DBFS storage.
+
+29:41 - sanjeev kumar
+  Yeah. Okay. Let me give you some pointers. Could you tell me, could please note this down? Like maybe next time you should read about it because I see some gap here.  Could you read about UC managed table versus UC external tables? Unity catalog. Uh. Uh, think. Yeah.
+
+30:00 - Suhash Raja
+  So tell me if SDP creates a managed, UC managed table or UC external table? UC managed table.
+
+30:10 - sanjeev kumar
+  In that case, while you are going and checking that it has ABFS path or DFS?
+
+30:19 - Suhash Raja
+  No, the thing like before starting the thing, like I have run out of the subscription, like, I tried the connection between the Azure storage earlier, like two weeks back.  So I understand how to connect and read from there.
+
+30:39 - sanjeev kumar
+  now, since I don't have the subscription, I guess you have an Azure subscription and on top of that, you are creating a Databricks workspace.  Like I use, I used it rarely, but I don't have it now.
+
+30:57 - Suhash Raja
+  So I'm going with the free edition. Yes. Thank Yeah, yeah, it's completely free edition now. But I'm just keeping the stories to within the free edition DBFS itself.  So that like, I can concentrate on the concepts rather than on like, whether it will cost me or not.
+
+31:15 - sanjeev kumar
+  So Yeah, DBFS is an older concept in Databricks. We don't no longer use that terminology. It's just one use nowadays, even though in the back end DBFS.  But anyway, it's good that you know, the older concepts. Now, could you also explain or read about like, difference between materialized views, streaming tables, like all the objects or construct that declarative pipelines have?
+
+31:41 - Suhash Raja
+  Like I went through the table decorator, materialized view and temporary view. Like, so everything can be done with the table, table itself.  But materialized view is, as far as the learning, like, I've learned that material. The materialized view is used for the gold layer, where the querying of the speed of the data, while the data analysts need the data very fast on their dashboards.  So at that time, we use materialized views. And that is the only difference I find between these two decorators.
+
+32:22 - sanjeev kumar
+  So the normal dot table, both of them are dot table, right? When you use the operators, but one of them is streaming table, one of them is materialized views.  And both of them have, like, like you mentioned, there's a big difference between both of them. I would also like to like, deep dive a bit more and find out what use cases will you use streaming table for and materialized view.  you said, but last week is used for the gold layer, right?-hmm. Could you also, like, find, maybe not now, because we have to move forward, but could you also list down next time, the pro and cons of each and which use case?  So which part of pipeline will it serve, for example, by part, mean, which kind of table streaming table will be used for ingestion of the data, which part will be used for the for the consumption of the data, right?  And also, maybe you can also let us know how it is different from Delta tables, like what is streaming table materialized view?  And what is this concept of Delta tables in Databricks? Right? I would like you to like, I know you might have an answer, but I would still like you to talk about it next session.  Because there is a there is a big difference that that I will, that I'm expecting that you might miss.  So we will see like if you, it will be great if you could find that out. But please read that.  Yeah. And another thing, so I would also like you to like, like you mentioned that you were already implementing that data engineering use case, ingestion, and then, then,  Some transformation, then data quality. Could you make sure that you create a pipeline touching all those three or four points?  I would like to see how you are designing your UI in STP, in declarative app, right? Okay. There will be some pointers there.
+
+34:17 - Suhash Raja
+  Yeah, like, what I did was like, just touching on the stuff, some like, trying to, like, at the minimalistic stuff.  Okay.
+
+34:27 - sanjeev kumar
+  But trying to implement, yeah.
+
+34:28 - Suhash Raja
+  So, in this week, like, I will, I will find the difference between these one and I will work on that other things which I've already added in my task list, like SAT.
+
+34:39 - sanjeev kumar
+  And go deeper into it, because, yeah, you should be able to find some edge cases that it is not covering.  Okay. If you can do that, means you have, like, tested the edge cases also, right? It will be nice, you know.  You don't have to do it next week, like, we are just starting up, so take your time, one week, two week, keep on experimenting with Okay.  deep down with this D MP. If you can go and talk about it end-to-end, that's more than enough, I would say.  Yeah, sure. Okay, thanks a lot. Filip, I know you gave a brief, but it would be nice if you could let us know.  Hello, can you hear us, Filip?
+
+35:26 - Filip Cedermark
+  Sorry, hello. Could you just repeat that last thing? Yeah, so could you let us know what you have been working on for everybody else to know?
+
+35:42 - sanjeev kumar
+  Yeah, of course.
+
+35:43 - Filip Cedermark
+  I mentioned this like a bit at the beginning, so some have already heard, but like I said, I'm starting to kind of transition from using only Databricks that I have been doing up until like a few weeks ago to learning.  And that's kind of what most of my time, the last few weeks I've been, I've gone to reading up on materials, setting up and connecting to my environment.  So I'm going to start using MeDBT for my internship projects now. I started doing it just yesterday. I think I have already presented my Faker notebook that you can use to generate some sample retail data, you get some customer data, you get some order details.  And it also does have functions for updating or inserting new changes in those rows. So I'm going to be using that as like a base, and then I'm going to go through like the rest of the data transformation using DBT.  Yeah, yeah.
+
+36:52 - sanjeev kumar
+  And Filip, so you will still be focusing on data engineering using DBT, right? Yes, that's the plan. I think engineering is kind of where I want to be, so I'm going to stay.  Then I would also like you to touch upon those core concepts, like incremental ingestion, then the one that we have in data engineering, like for example, how do you do data cleaning in DBT, how does SCD type 1, SCD type 2 are being designed, right?  What kind of artifacts it is creating in data bricks? So it can also be deployed in Snowflake. So in Snowflake or whatever, right, wherever you test, what kind of artifacts in the background it is creating, because as an engineer, even though you are using DBT, if you were just an analyst, I would not have expected you to know, like on data bricks, what kind of artifacts it is creating, but since you are an engineer, I would expect you to know that too, right?  So as a later on, later on, as you evolve, as you know more, once you are thorough with this one, go and see what exactly artifacts it creates in the, on the engine that it is running, because that is important.  You might be asked. Yeah, to keep it like wholesome. Makes sense. So since you started yesterday, keep working on that and let us know like what you find, what the pro and cons you find in dbt, how it is good.  It has, dbt has like really great features like branching and then a lot of other things are there, right?  Which then in the later on, once, once you are thorough with dbt, I would like you, Philip and Suhash to collaborate.  and talk to each other about dbt versus sdp, spark pipeline, because databricks things, whenever some customer is unhappy about dbt, databricks pushes for sdp as a replacement of dbt jobs and vice versa.  If somebody is not happy with sdp, dbt becomes a very good fit for them. So both of them have pro and cons.  I would like you later on, maybe a month later collaborate and give us a proper analysis of both these tools, right?  It's really nice for each of you to know, like what exactly are the pro and cons. Cool.
+
+39:11 - Filip Cedermark
+  Yeah. Okay. Deepika, yes.
+
+39:16 - sanjeev kumar
+  Hello Sanjeev.
+
+39:17 - DEEPIKA ELANGOVAN
+  So this week I started on the hands-on of implementation of Databricks infrastructure. So I had a good start, but I encountered lots and lots of errors.  to troubleshoot each error, it took a lot of time. So like I couldn't complete it, but I am in the way of that.  Could you also first tell the problem statement?
+
+39:38 - sanjeev kumar
+  Like what uses your problem?
+
+39:40 - DEEPIKA ELANGOVAN
+  The first thing is to get the access of the Azure portal, Sanjeev. So like I'm using my Gmail account.  So it looks like there is some conflict between Gmail account and Microsoft account to get that access. And as Suhash said, like my free edition also got expired.  So like I started using pay as you go model. So it is consumed. me some amount for me as well.  as of now, have reached some 57 SVK for this week alone. So like I thought I will quickly complete the demo and I will destroy it, but still like I'm in midway of it.  Still I'm trying to fix it. So that's an Azure cost, right? Yes.
+
+40:20 - sanjeev kumar
+  So once you expire your free trial, can't you just use another email to... I have used already some couple of accounts for my previous experience, Sanjeev.
+
+40:33 - DEEPIKA ELANGOVAN
+  So like I have no other option left apart from paying this time. Yeah, I wish all these technologies come up with some kind of free addition.
+
+40:43 - sanjeev kumar
+  That's for learning purposes. You don't have to worry about... You can, maybe you can limit if you want to like, because that's still database paying for it, right?  Yes. You can limit the users, but they should have a free addition. Otherwise, how will people learn, right? Still like I thought it was...  It's a small amount.
+
+41:00 - DEEPIKA ELANGOVAN
+  I thought it's okay to spend, so it'll be an issue. That makes sense. Okay. Okay. Whatever works for you, DPIKA ELANGOVAN, Yeah, there is lots of permission issue initially I had, Sanjeev, like in setting up database workspace in Azure, like some service principal access.
+
+41:17 - sanjeev kumar
+  So you are working on using Terraform, you want to showcase us that how can set up database workspace in Azure.
+
+41:28 - DEEPIKA ELANGOVAN
+  This is what you're trying to work on? Yes, correct. Maybe I can share my screen and show what I have worked on, or I can pick it up at the last end also.  Absolutely. You can do it right now.
+
+41:41 - sanjeev kumar
+  Okay.
+
+41:55 - DEEPIKA ELANGOVAN
+  Please let me know if my screen is visible. Yeah, it is. Okay. This is a code I got edited from...  No, no, it's a blank screen. Oh, okay. Let me just stop sharing and share it again, the whole window.  Is it up?
+
+42:29 - sanjeev kumar
+  No. I can see. So this is the code I got from Claude Sanjeev.
+
+42:33 - DEEPIKA ELANGOVAN
+  So like, I'm also using GitHub Actions for the CICD purpose. Then for the, in case of Terraform, I'm using some fine modules, like Compute, Networking, Security, and then Unity Catalog and Workspace.  So this is the description of each modules. Like, I'm using five modules.
+
+43:00 - sanjeev kumar
+  In the case of networking, creates the slide deck, sorry, you are creating this slide deck also, yes, for the demo I just prepared, everyone to do something like this in the end, like, for example, you will have to present your case that you have implemented, right?  And you will deny if you can have a proper structured presentation of what exactly you did. Yeah, please go ahead, sorry.
+
+43:25 - DEEPIKA ELANGOVAN
+  So this is the five models I'm trying to create, networking, workspace, unity catalog, security, and compute. And in between each model, these are the resources being created.  And this is the complete architecture, like how the code is being pushed to the GitHub and how it is retrieving those secrets and how the pipeline is running using GitHub actions.  And in the Azure portal, these are the actions that happens. It creates a resource group where all the networking modules, workspace modules, all the modules, all being deployed.  And we also have a remote back, remote packet, where all of them StateFiles get stored, which is useful to get to know about our versioning.  prevents state blocking because if two person runs the pipeline, there are chances that it might get corrupted. So to prevent that, we are using remote packet.  And it also helps for versioning so that we can know when exactly it was deployed last. Or if you want to revert back to the previous table version, you can go with the help of those things.  And since the state file, it stores lots of sensitive information, it is also important to encrypt those data. So all these things are provided by the remote packet.  So this remote packet consists of the state files, which has information about whatever the infrastructure or resources it is building.  So it always compares, like we will be able to see whether it is going to create or destroy or it's going to update.  So these are all the things it used to compare and based upon the Terraform applies those changes. Okay Okay.  Okay. And what about Terraform Destroy?
+
+45:01 - sanjeev kumar
+  What would that do in case I want to roll back everything? Terraform Destroy just completely deletes all the existing resources and configuration, Sanjeev.
+
+45:10 - DEEPIKA ELANGOVAN
+  Are there any orphan resources?
+
+45:12 - sanjeev kumar
+  Are there chances of that?
+
+45:15 - DEEPIKA ELANGOVAN
+  We specifically have to mention like which path we have to, like usually we will be deleting the resource group.  So whatever the resource is present in that resource group, it will completely eradicate those things. Okay.
+
+45:28 - sanjeev kumar
+  Thank you.
+
+45:29 - DEEPIKA ELANGOVAN
+  So these are the typical Terraform commands we commonly use, like init, plan, apply, and destroy. And there are some other commands also, which we will be using for our local setup.  And this is how we... To let you know, like for example, see for data analysts, this is not what you need.
+
+45:48 - sanjeev kumar
+  But as an engineer, you are supposed to know a little bit of it, not at the level of DPKAs, but you should understand because you will work quite closely with platform issues.  Okay. If the workspace... Workspace is not properly deployed, if you are hitting some kind of limits and whatnot, you will have to interact with Terraform because somebody would have deployed it, the CI CD process infrastructure as a code process, some interaction will be needed.  So it will be nice if data engineers know a little bit about it, because usually it is asked, like, okay, could you, usually it is a CI CD process, right, just for deployment of artifacts and pipeline.  But if you could showcase, you have a little knowledge about what are resource groups, what are vnets, where your workspace is being deployed, how, what is bundled destroy, what is plan and whatnot.  A little bit of, like, how infrastructure as a code works, that will be, like, really added advantage. We really, whenever we interview, at least I interview, I look for a little bit of understanding on this part.  If that is it, that's, that's, that's a plus one, straight away, right, just for the data engineers. Please go ahead, Deepika.  Sure. So this is our typical Terraform.
+
+47:00 - DEEPIKA ELANGOVAN
+  Folder structure will be having like main.df file. So usually it will be in .df extension, main file, variables file, output file, provider file.  So this provider file is quite important. Like it knows like where exactly the resource has to be deployed, like on which cloud platform, like it is either Azure or AWS or whatever other terraform resources available.  And this main.df file, it will let us know like which resources we are trying to build. Like for example, resource group, the storage account or Kubernetes cluster.  And this variable files, like we usually don't prefer hard coding the variables directly in our main.df file because we won't be able to reuse the same file again and again.  So we use the variables file. So it can fetch all the variables from the variables file and the main.df file can run.  And the output.df file is actually the output which Terraform provides at the end of run. So this output like it shows like what exactly it has been created and like sometimes this output is typing the elements  So opened on the next pipeline run also, so for this, this output of DFI apps. Maybe I can show the last run of my pipeline, like how exactly it worked.  And this is the architecture. As I showed, after the Azure part is done, then we have to set up the data pipelines repo with the help of data asset bundles.  So I'm still in this line, so this part I didn't start yet. Okay, makes sense. So these are all the tools I have used and what I have done for the initial setup and initial setup of the platform, Sanjeev.  Azure portal, GitHub, Databricks workspace, and VS Code for our local configuration. Yeah, yeah. Nice, Deepika. This really looks good.
+
+48:46 - sanjeev kumar
+  For now, I think we will move on to another. Sure. Yeah. Because yeah, but this is really great. And I would really like to see it in action sometime later.  Sure, Sanjeev. Yeah. Like maybe next week. I will try to resolve all those issues.
+
+49:02 - DEEPIKA ELANGOVAN
+  Sanjeev, in the meantime, I would just like to ask you one doubt. In your experience, have you encountered creating the resources in Sweden's Central region or West Europe region, Sanjeev?  Sorry, can I ask you? Whenever we want to create resources in Azure, do you prefer using it in Sweden's Central region or West Europe region?  Sweden's Central, if it is available. Okay, because like I have some issues setting up with the computer resource in Sweden's Central, Sanjeev, so I'm planning to...  that is in the case, then West Europe is also fine, because sometimes, like for example, telecom companies, right?
+
+49:43 - sanjeev kumar
+  They might have Swedish defense data and whatnot, right? Okay. They might send students in Sweden's specific regions, but yeah, for non, for not so sensitive things.  Okay. you're interested... ...I'll boCU, Any比如... ...2018아서 that's got questions. There in Europe is fine. Okay.
+
+50:05 - DEEPIKA ELANGOVAN
+  For the last two days, I'm kind of stuck on creating the computer source in Sweden's central region. Sanjeev, I'm trying to replace with lots of node image, but still, like, I mean, not a problem.  Please keep trying.
+
+50:19 - sanjeev kumar
+  And one more thing, Deepika, it's great that you are using Claude to do this and define the structure and whatnot, create the code.  Absolutely amazing. This is what you would do when you join a company, but make sure you also understand what it's creating because the questions will be on that.  Right. Keep that in mind.
+
+50:38 - DEEPIKA ELANGOVAN
+  Okay. Sure.
+
+50:39 - sanjeev kumar
+  Then we can move to, I think Asindu is next in my screen. Yes. Sanjeev. Yeah. Hello.
+
+50:52 - Asindu Gayangana
+  Within this week, I couldn't be able to do much more thing, but I focusing on creating CICD pipeline because I'm we're doing we can  I'm not good at that part. So I think I need to connect it deeper to get more knowledge from it.  So because initially I go with CLI, then again, I try to deploy pipelines only using UI. So I don't think I have good understanding about CICT pipelines, especially with Databricks.  Because it only have one workspace, because I used a free edition. So I plan to deploy into the two different accounts.  It means CI part in one account and deploy into the one another one free edition. So I don't know if it is possible.  So I'm going to do that part. Yeah, makes sense.
+
+51:55 - sanjeev kumar
+  So that's absolutely the aim you as a data engineer CIC department Asindu, last time you mentioned that you were working on the DQX.  Were you able to do that?
+
+52:14 - Asindu Gayangana
+  I practiced it, but I didn't include into the pipeline, but I can show you the notebook and how I done that.  Yeah, it will be great if you could.
+
+52:26 - sanjeev kumar
+  Maybe we have less time right now, but maybe next time, could you show us your end-to-end pipeline? Because I saw that you already have built that workflow job and everything seems done.  Could you also plug that DQX part and then show us a demo, like how exactly end-to-end you are doing it?  Okay, sure, Sanjeev.
+
+52:47 - Asindu Gayangana
+  Right now, I do some validation by a manual code within the SILVA layer, but I create a normal architecture using Roto.io, so that's it.  Okay. But if, if possible, please do that.
+
+53:03 - sanjeev kumar
+  And yes, like you mentioned, once this is done, please focus on CICT part two. That is also important. Okay, thank you.  So yeah, that's it. Okay, Nikolaos.
+
+53:18 - Nikolaos Biniaris
+  Hey Sanjeev. So what I have done this week, so we had the, I had two different things I had to focus on.  The one was to turn everything, like all my pipeline from spark.read. We talked about having a streaming with available now trigger.  So I have turned all my pipeline from bronze to gold, having streaming only, which is batch processing, but we talked about this trigger available now that makes it a batch.  I much. And we also talked about data quality checks, and we wanted them to be, instead of manual, metadata-driven.  Yes. What I managed to do with this, I did this many different times. I couldn't really figure out in the beginning how to make it actually metadata-driven, because every approach turned out to be, in the end, a kind of manual.
+
+54:30 - sanjeev kumar
+  So, like that, like, for example, metadata-driven for data quality checks, or in general metadata-driven? For data quality checks.
+
+54:42 - Nikolaos Biniaris
+  Okay, okay. Yeah, please go ahead. What I figured out is to use comments that Databricks provides next to each table column.  There is like a tag. It's like a comment, and I have managed to... Every time a table is running again, I can go and I have connected a specific comments to create also metadata quality checks.  So like, if I go to attack, and that the only manual code that I should put is like a comment saying, a DQ data quality, not null.  And then I have managed this comment to actually be turned into a metadata driven rule. So like, it will check if there is not nulls.  And the null values will be going to the current quarantine table. And the, like the quality data will be the only ones passed down to the called dimensions and facts.  No, this, this sounds good.
+
+55:51 - sanjeev kumar
+  But that rule, right, that you're written. Yes, I understand what you're trying to do. And by you calling it manual and we  Where is that DQ is equal to null, then do this? Where are you writing that text in the notebook itself, right?
+
+56:07 - Nikolaos Biniaris
+  Yes, it's like a table that is created only for these rules, and then Databricks goes like and applies these rules and transforms them.  I have made a function. It transforms like not null to actually implement this rule. And where does that utility get the rules from, not null rule, from a table?  Yes, but yes, but it's limited because I have, I am the one like who transforms these rules to be transformed into code.  So like when I say, for example, higher than zero, I am the one that I have figured that higher than zero, it will be always the same rule.  Like I have. have. To create the rules once, and then I just apply them through comments. Okay.
+
+57:05 - sanjeev kumar
+  I think I need to review that because there's some gaps there. Okay. In simple terms, it should be like whatever rules you're, what are rules?  Like, for example, it's just that, right? Like it's a SQL expression, right? It's like, okay, when select star from this particular table that can be parametrized, which table you're looking at, where keys can be parametrized on which column you want to check the null side, this column, uh, do account where equal to null.  If it is more than that, then you log it. This whole expression, you can put it in a configuration file.  Whenever a job runs, it's going to first read that every time. It's going to load that into its memory, that, uh, that data quality checks table.  Maybe it could be null date format and whatnot, whichever format you want. And then use that. That expression will just, that whole complete SQL expression will be used in the, I don't know, spark.sql, right?  So you can just, if you push that whole rule that you defined in a configuration file, it's metadata driven.  So I think you are quite close.
+
+58:21 - Nikolaos Biniaris
+  Yes, so this is like the, what you described, I think I am almost there, because this is more or less what I'm doing.  I have a not null rule, higher than zero or higher or equal. And then I also use the SQL queries like case when not condition, then do this.  So all of this is getting transformed just by my comment in the metadata table. I would maybe next time I would love to see that, like how exactly your handling is using comment.
+
+58:57 - sanjeev kumar
+  Okay. Yes. That's interesting to see. Another thing, Nikolaos, since last time you did not join, if I'm not correct, I wanted to discuss something with you.  I also discussed that with Nehaan. So I had a chat with Raj, and his opinion was, since your major is already in data analysis part, and we are looking for opportunities on this part, we wanted to check with you.  So data engineering is fine, you keep doing that to skill yourself. But what we would also like you to keep focusing on what is your strength.  I don't know, visualization, like Neha talked about, or analytics engineering, maybe using, you can do analytics engineering directly in data bits also, right?  You don't have to like, use other tools, or you can choose to go for DBT, or you can, I don't know, n number of things you can use for that.  Are you interested in that part? Yes, of course. That's the shortest path. Fath of employability, right, at the moment, like, it will be easy for us to get you interviews, and then data engineering, but you keep on working, keep on working, right, slowly, so that you have a fuller profile.  But I think the way Neha is approaching it right now, you should also follow that, maybe spend 50% of time in what you already are good at, and 50% of time on what you're doing on data engineering, right?  Yeah, yeah. What do you think about Niklas? Does it make sense? Yeah, yeah.
+
+1:00:28 - Nikolaos Biniaris
+  It's just that I don't have access to Power BI, because I have a MacBook. So most of my time when I want to do a visualization, I turn to Tableau.  Okay. Or if I'm using Snowflake, I go to Streamlit. Okay, that's even better.
+
+1:00:47 - sanjeev kumar
+  So you don't have to, like, learn Power BI only, right? Power BI is just one another visualization tool, So could you explain?  So you have experience in Power BI? No. It's fine. Don't worry about it. You don't don't have to learn Power BI.  You just to understand what is, you should need to have just some visualization tool experience. Tableau and Streamlit. Amazing, great.  So it means like in our team, we have diversity now. So Neha, for any interviews that we get for Power BI, I think we can position her and for Tableau and Streamlit, we can position you, right?  Or vice versa, we can do across also, right? How difficult it would be for you to learn Power BI, right?  The cultures are similar, right? So if, if it makes sense to you, so like we discussed, so Neha has good Power BI experience.  She's now focusing, or trying to evolve herself in the analytics, analytical engineering part, right? You also have visualization experience.  And the next evolution for you is analytical engineering part. You are already doing a lot of data engineering stuff.  So I think for you, it's very easy to become an analytical engineer, expand your horizon there, right? So, So, So,  So what do you think? So based on whatever you tell us, we will accordingly plan. Yeah.
+
+1:02:07 - Nikolaos Biniaris
+  I don't know. What is the process inside Databricks for analytics engineering? Like just creating views or creating... How do you create models in Databricks?
+
+1:02:22 - sanjeev kumar
+  So you don't create models, models, but you create like in DP terms, we call it models, right? But yeah, in Databricks, you can just create like data models, right?  You will still have to do... You can just use SQL to start creating that. So maybe what I would do is like, you have already done the data engineering part, the silver layer that you have created, right?  And after that, you can either use Spark declarative pipeline. I don't want you to do that right now, because that's like very specific to it.  I want you to keep... I want to keep it general, right? So just use Spark SQL. Like there is a Databricks SQL warehouse.  So start writing your scripts. For example, if silver table is... Why don't you start creating data models in gold, maybe star schema or something like that.  That will serve your dashboards. So that part you can do, still exactly what you are doing right now with you, Shedrek, wrote case statements and whatnot, but you are doing it for data engineering, data cleaning and whatnot.  Just focus the shift to after silver part. Have five silver tables and from that you are creating some data model, right?  Just start doing that in SQL Databricks.
+
+1:03:29 - Nikolaos Biniaris
+  All right. Yes. Okay. I will use a Spark SQL and I will create a lot of different like metrics or aggregations from the gold data.  Yes, exactly.
+
+1:03:40 - sanjeev kumar
+  And just to let you know, I think you and Neha also should collaborate a bit because, and see if this makes sense to you, right?  So for example, this particular use case is now expanded, like we just had week one, but yeah, I had worked on this one.  And, uh, did, A few things like, for example, just try to build on your visualization part also. Keep a little bit of practicing.  If you already are very good at it, don't worry about it. But still, would say make something out of this.  Maybe some calculated metrics. If you're using, then use DAX and Tableau, whatever. You can do calculated fields. Then time intelligence.  How exactly will you do that? This is just some sample that I have put here. This is all using blog.  But there could be some mistakes. But this just gives you an idea like similar concepts you can try in Tableau and Neha has already done it in Power BI, right?  So please try to do that. Like for example, variants and whatnot, like simple KPIs that you want to create.  Then for example, and especially the access control part, right? So for example, when you create dashboards and whatnot, who has access to what?  So this will be your visualization part, but then focus on the analytics focus on So that makes your profile fuller, like more accurate, right, for a whole end-to-end analytics life cycle.
+
+1:05:10 - Nikolaos Biniaris
+  Yeah, okay, great.
+
+1:05:12 - sanjeev kumar
+  Does it make sense, Niklas? I think that will be a better evolution for you at the moment, rather than directly jumping into data engineering, trying to build your skill there, right, because it might take some time to do that.
+
+1:05:26 - Nikolaos Biniaris
+  Yes, yes, I just wanted to focus a bit on the streaming, as we did right now, or like data quality checks.  And I think now that I have already the gold layer ready, I can actually go to a bit of analytics engineering.  Now it's time I can transition to that, yeah.
+
+1:05:45 - sanjeev kumar
+  Yeah, exactly. And once you do your part, like the thing that is your strength, then we see that, when we see that we are comfortable there, then we will keep on doing the engineering part, we will not stop there.  learning, streaming, understanding those. Constructs is, is important, right? It's great. Like you can transition to any kind of role, but let's, let's first focus on the strengths and we will accordingly expand.  Okay. Yes.
+
+1:06:09 - Nikolaos Biniaris
+  Yep. Okay. Great guys.
+
+1:06:11 - sanjeev kumar
+  So any other questions, feedback, do you guys have enough for you to work this week or what do you think?  Yeah, I have my tasks.
+
+1:06:32 - Suhash Raja
+  So I will connect with Deepika.
+
+1:06:39 - sanjeev kumar
+  Okay. Asindu also like said, like you would like to connect with Deepika and Suhas also connect with Filip, like, because I will, I really want you to now work with the higher amount of data.  That's very important for you, right? Because you're focusing on Databricks engineering and Databricks is built for high things. So for smaller data, it's fine.  Like you try for a week or two. But you soon have to switch to that. I want you to show me some errors so that we can go and debug them.  But guys, one final question. I need some feedback from you. Does this model, is this model working? Now we are going through a specialization.  We spent some time on DA, DE, and DevOps. So there is certain amount of time where that might not be interesting to you, right?  So you have to keep giving us feedback on that, how we can make it better, right? Do let us know.  There are some parts which everyone should know. If you just keep focus on, I will tell you from my experience.  As your role evolves, right, you will never be just data engineer. You will never be just CICD engineer, right?  Your role will evolve into or never be just data analyst. Your role will evolve into something bigger, like maybe architect kind of a role, right?  Where all All these touch points, it will be great if you know, but do let us know if you think your time is being wasted a little bit, like while we are doing other some technical stuff with some other persona.  I would love those kind of feedback and see how we can make it better.
+
+1:08:20 - Suhash Raja
+  I think Sanjeev, the weekly call is very good that we all are there and we get perspectives from different things.  And I think I will be kind of connecting with every other person here, like, so that like, I think more, more collaboration that I make that I can learn something new, like, what Philip is doing with dbt, I need him to also like, look at SDP later on, because that's a really good compete situation.
+
+1:08:59 - sanjeev kumar
+  And I that's I'm always, I work for Databricks. I need to compete against DBT and I'm a fan of DBT.  It's that great. But in a lot of places, SDP just wins hands down, right? So it would be very nice to like just collaborate.  Okay, but that's on data engineering. But I would like to hear from Neha and Deepika first, because you guys, what do you think?  What's your feedback? For me, it's quite interesting, Sanjeev, because I'm learning the things which I haven't learned before.
+
+1:09:30 - DEEPIKA ELANGOVAN
+  So this data engineering field itself is completely new for me. in that, like how I can implement the CICD practices, it's quite interesting for me to learn.  And I'm happy, like I'm at least not a pro on data engineering, but at least to the overview level, I understood what exactly is data engineering, what are all the tools or what are all the activities we are doing there.  So I think it's a good skill to have, I guess.
+
+1:09:52 - sanjeev kumar
+  Yeah, and then it's, it's, it is never a harm to know what is power BI, what it is good at, what is  Tableau, what it is good at, you should know it, like ultimately, when it really was, you are just not bound to one small piece, right?  You keep your antennas open, okay, there's a visualization tool and seems like Nikolaos is talking about Tableau and Power BI is better in this part.  Oh, okay, that's good to know, right? So I think that's a good experience. I like to be in sessions where I hear at least I should have 200 level information about some other latest and greatest tool in the market.  But Deepika, Nikolaos, I know you are quite a bit focused on engineering part also. So for you, I think it would make sense the listening to others, but Neha, I would have to hear from you.  What do you think? Is it too much feedback on this part?
+
+1:10:49 - Neha Doda
+  You have to reciprocate to what others said, right?
+
+1:10:53 - sanjeev kumar
+  You just be honest. Yeah, actually, sometimes I actually feel disconnected, because
+
+1:11:00 - Neha Doda
+  Some terms and technologies I don't understand, but, but even being like a passive listener, I am trying to learn something new.  So it's, it's a good idea to listen to what others roles are like, what's happening in their role and what they are doing.  So, even though I will graph if 5% of it, and I think it's good to hear them. It's there for me as well, Neha, like, I can't understand completely how exactly data is still working, but how you, you perceive DevOps or whatever, that is a good idea to touch other roles as well.  Yeah, because see Neha, now you want to focus on analytics and engineers.
+
+1:11:44 - sanjeev kumar
+  So this CICT part will come into your, in the picture for sure, because analytics engineers are independent of data engineers.  Now, how will you manage if you're like creating 10, 15, 20 data products, visualization tool, how will you manage them?  Right? So CICT will I'm one. last Thank Definitely come into the picture when you try to be more technical analytics part, right?  So, so that sharing is important. And I have my own selfish reason also because I want others to understand this dashboarding part.  Like next time you are going to talk about this import mode, composite mode, you will not believe. As a data engineer, I used to hear about it like more, very often.  I did not know, and others expected me as a data engineer to think of, to know, know about it.  Right. So it's, it's my selfish reason for you, for others that they should learn about these technicalities because ultimately your users are either data science or data analysts.  You have to listen to them, what they exactly want, how to opt in optimally deliver those value to them.
+
+1:12:53 - Neha Doda
+  Okay. Uh, great.
+
+1:12:54 - sanjeev kumar
+  Uh, thanks a lot guys for this week. Uh, next week we can sync again. you. Right. And we'll have more discussions.  Yes. Sounds good. Okay. Bye. Thank you.
